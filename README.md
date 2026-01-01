@@ -214,6 +214,12 @@ provided appropriate attribution is given.
 
 ---
 
+### Naming Note
+
+The name **PMS-LOGIC** reflects the central thesis of the work — that logic is a beginning, not an end — and is dedicated to Leonard Nimoy.
+
+---
+
 ## Final Note
 
 PMS–LOGIC does not tell you what you *ought* to do.
