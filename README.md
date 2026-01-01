@@ -84,8 +84,8 @@ What appears as *morality* is therefore not law or command, but the
 ---
 
 ## Relation to PMS
-
-PMS–LOGIC is built directly on the **canonical PMS operator grammar (Δ–Ψ)** as defined in `PMS.yaml`.
+PMS–LOGIC is built directly on the **canonical PMS operator grammar (Δ–Ψ)** as defined in
+[`PMS.yaml`](https://raw.githubusercontent.com/tz-dev/Praxeological-Meta-Structure-Theory/refs/heads/main/model/PMS.yaml).
 
 * No new operators are introduced
 * No operator is redefined
