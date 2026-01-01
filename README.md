@@ -169,8 +169,6 @@ PMS–LOGIC is intended for:
 
 *PMS-LOGIC* is situated within a broader **praxeological ecosystem** that connects anthropological theory, formal operator models, applied analyses, and executable specifications.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18116492.svg)](https://doi.org/10.5281/zenodo.18116492)  
-
 The resources below provide different **points of access** into that ecosystem: from the book and its conceptual foundations, to related model architectures, reference implementations, and interactive tools. Together, they form a coherent field of inquiry rather than a collection of isolated artifacts.
 
 | Category | Resource | Description |
