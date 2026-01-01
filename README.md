@@ -1,12 +1,25 @@
-# PMS–LOGIC  
+# PMS–LOGIC
+
 **Structural Responsibility, Logical Limits, and Post-Moral Effects**
 
-PMS–LOGIC is a theoretical extension and application of the **Praxeological Meta-Structure (PMS)** to a classical problem in philosophy:  
-the tension between **Hume’s “no ought from is”** and the practical intuition that **effective capacity entails responsibility**.
+**PMS–LOGIC is a formal extension and application of the Praxeological Meta-Structure (PMS)** — a generative operator framework (Δ–Ψ) for modelling praxis, asymmetry, temporality, and self-binding.
+While PMS provides the **canonical operator grammar** for analysing action and non-action, PMS–LOGIC explores **what follows when this grammar is applied to a classical philosophical tension**: the relation between facts, responsibility, and morality.
+
+Building explicitly on PMS as its structural foundation
+(see: [https://github.com/tz-dev/Praxeological-Meta-Structure-Theory](https://github.com/tz-dev/Praxeological-Meta-Structure-Theory)),
+this project does **not modify or extend the PMS operator set**, but uses it **strictly as specified** to reconstruct a long-standing problem in moral philosophy.
+
+PMS–LOGIC applies PMS to the tension between **Hume’s “no ought from is”** and the persistent practical intuition that **effective capacity entails responsibility**.
 
 Rather than proposing a new ethics, PMS–LOGIC provides a **strictly praxeological reconstruction** of how *moral readability* and *responsibility* emerge **without normativity**, **without moral laws**, and **without metaphysical grounding**.
 
-The project demonstrates how **logic reaches a structural limit (Λ)** and how **responsibility arises post hoc** as an effect of **irreversible praxis under asymmetry and time**, stabilized through **self-binding (Ψ)**.
+The project demonstrates how **logic reaches a structural limit (Λ)** within PMS, and how **responsibility arises post hoc** as an effect of **irreversible praxis under asymmetry (Ω) and temporality (Θ)**, stabilized through **self-binding (Ψ)**.
+
+In this sense, PMS–LOGIC should be read as:
+
+* **conceptually dependent on PMS**,
+* **formally consistent with the PMS operator grammar**, and
+* **thematically focused on the post-moral effects** that become visible once PMS is applied to ethical discourse.
 
 ---
 
