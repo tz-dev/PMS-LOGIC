@@ -1608,3 +1608,10 @@ They ensure that PMS–LOGIC:
 They complete the paper structurally —
 not by closing it,
 but by **stabilizing its open boundaries** in accordance with its own logic.
+
+---
+
+### Naming Note
+
+The name **PMS-LOGIC** reflects the central thesis of the work — that logic is a beginning, not an end — and is dedicated to Leonard Nimoy.
+
