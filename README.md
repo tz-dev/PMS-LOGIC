@@ -2,11 +2,10 @@
 
 **Structural Responsibility, Logical Limits, and Post-Moral Effects**
 
-**PMS–LOGIC is a formal extension and application of the Praxeological Meta-Structure (PMS)** — a generative operator framework (Δ–Ψ) for modelling praxis, asymmetry, temporality, and self-binding.  
+**PMS–LOGIC is a formal extension and application of the [Praxeological Meta-Structure (PMS)](https://github.com/tz-dev/Praxeological-Meta-Structure-Theory)** — a generative operator framework (Δ–Ψ) for modelling praxis, asymmetry, temporality, and self-binding.
 While PMS provides the **canonical operator grammar** for analysing action and non-action, PMS–LOGIC explores **what follows when this grammar is applied to a classical philosophical tension**: the relation between facts, responsibility, and morality.
 
-Building explicitly on PMS as its structural foundation  
-(see: https://github.com/tz-dev/Praxeological-Meta-Structure-Theory),  
+Building explicitly on PMS as its structural foundation,
 this project does **not modify or extend the PMS operator set**, but uses it **strictly as specified** to reconstruct a long-standing problem in moral philosophy.
 
 PMS–LOGIC applies PMS to the tension between **Hume’s “no ought from is”** and the persistent practical intuition that **effective capacity entails responsibility**.
