@@ -24,7 +24,7 @@ In this sense, PMS–LOGIC should be read as:
 - **formally consistent with the PMS operator grammar**, and
 - **focused on structural legibility rather than moral or psychological evaluation**.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18116492.svg)](https://doi.org/10.5281/zenodo.18116492)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18184486.svg)](https://doi.org/10.5281/zenodo.18184486)
 
 ---
 
