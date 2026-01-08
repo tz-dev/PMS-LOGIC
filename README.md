@@ -283,9 +283,10 @@ PMS-LOGIC/
 ├── PMS-LOGIC.md
 ├── PMS-LOGIC.html
 ├── PMS-LOGIC.pdf
-├── pms-logic.yaml
-├── Model Specification - PMS-LOGIC.html
-├── Model Specification - PMS-LOGIC.pdf
+├── model/
+│   ├── Model Specification - PMS-LOGIC.html
+│   ├── Model Specification - PMS-LOGIC.pdf
+│   └── PMS-LOGIC.yaml
 ├── css/
 │   └── main.css
 └── examples/
