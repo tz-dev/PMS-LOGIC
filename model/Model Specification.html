@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PMS-LOGIC – Model Specification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        --color-text: #111;
+        --color-muted: #555;
+        --color-accent: #333;
+        --color-border: #ddd;
+        --color-bg: #fafafa;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background: white;
+        line-height: 1.5;
+        font-size: 14px;
+      }
+
+      blockquote {
+        margin: 0 0 16px;
+        padding: 0 1em;
+        color: #57606a;
+        border-left: 0.25em solid #d0d7de;
+      }
+
+      .page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+        background: white;
+      }
+
+      header {
+        border-bottom: 1px solid var(--color-border);
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+      }
+
+      header h1 {
+        font-size: 1.9rem;
+        margin: 0 0 8px;
+        letter-spacing: 0.02em;
+      }
+
+      header .subtitle {
+        font-size: 0.95rem;
+        color: var(--color-muted);
+        margin-bottom: 8px;
+      }
+
+      header .meta {
+        font-size: 0.8rem;
+        color: var(--color-muted);
+      }
+
+      h2 {
+        margin-top: 15px;
+        margin-bottom: 4px;
+        font-size: 1.15rem;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 4px;
+      }
+
+      h3 {
+        margin-top: 18px;
+        margin-bottom: 4px;
+        font-size: 1rem;
+        color: var(--color-accent);
+      }
+
+      p {
+        margin: 4px 0 8px;
+      }
+
+      ul {
+        margin: 4px 0 10px 1.2rem;
+        padding: 0;
+        line-height: 1.1em;
+      }
+
+      li {
+        margin-bottom: 3px;
+      }
+
+      .code-inline {
+        font-family: var(--font-mono);
+        font-size: 0.9em;
+        background: #f5f5f5;
+        padding: 1px 4px;
+        border-radius: 3px;
+      }
+
+      .box {
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        padding: 8px 10px;
+        background: #fcfcfc;
+        margin: 8px 0 12px;
+        line-height: 1.05em;
+      }
+
+      .box-title {
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+      }
+
+      .small {
+        font-size: 0.85rem;
+        color: var(--color-muted);
+      }
+
+      .two-column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .two-column > div {
+        flex: 1 1 260px;
+        min-width: 0;
+      }
+
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 8px 0 12px;
+        font-size: 0.77rem;
+        line-height: 1.2em;
+      }
+
+      .table th,
+      .table td {
+        border: 1px solid var(--color-border);
+        padding: 4px 6px;
+        vertical-align: top;
+      }
+
+      .table th {
+        background: #f5f5f5;
+        font-weight: 600;
+      }
+
+      .tag {
+        display: inline-block;
+        border-radius: 999px;
+        border: 1px solid var(--color-border);
+        padding: 1px 8px;
+        font-size: 0.75rem;
+        margin-right: 4px;
+        margin-bottom: 3px;
+      }
+
+      .placeholder {
+        font-style: italic;
+        color: var(--color-muted);
+      }
+
+      .pagebreak{
+        page-break-before:always
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+        .page {
+          box-shadow: none;
+          padding: 24px 18px;
+        }
+        a[href]:after {
+          content: "";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>PMS-LOGIC – Model Specification</h1>
+        <div class="subtitle">
+          A PMS-conform application layer for logic: pre-moral foundations, logical limits, and post-moral effects (responsibility without “ought”)
+        </div>
+        <div class="meta">
+          Version: PMS-LOGIC_1.0 &middot;
+          Spec basis: <span class="code-inline">pms-logic.yaml</span><br />
+          Author: T. Zöller &middot; Formalisation assistance: ChatGPT (GPT-5.2 Thinking)<br />
+          Language: EN &middot; Status: Model spec (aligned with <span class="code-inline">schema_meta.status = "draft"</span>)<br />
+          Depends on: <span class="code-inline">PMS.yaml</span> (<span class="code-inline">schema_version = "PMS_1.1"</span>)
+        </div>
+      </header>
+
+      <!-- 1. Purpose & scope -->
+      <section id="purpose-scope">
+        <h2>1. Purpose and scope of this specification</h2>
+
+        <p>
+          This document specifies the <em>PMS-LOGIC</em> layer in a concise, technical form.
+          It is based on the YAML file <span class="code-inline">pms-logic.yaml</span>
+          (with <span class="code-inline">schema_version = "PMS-LOGIC_1.0"</span>) and renders its structure,
+          constraints, and semantics explicit for human readers and computational systems.
+        </p>
+
+        <p>
+          PMS-LOGIC is an <strong>application profile</strong> (overlay) of the Praxeological Meta-Structure
+          (PMS; Δ–Ψ). It does <strong>not</strong> redefine PMS operators, dependencies, layers, or derived axes.
+          Instead, it formalizes a <strong>logic lens</strong> that is:
+          <strong>pre-moral in justification</strong> (no norms, values, duties, or prescriptions introduced),
+          <strong>logical in ordering</strong> (consistency without closure-authority), and
+          <strong>post-moral in effect</strong> (responsibility becomes morally readable as a field-effect under
+          asymmetry and irreversibility, without generating “ought”).
+        </p>
+
+        <p>The specification covers, in particular:</p>
+        <ul>
+          <li>
+            the <strong>schema_meta</strong> block (identity, status, authorship, explicit dependency on PMS_1.1);
+          </li>
+          <li>
+            the <strong>validity gate</strong> enforcing Χ (Distance), reversibility, and D (dignity-in-practice);
+          </li>
+          <li>
+            the <strong>paper lens</strong> definition (tripartition: pre-moral / logical / post-moral) and non-operator constructs;
+          </li>
+          <li>
+            <strong>reduced signatures</strong> for the three levels and key threshold markers (non-closure, moral readability, effective capacity);
+          </li>
+          <li>
+            <strong>failure-mode constraints</strong> (apparent norms reconstructed as structural constraints; non-prescriptive);
+          </li>
+          <li>
+            the <strong>drift catalogue</strong> (structural failure modes: dogmatism, authority capture, pseudo-ought injection, etc.);
+          </li>
+          <li>
+            <strong>scale matrices</strong> (projection onto PMS derived axes; structural only);
+          </li>
+          <li>
+            <strong>counter-readings</strong> (misreadings and structural responses);
+          </li>
+          <li>
+            the <strong>example suite schema</strong> (scene-bound, operator-readable vignettes).
+          </li>
+        </ul>
+
+        <div class="box">
+          <div class="box-title">Core idea</div>
+          <p class="small">
+            PMS-LOGIC treats logic as an indispensable ordering tool whose structural boundary is
+            <strong>non-closure</strong> (Λ carried within □). Morality is <strong>not</strong> an operator but a
+            readability field of responsibility that emerges <strong>post hoc</strong> under Ω and Θ. The profile
+            reconstructs “norm-like” statements as <strong>failure-mode constraints</strong> (self-binding and restraint),
+            not as obligations or prescriptions.
+          </p>
+        </div>
+      </section>
+
+      <div class="pagebreak"></div>
+
+      <!-- 2. High-level YAML structure -->
+      <section id="structure">
+        <h2>2. High-level structure of the YAML model</h2>
+
+        <h3>2.1 Top-level keys</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>Description</th>
+              <th>Role in the model</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code-inline">schema_version</span></td>
+              <td>Version identifier (<span class="code-inline">"PMS-LOGIC_1.0"</span>).</td>
+              <td>Compatibility and citation</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">schema_meta</span></td>
+              <td>Model identity, authors, status, and explicit dependency on PMS_1.1; paper source metadata.</td>
+              <td>Meta-information / inheritance statement</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">validity_gate</span></td>
+              <td>Entry conditions for PMS-application: Χ, reversibility, D.</td>
+              <td>Application firewall</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">operator_reference</span></td>
+              <td>Fixed operator set Δ–Ψ and dependency hygiene notes.</td>
+              <td>Non-redefinition guarantee</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">overlays</span></td>
+              <td>Optional amplification overlays (non-operators). Empty in PMS-LOGIC.</td>
+              <td>Explicit statement of “no new operators”</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">paper_lens</span></td>
+              <td>Tripartition (pre-moral / logical / post-moral), key claims, theses, and non-operator constructs.</td>
+              <td>Semantic lens declaration</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">reduced_signatures</span></td>
+              <td>Reduced signatures for the three levels and key threshold markers (non-closure, moral readability, effective capacity).</td>
+              <td>Threshold definitions</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">failure_mode_constraints</span></td>
+              <td>Apparent “norms” reconstructed as structural constraints (non-prescriptive).</td>
+              <td>Constraint layer (no “ought”)</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">drift_catalogue</span></td>
+              <td>Structural failure modes (operator distortions): dogmatism, authority capture, pseudo-ought injection, etc.</td>
+              <td>Drift awareness</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">scale_matrices</span></td>
+              <td>Structural projections (e.g., onto derived axes A, C, R, E, D).</td>
+              <td>Comparability / interpretive compression</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">counter_readings</span></td>
+              <td>Common misreadings and structural responses (without ethics injection, metaphysics, or weaponization).</td>
+              <td>Misuse resistance</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">glossary</span></td>
+              <td>Paper glossary (non-operator definitions; operator meanings remain canonical in PMS.yaml).</td>
+              <td>Terminological hygiene</td>
+            </tr>
+            <tr>
+              <td><span class="code-inline">example_suite_schema</span></td>
+              <td>Schema for repo vignettes (scene-bound, operator-readable, non-instructional).</td>
+              <td>Implementation discipline</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="box">
+          <div class="box-title">Conceptual separation</div>
+          <p class="small">
+            PMS defines the operator grammar (Δ–Ψ). PMS-LOGIC defines how that grammar is used to keep
+            logic <em>indispensable</em> while preventing its elevation to closure-authority, and how responsibility
+            becomes readable without translating it into “ought.”
+          </p>
+        </div>
+      </section>
+
+      <div class="pagebreak"></div>
+
+      <!-- 3. Validity gate -->
+      <section id="validity">
+        <h2>3. Validity gate and scope constraints</h2>
+
+        <h3>3.1 Application gate</h3>
+        <ul>
+          <li><strong>Χ (Distance):</strong> stop-capability must remain active; no fusion into verdict, authority, or closure claims.</li>
+          <li><strong>Reversibility:</strong> all readings are scene-bound and revisable; no global person labels.</li>
+          <li><strong>D (Dignity-in-practice):</strong> no shaming/ranking; structure-only critique of configurations.</li>
+        </ul>
+
+        <h3>3.2 Explicit non-goals</h3>
+        <ul>
+          <li>deriving or asserting norms, values, duties, or “ought” statements;</li>
+          <li>turning logical coherence into ultimate justification or authority;</li>
+          <li>coercive enforcement, legitimacy attribution, person-ranking, irreversible exposure demands;</li>
+          <li>metaphysical closure substitutions (theological, ontological, or totalizing narratives);</li>
+          <li>clinical inference, personality typing, or mental health claims.</li>
+        </ul>
+
+        <div class="box">
+          <div class="box-title">Key firewall</div>
+          <p class="small">
+            If logic is used as final authority (closure-authority) or responsibility is translated into “ought,” the application
+            has left PMS-LOGIC’s scope and violates the validity gate.
+          </p>
+        </div>
+      </section>
+
+      <div class="pagebreak"></div>
+
+      <!-- 4. PMS-LOGIC as structure -->
+      <section id="logic-core">
+        <h2>4. PMS-LOGIC as a structural configuration</h2>
+
+        <p>
+          PMS-LOGIC is defined by a tripartition of levels. Each level is expressed as a
+          reduced signature (shorthand only; PMS dependencies remain authoritative).
+        </p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Reduced signature</th>
+              <th>Meaning (structural)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pre-moral justification</strong></td>
+              <td><span class="code-inline">Δ + ∇ + □ + Λ + Α</span></td>
+              <td>
+                Praxis conditions prior to normativity: difference triggers impulse; frames constrain;
+                non-events structure expectation; stabilized patterns emerge without moral evaluation.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Logical boundary management</strong></td>
+              <td><span class="code-inline">□ + Λ + Χ + Σ</span></td>
+              <td>
+                Logic as ordering: integration and consistency are pursued under explicit non-closure (Λ)
+                and held back from dogmatic totalization by distance (Χ).
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Post-moral effects</strong></td>
+              <td><span class="code-inline">Ω + Θ + Ψ</span></td>
+              <td>
+                Responsibility becomes attributable under asymmetry (Ω) and irreversibility (Θ) once
+                trajectories bind (Ψ). No norms are derived; effects become morally readable post hoc.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="box">
+          <div class="box-title">Boundary formula</div>
+          <p class="small">
+            <strong>Pre-moral in justification, post-moral in effect.</strong><br />
+            Logic remains a tool for ordering within frames and under non-closure; it does not become an authority that
+            converts coherence into obligation.
+          </p>
+        </div>
+
+        <h3>4.1 Moral readability without “ought”</h3>
+        <p>
+          PMS-LOGIC treats “morality” as a <em>non-operator readability field</em>, minimally expressible as:
+          <span class="code-inline">Ω + Θ + Λ + Ψ</span>. This indicates that moral language becomes tempting where
+          irreversible consequences are attributable under asymmetry, while non-closure persists. The profile does not
+          generate prescriptions.
+        </p>
+
+        <h3>4.2 Effective capacity boundary (no capacity → no responsibility)</h3>
+        <p>
+          Responsibility presupposes effective, frame-bound capacity with temporal availability:
+          <span class="code-inline">□ + Θ</span>. Where effective capacity is absent, no responsibility arises—even if outcomes
+          appear significant later.
+        </p>
+
+        <div class="box">
+          <div class="box-title">Non-equivalence</div>
+          <p class="small">
+            “Responsibility” here means <em>attributability of consequences</em>, not moral desert. It is distinct from guilt,
+            blame, or prescriptive obligation.
+          </p>
+        </div>
+      </section>
+
+      <div class="pagebreak"></div>
+
+      <!-- 5. Drift, risk, closure-authority -->
+      <section id="risk">
+        <h2>5. Risk, drift, and closure-authority failure modes</h2>
+
+        <p>
+          PMS-LOGIC treats “being coherent” and “being right” as structural stressors: both can trigger drift toward
+          closure-authority and pseudo-obligation. The model’s discipline is to restore Χ, preserve Λ, and keep □ explicit.
+        </p>
+
+        <h3>5.1 Drift catalogue (structural failure modes)</h3>
+        <ul>
+          <li><strong>Dogmatism (Σ-totalization):</strong> coherence is turned into final truth; Λ is denied rather than carried.</li>
+          <li><strong>Authority capture (Ω-inflation):</strong> power gradients are mistaken for epistemic/moral authority; Χ is suppressed.</li>
+          <li><strong>Moralism (pseudo-ought injection):</strong> responsibility is retranslated into obligation; Ψ is externalized into enforcement.</li>
+          <li><strong>Nihilism (Λ-suppression):</strong> non-events and omissions are treated as irrelevant; temporal consequence is flattened.</li>
+          <li><strong>Technocratic reduction (□-overconstraint):</strong> frames are treated as exhaustive; unmodeled remainder is dismissed.</li>
+        </ul>
+
+        <div class="box">
+          <div class="box-title">Structural warning</div>
+          <p class="small">
+            The critical failure is not “lack of logic,” but logic elevated to <strong>authority</strong>: forced closure, hidden normativity,
+            or power laundering through coherence.
+          </p>
+        </div>
+
+        <h3>5.2 Apparent norms as constraints (non-prescriptive)</h3>
+        <p>
+          PMS-LOGIC reconstructs norm-like statements as <em>failure-mode constraints</em> (self-binding and restraint), not obligations.
+          They function to prevent closure substitution, authority drift, and coercion under Ω and Θ.
+        </p>
+      </section>
+
+      <div class="pagebreak"></div>
+
+      <!-- 6. Minimal Application Protocol -->
+      <section id="map">
+        <h2>6. Minimal Application Protocol (MAP)</h2>
+
+        <ol>
+          <li><strong>□ Frame check:</strong> What is the scene, scope, and boundary of the claim? What is explicitly excluded?</li>
+          <li><strong>Λ Non-closure integrity:</strong> Where does explanation end? What remainder must be carried rather than replaced?</li>
+          <li><strong>Σ Integration discipline:</strong> What is coordinated, and what is being totalized? Is coherence being treated as authority?</li>
+          <li><strong>Ω/Θ Asymmetry &amp; irreversibility audit:</strong> Who bears irreversible cost, exposure, or consequence over time?</li>
+          <li><strong>Χ Distance enforcement:</strong> Where is the closure drive (or correctness) replacing restraint and reversibility?</li>
+          <li><strong>□+Θ Effective capacity test:</strong> Is there frame-bound capacity with temporal availability? If not: no responsibility attribution.</li>
+          <li><strong>Ψ Self-binding test:</strong> Who is actually bound to consequences (self-binding) vs. who is being bound (externalization)?</li>
+        </ol>
+
+        <div class="box">
+          <div class="box-title">Invalidity marker</div>
+          <p class="small">
+            Any translation of responsibility into “ought” (prescriptive demand), or any coercive move that uses logic as
+            closure-authority, is sufficient for PMS-LOGIC scope invalidity.
+          </p>
+        </div>
+      </section>
+
+      <div class="pagebreak"></div>
+
+      <!-- 7. Implementation & citation -->
+      <section id="implementation">
+        <h2>7. Implementation notes and citation</h2>
+
+        <p>
+          The authoritative specification is <span class="code-inline">pms-logic.yaml</span>, intended to be loaded after
+          <span class="code-inline">PMS.yaml</span>. PMS operator meanings and dependencies remain canonical in PMS.yaml.
+        </p>
+
+        <div class="box small">
+          <span class="code-inline">PMS.yaml</span> → <span class="code-inline">pms-logic.yaml</span>
+        </div>
+
+        <p class="small">
+          <strong>Technical reference:</strong><br />
+          <em>pms-logic.yaml – PMS-LOGIC Application Profile (PMS-LOGIC_1.0)</em>
+        </p>
+
+        <p class="small">
+          <strong>Base dependency:</strong><br />
+          <em>PMS.yaml – Praxeological Meta-Structure (PMS_1.1)</em>
+        </p>
+
+        <p>
+          <strong>License:</strong><br />
+          Governed by the license declared in the distribution repository.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
