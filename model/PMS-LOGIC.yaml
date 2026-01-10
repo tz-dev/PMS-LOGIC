@@ -1,36 +1,124 @@
 # =============================================================================
-#  PMS-PAPER APPLICATION PROFILE (OVERLAY)
+#  PMS-LOGIC — PAPER-SPECIFIC APPLICATION SCHEMA (OVERLAY)
 #
-#  Repo:           https://github.com/tz-dev/PMS-LOGIC
-#  File:           pms-logic.yaml
-#  Version:        PMS-LOGIC_1.0 (draft)
-#  Last Updated:   2026-01-08
+#  Repository:
+#    https://github.com/tz-dev/PMS-LOGIC
 #
-#  Summary:
-#    This document defines a paper-specific APPLICATION PROFILE for the
-#    Praxeological Meta-Structure (PMS). It provides a structural overlay
-#    for the PMS–LOGIC lens (pre-moral foundations, logical limits, post-moral
-#    effects), expressed strictly in the canonical PMS operator grammar (Δ–Ψ).
+#  File:
+#    PMS-LOGIC.yaml
 #
-#  Relationship to PMS (non-negotiable):
-#    - Depends on the canonical PMS base specification (schema_version: PMS_1.1).
-#    - Does NOT redefine Δ–Ψ, does NOT add new meta-axioms, and does NOT
-#      modify operator dependencies or derived axes.
-#    - Introduces ONLY overlay-level constructs: reduced signatures,
-#      drift catalogues, scale matrices, example schemas, and (if any)
-#      amplification overlays explicitly marked as non-operators.
+#  Schema Version:
+#    PMS-LOGIC_1.0
 #
-#  Validity Gate (PMS entry condition — application-only):
-#    Any USE of this profile as PMS-application presupposes:
-#      - Χ (distance),
-#      - reversibility (scene-bound, revisable readings),
-#      - D (dignity-in-practice; no shaming/ranking; structure-only critique).
-#    This gate constrains application, not critique or rejection.
+#  Last Updated:
+#    2026-01-08
 #
-#  Canonical Operator Source:
+# -----------------------------------------------------------------------------
+#  PURPOSE AND STATUS
+# -----------------------------------------------------------------------------
+#  This document defines a paper-specific APPLICATION SCHEMA for the
+#  Praxeological Meta-Structure (PMS). It formalizes the theoretical arguments
+#  of the accompanying paper
+#
+#    “PMS-LOGIC — Pre-Moral Foundations,
+#     Logical Limits, and Post-Moral Effects (Δ–Ψ)”
+#
+#  by expressing them in a machine-readable, structurally constrained form.
+#
+#  The schema is an OVERLAY, not a fork or extension of PMS. Its function is to
+#  make the LOGIC lens formally legible while remaining strictly subordinate
+#  to the canonical PMS specification.
+#
+# -----------------------------------------------------------------------------
+#  RELATIONSHIP TO PMS (NON-NEGOTIABLE CONSTRAINTS)
+# -----------------------------------------------------------------------------
+#  - This schema DEPENDS on the canonical PMS base specification
+#    (schema_version: PMS_1.1).
+#
+#  - It does NOT redefine, replace, reinterpret, or extend the eleven PMS
+#    meta-axioms (Δ–Ψ).
+#
+#  - It does NOT introduce new operators, meta-axioms, or dependency relations.
+#
+#  - It does NOT modify canonical operator order, dependency hygiene, or
+#    derived axes (A, C, R, E, D).
+#
+#  - All references to operators (Δ–Ψ) retain their meanings exactly as defined
+#    in PMS.yaml.
+#
+#  - Any apparent deviations (e.g. “reduced signatures”, “logical levels”,
+#    “post-moral effects”) are overlay-level constructs only and MUST NOT be
+#    read as changes to PMS operator logic.
+#
+# -----------------------------------------------------------------------------
+#  SCOPE OF THE OVERLAY
+# -----------------------------------------------------------------------------
+#  This application schema introduces ONLY overlay-level constructs, including:
+#
+#    - reduced operator signatures (shorthand expressions for analysis),
+#    - logical drift patterns and failure-mode constraints,
+#    - boundary constructs (non-closure, effective capacity, non-innocence),
+#    - derived-axis projections (structural, non-evaluative),
+#    - example-suite schemas (scene-bound, non-instructional).
+#
+#  These constructs:
+#    - amplify or organize existing PMS operators,
+#    - never replace generativity with explanation,
+#    - never inject norms, values, duties, or prescriptions,
+#    - remain descriptive, non-diagnostic, and non-prescriptive.
+#
+# -----------------------------------------------------------------------------
+#  VALIDITY GATE — PMS ENTRY CONDITION (APPLICATION-ONLY)
+# -----------------------------------------------------------------------------
+#  Any USE of this schema as a PMS APPLICATION presupposes acceptance of the
+#  canonical PMS entry condition:
+#
+#    - Χ (Distance):
+#        a maintained meta-position and stop-capability; no fusion into verdict,
+#        authority, or normative demand.
+#
+#    - Reversibility:
+#        all readings are scene-bound, revisable, and configuration-specific;
+#        no global person labels or irreversible interpretive claims.
+#
+#    - D (Dignity-in-Practice):
+#        no shaming, ranking, humiliation, or ontological person evaluation;
+#        critique is restricted to structural attribution and boundary handling.
+#
+#  This gate constrains APPLICATION only.
+#  PMS itself may be criticized, rejected, or ignored without satisfying it.
+#
+# -----------------------------------------------------------------------------
+#  SELF-BINDING AND MODEL HYGIENE (CLARIFICATION)
+# -----------------------------------------------------------------------------
+#  In line with PMS.yaml, any application that suspends Distance (Χ),
+#  Dignity-in-Practice (D), or Self-Binding discipline (Ψ) in order to enforce
+#  truth, certainty, authority, or moral legitimacy is formally INVALID as PMS
+#  application—even if PMS terminology is retained.
+#
+#  PMS-LOGIC therefore treats all analyses as:
+#    - scene-bound,
+#    - structurally revisable,
+#    - non-metaphysical,
+#    - non-psychological,
+#    - non-moralizing.
+#
+#  Logic is treated as an ordering tool with a structural boundary (Λ),
+#  not as an authority that closes interpretation or justifies obligation.
+#
+# -----------------------------------------------------------------------------
+#  CANONICAL OPERATOR SOURCE
+# -----------------------------------------------------------------------------
+#  PMS base specification:
 #    PMS.yaml (schema_version: PMS_1.1)
+#
+#  Canonical source URL:
 #    https://raw.githubusercontent.com/tz-dev/Praxeological-Meta-Structure-Theory/refs/heads/main/model/PMS.yaml
+#
+#  PMS-LOGIC MUST always be read against this source.
+#
 # =============================================================================
+
 
 schema_version: "PMS-LOGIC_1.0"
 
@@ -518,3 +606,4 @@ example_suite_schema:
     - "Failure-mode constraint reference (optional; max 1–2 items)"
     - "Validity gate reminder (Χ + reversibility + D)"
     - "Readable structural closure (2–5 sentences; non-instructional)"
+
