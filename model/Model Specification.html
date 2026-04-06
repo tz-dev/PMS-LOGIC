@@ -198,11 +198,11 @@
           A PMS-conform application layer for logic: pre-moral foundations, logical limits, and post-moral effects (responsibility without “ought”)
         </div>
         <div class="meta">
-          Version: PMS-LOGIC_1.0 &middot;
+          Version: PMS-LOGIC_1.1 &middot;
           Spec basis: <span class="code-inline">pms-logic.yaml</span><br />
-          Author: T. Zöller &middot; Formalisation assistance: ChatGPT (GPT-5.2 Thinking)<br />
+          Author: T. Zöller &middot; Formalisation assistance: ChatGPT (GPT-5.4 Thinking)<br />
           Language: EN &middot; Status: Model spec (aligned with <span class="code-inline">schema_meta.status = "draft"</span>)<br />
-          Depends on: <span class="code-inline">PMS.yaml</span> (<span class="code-inline">schema_version = "PMS_1.1"</span>)
+          Depends on: <span class="code-inline">PMS.yaml</span> (<span class="code-inline">schema_version = "PMS_1.3"</span>)
         </div>
       </header>
 
@@ -213,7 +213,7 @@
         <p>
           This document specifies the <em>PMS-LOGIC</em> layer in a concise, technical form.
           It is based on the YAML file <span class="code-inline">pms-logic.yaml</span>
-          (with <span class="code-inline">schema_version = "PMS-LOGIC_1.0"</span>) and renders its structure,
+          (with <span class="code-inline">schema_version = "PMS-LOGIC_1.1"</span>) and renders its structure,
           constraints, and semantics explicit for human readers and computational systems.
         </p>
 
@@ -222,39 +222,50 @@
           (PMS; Δ–Ψ). It does <strong>not</strong> redefine PMS operators, dependencies, layers, or derived axes.
           Instead, it formalizes a <strong>logic lens</strong> that is:
           <strong>pre-moral in justification</strong> (no norms, values, duties, or prescriptions introduced),
-          <strong>logical in ordering</strong> (consistency without closure-authority), and
-          <strong>post-moral in effect</strong> (responsibility becomes morally readable as a field-effect under
-          asymmetry and irreversibility, without generating “ought”).
+          <strong>logical in ordering</strong> (coherence and inference without closure-authority), and
+          <strong>post-moral in effect</strong> (responsibility becomes attributable and morally readable as a
+          post hoc field-effect under asymmetry, temporality, non-closure, and self-binding, without generating “ought”).
         </p>
 
-        <p>The specification covers, in particular:</p>
+        <p>
+          The specification covers, in particular:
+        </p>
         <ul>
           <li>
-            the <strong>schema_meta</strong> block (identity, status, authorship, explicit dependency on PMS_1.1);
+            the <strong>schema_meta</strong> block (identity, status, authorship, and explicit dependency on PMS_1.3);
           </li>
           <li>
             the <strong>validity gate</strong> enforcing Χ (Distance), reversibility, and D (dignity-in-practice);
           </li>
           <li>
-            the <strong>paper lens</strong> definition (tripartition: pre-moral / logical / post-moral) and non-operator constructs;
+            the <strong>operator reference</strong> block fixing the canonical operator set Δ–Ψ and dependency hygiene;
           </li>
           <li>
-            <strong>reduced signatures</strong> for the three levels and key threshold markers (non-closure, moral readability, effective capacity);
+            the <strong>paper lens</strong> definition (tripartition: pre-moral / logical / post-moral), including key claims,
+            theses, and non-operator constructs;
           </li>
           <li>
-            <strong>failure-mode constraints</strong> (apparent norms reconstructed as structural constraints; non-prescriptive);
+            <strong>reduced signatures</strong> for the three levels and key threshold markers
+            (non-closure, moral readability, effective capacity, and Hume-knot reconstruction);
           </li>
           <li>
-            the <strong>drift catalogue</strong> (structural failure modes: dogmatism, authority capture, pseudo-ought injection, etc.);
+            <strong>PMS-internal self-binding constraints</strong> (apparent norms reconstructed structurally in non-prescriptive form);
           </li>
           <li>
-            <strong>scale matrices</strong> (projection onto PMS derived axes; structural only);
+            the <strong>drift catalogue</strong> (structural failure modes: dogmatism, authority capture,
+            pseudo-ought injection, nihilism, and technocratic reduction);
           </li>
           <li>
-            <strong>counter-readings</strong> (misreadings and structural responses);
+            <strong>scale matrices</strong> (paper-internal projection onto PMS derived axes; structural rather than evaluative);
           </li>
           <li>
-            the <strong>example suite schema</strong> (scene-bound, operator-readable vignettes).
+            <strong>counter-readings</strong> (misreadings and structural responses, including translation-success vs. final superiority);
+          </li>
+          <li>
+            the <strong>glossary</strong> (paper-specific non-operator definitions; canonical operator meanings remain in PMS.yaml);
+          </li>
+          <li>
+            the <strong>example suite schema</strong> (scene-bound, operator-readable, non-instructional vignettes).
           </li>
         </ul>
 
@@ -263,8 +274,8 @@
           <p class="small">
             PMS-LOGIC treats logic as an indispensable ordering tool whose structural boundary is
             <strong>non-closure</strong> (Λ carried within □). Morality is <strong>not</strong> an operator but a
-            readability field of responsibility that emerges <strong>post hoc</strong> under Ω and Θ. The profile
-            reconstructs “norm-like” statements as <strong>failure-mode constraints</strong> (self-binding and restraint),
+            readability field of responsibility that emerges <strong>post hoc</strong> under Ω, Θ, Λ, and Ψ.
+            The profile reconstructs “norm-like” statements as <strong>PMS-internal self-binding constraints</strong>,
             not as obligations or prescriptions.
           </p>
         </div>
@@ -288,17 +299,17 @@
           <tbody>
             <tr>
               <td><span class="code-inline">schema_version</span></td>
-              <td>Version identifier (<span class="code-inline">"PMS-LOGIC_1.0"</span>).</td>
+              <td>Version identifier (<span class="code-inline">"PMS-LOGIC_1.1"</span>).</td>
               <td>Compatibility and citation</td>
             </tr>
             <tr>
               <td><span class="code-inline">schema_meta</span></td>
-              <td>Model identity, authors, status, and explicit dependency on PMS_1.1; paper source metadata.</td>
+              <td>Model identity, authors, status, explicit dependency on PMS_1.3, and paper-source metadata.</td>
               <td>Meta-information / inheritance statement</td>
             </tr>
             <tr>
               <td><span class="code-inline">validity_gate</span></td>
-              <td>Entry conditions for PMS-application: Χ, reversibility, D.</td>
+              <td>Entry conditions for PMS-application: Χ, reversibility, and D.</td>
               <td>Application firewall</td>
             </tr>
             <tr>
@@ -308,8 +319,8 @@
             </tr>
             <tr>
               <td><span class="code-inline">overlays</span></td>
-              <td>Optional amplification overlays (non-operators). Empty in PMS-LOGIC.</td>
-              <td>Explicit statement of “no new operators”</td>
+              <td>No amplification overlays; explicit statement that PMS-LOGIC adds no new operators.</td>
+              <td>Overlay discipline</td>
             </tr>
             <tr>
               <td><span class="code-inline">paper_lens</span></td>
@@ -318,27 +329,27 @@
             </tr>
             <tr>
               <td><span class="code-inline">reduced_signatures</span></td>
-              <td>Reduced signatures for the three levels and key threshold markers (non-closure, moral readability, effective capacity).</td>
+              <td>Reduced signatures for the three levels and key threshold markers (non-closure, moral readability, effective capacity, Hume-knot reconstruction).</td>
               <td>Threshold definitions</td>
             </tr>
             <tr>
               <td><span class="code-inline">failure_mode_constraints</span></td>
-              <td>Apparent “norms” reconstructed as structural constraints (non-prescriptive).</td>
-              <td>Constraint layer (no “ought”)</td>
+              <td>PMS-internal self-binding constraints reconstructing apparent norms in non-prescriptive form.</td>
+              <td>Constraint layer without “ought”</td>
             </tr>
             <tr>
               <td><span class="code-inline">drift_catalogue</span></td>
-              <td>Structural failure modes (operator distortions): dogmatism, authority capture, pseudo-ought injection, etc.</td>
+              <td>Structural failure modes (operator distortions): dogmatism, authority capture, pseudo-ought injection, nihilism, technocratic reduction.</td>
               <td>Drift awareness</td>
             </tr>
             <tr>
               <td><span class="code-inline">scale_matrices</span></td>
-              <td>Structural projections (e.g., onto derived axes A, C, R, E, D).</td>
+              <td>Paper-internal structural projection onto derived axes A, C, R, E, and D.</td>
               <td>Comparability / interpretive compression</td>
             </tr>
             <tr>
               <td><span class="code-inline">counter_readings</span></td>
-              <td>Common misreadings and structural responses (without ethics injection, metaphysics, or weaponization).</td>
+              <td>Common misreadings and structural responses, including translation-success vs. final superiority and adjacent-framework clarification.</td>
               <td>Misuse resistance</td>
             </tr>
             <tr>
@@ -348,7 +359,7 @@
             </tr>
             <tr>
               <td><span class="code-inline">example_suite_schema</span></td>
-              <td>Schema for repo vignettes (scene-bound, operator-readable, non-instructional).</td>
+              <td>Schema for repository vignettes (scene-bound, operator-readable, non-instructional).</td>
               <td>Implementation discipline</td>
             </tr>
           </tbody>
@@ -359,7 +370,7 @@
           <p class="small">
             PMS defines the operator grammar (Δ–Ψ). PMS-LOGIC defines how that grammar is used to keep
             logic <em>indispensable</em> while preventing its elevation to closure-authority, and how responsibility
-            becomes readable without translating it into “ought.”
+            becomes attributable and morally readable without being translated into “ought.”
           </p>
         </div>
       </section>
@@ -373,15 +384,15 @@
         <h3>3.1 Application gate</h3>
         <ul>
           <li><strong>Χ (Distance):</strong> stop-capability must remain active; no fusion into verdict, authority, or closure claims.</li>
-          <li><strong>Reversibility:</strong> all readings are scene-bound and revisable; no global person labels.</li>
-          <li><strong>D (Dignity-in-practice):</strong> no shaming/ranking; structure-only critique of configurations.</li>
+          <li><strong>Reversibility:</strong> all readings are scene-bound and revisable; no global person labels or irreversible interpretive claims.</li>
+          <li><strong>D (Dignity-in-practice):</strong> no shaming, ranking, humiliation, or ontological person evaluation; critique is restricted to structural attribution and boundary handling.</li>
         </ul>
 
         <h3>3.2 Explicit non-goals</h3>
         <ul>
           <li>deriving or asserting norms, values, duties, or “ought” statements;</li>
           <li>turning logical coherence into ultimate justification or authority;</li>
-          <li>coercive enforcement, legitimacy attribution, person-ranking, irreversible exposure demands;</li>
+          <li>coercive enforcement, legitimacy attribution, person-ranking, or irreversible exposure demands;</li>
           <li>metaphysical closure substitutions (theological, ontological, or totalizing narratives);</li>
           <li>clinical inference, personality typing, or mental health claims.</li>
         </ul>
@@ -427,7 +438,7 @@
               <td><strong>Logical boundary management</strong></td>
               <td><span class="code-inline">□ + Λ + Χ + Σ</span></td>
               <td>
-                Logic as ordering: integration and consistency are pursued under explicit non-closure (Λ)
+                Logic functions as ordering: integration and consistency are pursued under explicit non-closure (Λ)
                 and held back from dogmatic totalization by distance (Χ).
               </td>
             </tr>
@@ -463,7 +474,8 @@
         <p>
           Responsibility presupposes effective, frame-bound capacity with temporal availability:
           <span class="code-inline">□ + Θ</span>. Where effective capacity is absent, no responsibility arises—even if outcomes
-          appear significant later.
+          appear significant later. The threshold at which capacity becomes effectively attributable remains calibration-sensitive:
+          PMS-LOGIC specifies the structural form, not every threshold case in advance.
         </p>
 
         <div class="box">
@@ -489,10 +501,10 @@
         <h3>5.1 Drift catalogue (structural failure modes)</h3>
         <ul>
           <li><strong>Dogmatism (Σ-totalization):</strong> coherence is turned into final truth; Λ is denied rather than carried.</li>
-          <li><strong>Authority capture (Ω-inflation):</strong> power gradients are mistaken for epistemic/moral authority; Χ is suppressed.</li>
+          <li><strong>Authority capture (Ω-inflation):</strong> power gradients are mistaken for epistemic or moral authority; Χ is suppressed.</li>
           <li><strong>Moralism (pseudo-ought injection):</strong> responsibility is retranslated into obligation; Ψ is externalized into enforcement.</li>
           <li><strong>Nihilism (Λ-suppression):</strong> non-events and omissions are treated as irrelevant; temporal consequence is flattened.</li>
-          <li><strong>Technocratic reduction (□-overconstraint):</strong> frames are treated as exhaustive; unmodeled remainder is dismissed.</li>
+          <li><strong>Technocratic reduction (□-overconstraint):</strong> frames are treated as exhaustive; unmodeled remainder is dismissed or misrecognized.</li>
         </ul>
 
         <div class="box">
@@ -503,11 +515,19 @@
           </p>
         </div>
 
-        <h3>5.2 Apparent norms as constraints (non-prescriptive)</h3>
+        <h3>5.2 PMS-internal self-binding constraints (non-prescriptive)</h3>
         <p>
-          PMS-LOGIC reconstructs norm-like statements as <em>failure-mode constraints</em> (self-binding and restraint), not obligations.
+          PMS-LOGIC reconstructs norm-like statements as <em>PMS-internal self-binding constraints</em>, not obligations.
           They function to prevent closure substitution, authority drift, and coercion under Ω and Θ.
         </p>
+
+        <ul>
+          <li><strong>A boundary that cannot be carried becomes structurally unstable.</strong></li>
+          <li><strong>Forced closure where Non-Event (Λ) persists produces structural instability.</strong></li>
+          <li><strong>When explanatory power is converted into sense-making authority, structural overreach occurs.</strong></li>
+          <li><strong>Where proximity generates power, viable praxis requires maintained distance.</strong></li>
+          <li><strong>Within PMS-LOGIC, stable self-binding takes the form of restraint rather than assertion.</strong></li>
+        </ul>
       </section>
 
       <div class="pagebreak"></div>
@@ -518,7 +538,7 @@
 
         <ol>
           <li><strong>□ Frame check:</strong> What is the scene, scope, and boundary of the claim? What is explicitly excluded?</li>
-          <li><strong>Λ Non-closure integrity:</strong> Where does explanation end? What remainder must be carried rather than replaced?</li>
+          <li><strong>Λ Non-closure integrity:</strong> Where does explanation reach a stopping point? What remainder must be carried rather than replaced?</li>
           <li><strong>Σ Integration discipline:</strong> What is coordinated, and what is being totalized? Is coherence being treated as authority?</li>
           <li><strong>Ω/Θ Asymmetry &amp; irreversibility audit:</strong> Who bears irreversible cost, exposure, or consequence over time?</li>
           <li><strong>Χ Distance enforcement:</strong> Where is the closure drive (or correctness) replacing restraint and reversibility?</li>
@@ -537,9 +557,42 @@
 
       <div class="pagebreak"></div>
 
-      <!-- 7. Implementation & citation -->
-      <section id="implementation">
-        <h2>7. Implementation notes and citation</h2>
+      <!-- 7. Projection, counter-readings, and implementation -->
+      <section id="projection-counterreadings">
+        <h2>7. Projection, counter-readings, and implementation</h2>
+
+        <h3>7.1 Derived-axis projection</h3>
+        <p>
+          PMS-LOGIC includes a projection onto the derived axes A, C, R, E, and D. This projection is
+          <strong>not a measurement of objective system quality</strong>. It is a <strong>paper-internal structural localization</strong>
+          showing which capacities are amplified, constrained, or stabilized by the configuration reconstructed in PMS-LOGIC.
+        </p>
+
+        <ul>
+          <li><strong>Awareness (A):</strong> high; strong sensitivity to limits and conditions of praxis.</li>
+          <li><strong>Coherence (C):</strong> high; stability is maintained despite non-closure.</li>
+          <li><strong>Responsibility (R):</strong> high; structurally attributable rather than obligatory.</li>
+          <li><strong>Action (E):</strong> deliberately constrained; restraint is preferred to overreach.</li>
+          <li><strong>Dignity-in-Practice (D):</strong> stabilizing; power is handled through restraint and stable continuity without norm derivation.</li>
+        </ul>
+
+        <h3>7.2 Counter-readings</h3>
+        <p>
+          PMS-LOGIC explicitly addresses standard misreadings:
+        </p>
+        <ul>
+          <li><strong>“This is just ethics in disguise.”</strong> Response: no PMS operator generates values, norms, or prescriptions.</li>
+          <li><strong>“This collapses into relativism.”</strong> Response: frame-bound attribution under Ω, Θ, and Λ is constrained, not arbitrary.</li>
+          <li><strong>“This is nihilism with extra steps.”</strong> Response: omission and non-action remain structurally relevant.</li>
+          <li><strong>“This is a hidden theological argument.”</strong> Response: non-closure is carried without metaphysical filling.</li>
+          <li><strong>“This makes responsibility unfair.”</strong> Response: PMS models attribution, not moral desert.</li>
+          <li><strong>“This cannot guide action.”</strong> Response: PMS-LOGIC offers orientation, not instruction.</li>
+          <li><strong>“This wins by translation, not necessarily by final superiority.”</strong> Response: translation success is not treated as proof of final settlement.</li>
+          <li><strong>“Relation to adjacent frameworks.”</strong> Response: PMS-LOGIC is not virtue ethics, pragmatism, or systems ethics; it reconstructs structurally rather than normatively.</li>
+        </ul>
+      </section>
+
+        <h3>7.3 Implementation notes and citation</h3>
 
         <p>
           The authoritative specification is <span class="code-inline">pms-logic.yaml</span>, intended to be loaded after
@@ -552,12 +605,12 @@
 
         <p class="small">
           <strong>Technical reference:</strong><br />
-          <em>pms-logic.yaml – PMS-LOGIC Application Profile (PMS-LOGIC_1.0)</em>
+          <em>pms-logic.yaml – PMS-LOGIC Application Profile (PMS-LOGIC_1.1)</em>
         </p>
 
         <p class="small">
           <strong>Base dependency:</strong><br />
-          <em>PMS.yaml – Praxeological Meta-Structure (PMS_1.1)</em>
+          <em>PMS.yaml – Praxeological Meta-Structure (PMS_1.3)</em>
         </p>
 
         <p>

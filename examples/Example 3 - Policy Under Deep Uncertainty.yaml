@@ -1,0 +1,581 @@
+# =============================================================================
+#  PMS-LOGIC — EXAMPLE SUITE ENTRY
+#
+#  Repository:
+#    https://github.com/tz-dev/PMS-LOGIC
+#
+#  File:
+#    examples/LOGIC_EX_03_policy-deep-uncertainty.yaml
+#
+#  Example Version:
+#    LOGIC_EX_03_1.0
+#
+#  Last Updated:
+#    2026-04-06
+#
+# -----------------------------------------------------------------------------
+#  PURPOSE AND STATUS
+# -----------------------------------------------------------------------------
+#  This document defines a scene-bound EXAMPLE SUITE ENTRY for the
+#  PMS-LOGIC application profile. It is fully aligned with:
+#
+#    - PMS-LOGIC.yaml (schema_version: PMS-LOGIC_1.1)
+#    - PMS.yaml       (schema_version: PMS_1.3)
+#
+#  It is not a normative guide, not a policy manual, and not a moral code.
+#  Its function is to render a concrete decision scene operator-readable under
+#  the PMS-LOGIC lens while preserving:
+#
+#    - Distance (Χ),
+#    - reversibility,
+#    - Dignity-in-Practice (D),
+#    - non-prescriptivity,
+#    - and strict responsibility/ought separation.
+#
+# -----------------------------------------------------------------------------
+#  EXAMPLE TYPE
+# -----------------------------------------------------------------------------
+#  Scene-bound, non-instructional, structurally reconstructive.
+#
+# =============================================================================
+
+schema_version: "PMS-LOGIC_1.1"
+
+example_meta:
+  example_id: "LOGIC_EX_03"
+  example_version: "LOGIC_EX_03_1.0"
+  title: "Policy Under Deep Uncertainty: When Logic Must Carry Λ"
+  status: "draft_example"
+  last_updated: "2026-04-06"
+  language: "EN"
+  repository_path: "examples/LOGIC_EX_03_policy-deep-uncertainty.yaml"
+  aligned_with:
+    profile_name: "PMS–LOGIC Application Profile"
+    profile_short: "PMS-LOGIC"
+    profile_schema_version: "PMS-LOGIC_1.1"
+    base_model_name: "Praxeological Meta-Structure"
+    base_model_short: "PMS"
+    base_schema_version: "PMS_1.3"
+  authors:
+    - name: "T. Zöller"
+      role: "originator"
+    - name: "ChatGPT (GPT-5.4 Thinking)"
+      role: "formalization_assistant"
+  example_type:
+    scene_bound: true
+    non_instructional: true
+    person_level_typing: false
+    sanction_logic: false
+    moral_code_generation: false
+
+validity_gate_reminder:
+  note: >
+    This example remains valid only as a scene-bound PMS application. It does
+    not license verdicts, prescriptions, person-ranking, or irreversible
+    identity claims.
+  requires:
+    - id: "Χ"
+      name: "Distance"
+      meaning: >
+        Maintain meta-position and stop-capability; no fusion into verdict,
+        authority, or normative demand.
+    - id: "reversibility"
+      meaning: >
+        All readings remain scene-bound, revisable, and configuration-specific;
+        no global person labels or irreversible interpretive claims.
+    - id: "D"
+      name: "Dignity-in-practice"
+      meaning: >
+        No shaming, ranking, humiliation, or ontological person evaluation;
+        critique remains restricted to structural attribution and boundary handling.
+
+model_binding:
+  source_profile:
+    file: "PMS-LOGIC.yaml"
+    schema_version: "PMS-LOGIC_1.1"
+  source_base_model:
+    file: "PMS.yaml"
+    schema_version: "PMS_1.3"
+  applicable_profile_sections:
+    - "paper_lens.tripartition"
+    - "paper_lens.non_operator_constructs"
+    - "reduced_signatures"
+    - "failure_mode_constraints"
+    - "drift_catalogue"
+    - "scale_matrices.derived_axes_projection"
+    - "counter_readings"
+    - "example_suite_schema"
+
+example_entry:
+  minimal_vignette:
+    scene: >
+      A public policy team must decide whether and how to intervene under deep
+      uncertainty: models are incomplete, evidence is contested, long-term
+      effects are only partially estimable, and decision deadlines arrive before
+      convergence is possible.
+    stakes: >
+      Policy choices may generate large-scale, irreversible consequences across
+      populations, infrastructures, institutions, and time horizons. Delayed
+      action, premature action, or default inaction all shape exposure
+      distributions.
+    structural_issue: >
+      The issue is how decision-structuring proceeds when closure is
+      structurally unavailable, without converting logic, modeling, or expert
+      integration into final authority.
+
+  why_this_is_repo_useful:
+    structural_focus: >
+      This example is useful because it concentrates non-closure, model limits,
+      institutional decision capacity, large-scale asymmetry, and temporal
+      irreversibility in a single scene. It is especially apt for showing that
+      responsibility can become attributable even where certainty is absent.
+    relevance_for_profile: >
+      It demonstrates PMS–LOGIC’s central distinction between knowledge and
+      capacity, clarifies how delay itself can function as a non-event (Λ)
+      within an operative frame, and shows why logic must remain boundary
+      management rather than justificatory authority.
+    repository_value: >
+      As a test vector, it differentiates PMS–LOGIC from scientistic closure,
+      deontic rule-generation, technocratic authority claims, and nihilistic
+      appeals to uncertainty. It shows how policy remains morally readable
+      without deriving an ought.
+
+  frame_validity:
+    operative_frame_□:
+      role_space:
+        - "Policy analysts, decision-makers, and advisory bodies operating within institutional mandates."
+        - "Public authorities with bounded legal competence, budgetary reach, and implementation responsibility."
+        - "Affected populations that bear consequences without equivalent reciprocal influence over decision architecture."
+      scope_boundaries:
+        - "Only decisions feasible within current data, modeling capacity, legal authority, institutional remit, and policy timelines count as operative possibilities."
+        - "Effective decision capacity is bounded by available means, jurisdiction, implementation channels, and temporal windows."
+        - "Attribution applies only within the actual decision-bearing frame, not idealized omniscient governance."
+      out_of_frame:
+        - "Moral doctrines treated as decision engines."
+        - "Comprehensive value rankings of all affected goods and persons."
+        - "Guarantees of optimal outcomes."
+        - "Assumptions that additional modeling will necessarily eliminate uncertainty in time."
+        - "Any equation of analytical sophistication with final legitimacy."
+      frame_integrity_note: >
+        The example remains valid only so long as the institutional frame is
+        sufficiently legible to identify actual decision-bearing roles, bounded
+        capacities, and operative deadlines. If the frame collapses or is merely
+        symbolic, attribution claims require recalibration rather than inflation.
+
+  operator_mapping:
+    full_chain:
+      sequence: ["Δ", "∇", "□", "Λ", "Α", "Ω", "Θ", "Φ", "Χ", "Σ", "Ψ"]
+      note: >
+        This is a readability chain for the example, not a redefinition of PMS
+        dependency order.
+
+    reduced_signature_mapping:
+      PRE_MORAL_justification:
+        operators: ["Δ", "∇", "□", "Λ", "Α"]
+        function_in_scene: >
+          Known/unknown distinctions, modeled/unmodeled risks, incomplete
+          evidence, and recurring habits of uncertainty-management define the
+          scene before evaluative or normative vocabulary is introduced.
+
+      LOGIC_boundary_management:
+        operators: ["□", "Λ", "Χ", "Σ"]
+        function_in_scene: >
+          The case requires coordinated reading of evidence, uncertainty,
+          deadlines, and institutional limits under persistent non-closure,
+          while distance restrains model absolutization and authority inflation.
+
+      POST_MORAL_effects:
+        operators: ["Ω", "Θ", "Ψ"]
+        function_in_scene: >
+          Unequal policy power, irreversible temporal path-dependence, and
+          continuity of decision-bearing consequence make action, delay, and
+          default attributable without generating a prescriptive ought.
+
+      MORAL_READABILITY_min:
+        operators: ["Ω", "Θ", "Λ", "Ψ"]
+        function_in_scene: >
+          This constellation explains why policy decisions become morally
+          readable post hoc once uncertainty-bearing action or omission
+          redistributes risk over time.
+
+      POTENTIAL_effective:
+        operators: ["□", "Θ"]
+        function_in_scene: >
+          Only frame-bound and temporally available decision capacity counts;
+          epistemic completeness is not required for attribution.
+
+      NON_CLOSURE_stability:
+        operators: ["Δ", "□", "Λ", "Α"]
+        function_in_scene: >
+          Persistent uncertainty becomes structurally carriable within the frame;
+          recurrent modeling and advisory practice stabilize response without
+          eliminating non-closure.
+
+      HUME_KNOT_reconstruction:
+        operators: ["□", "Ω", "Θ", "Λ", "Ψ"]
+        function_in_scene: >
+          The policy scene becomes responsibility-readable without crossing the
+          is/ought boundary; consequences become attributable, not obligatory.
+
+  tripartition_tag:
+    pre_moral:
+      applies: true
+      statement: >
+        Model incompleteness, uncertainty, institutional role structure, timing,
+        and expected omissions define the scene structurally prior to norm
+        derivation.
+    logical:
+      applies: true
+      statement: >
+        Policy analysis functions as ordering and boundary management: evidence,
+        models, and constraints are coordinated without resolving the irreducible
+        uncertainty remainder.
+    post_moral:
+      applies: true
+      statement: >
+        Moral readability emerges only once policy trajectories become
+        attributable under asymmetry, temporality, non-event, and self-binding.
+
+  structural_analysis:
+    distinctions_Δ:
+      - "Known vs. unknown effects."
+      - "Modeled vs. unmodeled risks."
+      - "Short-term mitigation vs. long-term consequence."
+      - "Action within decision window vs. delayed action after windows narrow."
+      - "Institutional capacity vs. epistemic completeness."
+
+    impulse_∇:
+      - "Drive toward intervention, stabilization, or preemption."
+      - "Drive toward postponement in search of better evidence."
+      - "Pressure to convert provisional modeling into decisive closure."
+      - "Pressure to treat uncertainty as temporary rather than structurally persistent."
+
+    frame_□:
+      - "Institutional mandates and legal authority."
+      - "Available data and bounded modeling capacity."
+      - "Decision deadlines and implementation timelines."
+      - "Administrative and fiscal limits."
+      - "Policy channels through which interventions can actually occur."
+
+    non_event_Λ:
+      - "Absence of decisive evidence."
+      - "No final model convergence before action deadlines."
+      - "Delay or deferral of intervention within an operative policy window."
+      - "No policy frame can guarantee complete knowledge, full fairness, or total reversibility."
+
+    attractor_Α:
+      - "Recurrent reliance on expert models despite acknowledged incompleteness."
+      - "Habitual framing of uncertainty as temporary."
+      - "Institutional default toward procedural delay under contested evidence."
+      - "Routine use of model coherence as a substitute for closure."
+
+    asymmetry_Ω:
+      exposure_gradients:
+        - "Policymakers shape conditions affecting many who lack reciprocal influence over decision architecture."
+        - "Different populations bear unequal exposure to policy error, delay, or omission."
+        - "Expert institutions may hold interpretive leverage over uncertainty framing."
+      capacity_gradients:
+        - "Decision authority exceeds epistemic certainty."
+        - "Modeling capacity is bounded and unevenly distributed."
+        - "Affected populations may bear consequences without having decision-bearing capacity."
+      note: >
+        Ω here indicates unequal power over exposure, timing, and consequence
+        distribution. It does not establish moral superiority or inferiority.
+
+    temporality_Θ:
+      - "Policy choices commit resources and trajectories that cannot be fully reversed."
+      - "Delay redistributes risk across time rather than preserving neutrality."
+      - "Missed intervention windows can foreclose later options."
+      - "Future reinterpretation cannot erase locked-in consequences."
+
+    recontextualization_Φ:
+      - "Shift from 'optimal solution' to 'capacity-consistent response under uncertainty.'"
+      - "Reframe the case from 'correct choice' to 'attributable trajectory management under non-closure.'"
+
+    distance_Χ:
+      - "Resist elevation of models into justificatory authority."
+      - "Prevent coherence from becoming necessity-language."
+      - "Prevent uncertainty from being rhetorically converted into excuse or command."
+      - "Keep the analysis structural rather than moralizing or technocratic."
+
+    integration_Σ:
+      - "Coordinate evidence, uncertainty, deadlines, and institutional limits."
+      - "Preserve coherence without claiming completeness."
+      - "Integrate modeled and unmodeled remainder without absolutizing the model."
+
+    self_binding_Ψ:
+      - "Commitment to owning consequences across policy revisions and time."
+      - "Decision-bearing institutions remain structurally linked to downstream effects."
+      - "Attribution persists across reinterpretation, correction, and policy update."
+
+  effective_capacity_boundary:
+    boundary_condition_ref: "BC_EFFECTIVE_CAPACITY"
+    statement: >
+      Responsibility presupposes effective, frame-bound policy capacity with
+      available authority, operative implementation channels, and open temporal
+      windows. Epistemic completeness does not define capacity.
+    no_capacity_no_attribution: >
+      Where effective decision capacity is absent, attribution of responsibility
+      does not arise even if later observers imagine that better outcomes were
+      in principle possible.
+    calibration_note: >
+      The threshold at which policy capacity becomes effectively attributable
+      remains calibration-sensitive. Borderline cases may involve fragmented
+      jurisdiction, symbolic authority, implementation incapacity, broken data
+      pipelines, or decision windows that have already materially closed.
+      PMS–LOGIC clarifies the structural form of attributable capacity, but not
+      every threshold of sufficiency in advance.
+    anti_inflation_note: >
+      This boundary blocks scientistic inflation ('certainty is required before
+      responsibility exists') and voluntarist inflation ('decision-makers were
+      obliged to solve uncertainty completely before acting').
+
+  moral_readability_field:
+    status: "post-moral readability"
+    minimal_operator_basis: ["Ω", "Θ", "Λ", "Ψ"]
+    emergence_statement: >
+      Moral readability emerges post hoc because policy action, delay, and
+      default cease to be neutral once decision-bearing institutions operate
+      under asymmetry and irreversible time.
+    omission_non_neutrality: >
+      Delaying or deferring a decision functions as a non-event (Λ) within the
+      operative frame and therefore redistributes risk across time, even though
+      no prescriptive command is generated.
+    non_innocence_note: >
+      The scene becomes one of non-innocence not because a hidden duty to decide
+      correctly is derived, but because policy trajectories become traceable once
+      capacity, asymmetry, temporality, and self-binding are in place.
+    hume_boundary_note: >
+      Nothing in this example derives an ought from an is. The reconstruction
+      remains on the side of attributable consequence rather than obligation.
+
+  logic_boundary_management:
+    role_of_logic: >
+      Logic functions as an ordering instrument for coordinating models,
+      evidence, deadlines, institutional remit, and uncertainty-bearing options.
+    limit_of_logic: >
+      Logic cannot eliminate uncertainty within the available window, and it
+      cannot transform coherent model-integration into final authority or moral
+      justification.
+    persistent_non_closure: >
+      Non-closure (Λ) remains within the frame: uncertainty persists, modeled
+      and unmodeled effects remain unevenly visible, and no policy model fully
+      completes the scene.
+    closure_pressure:
+      source: "∇ → Σ-totalization risk"
+      description: >
+        Pressure arises to declare a policy 'logically necessary' or
+        'scientifically compelled' in order to compensate for unresolved
+        uncertainty and institutional pressure to act.
+    disciplined_stopping_point: >
+      The appropriate endpoint is a structurally disciplined stopping point for
+      logic as used here: coherent coordination without conversion into final authority.
+
+  typical_drift_markers:
+    - drift_id: "dogmatism_sigma_totalization"
+      marker: >
+        Treating provisional models, forecasts, or expert syntheses as final
+        truth rather than bounded integration under uncertainty.
+    - drift_id: "moralism_pseudo_ought_injection"
+      marker: >
+        Translating uncertainty-bearing responsibility into prescriptive
+        imperatives masked as necessity.
+    - drift_id: "nihilism_lambda_suppression"
+      marker: >
+        Claiming uncertainty absolves responsibility because outcomes cannot be
+        known with certainty.
+    - drift_id: "authority_capture_omega_inflation"
+      marker: >
+        Allowing power positions or advisory prestige to redefine uncertainty as
+        already resolved.
+    - drift_id: "technocratic_reduction_frame_overconstraint"
+      marker: >
+        Treating the policy frame or model space as exhaustive of reality and
+        dismissing unmodeled remainder as negligible or unreal.
+
+  failure_mode_constraint_reference:
+    - id: "FMC2"
+      label: "Forced closure where Non-Event (Λ: structured absence) persists produces structural instability."
+      relevance: >
+        Policy uncertainty cannot be eliminated by declaration. Any attempt to
+        present the situation as fully resolved substitutes false certainty for
+        persistent remainder.
+
+    - id: "FMC3"
+      label: "When explanatory power is converted into sense-making authority, structural overreach occurs."
+      relevance: >
+        Models and expert syntheses can explain and coordinate, but they do not
+        thereby acquire final authority over legitimacy, justice, or the moral
+        meaning of exposure distributions.
+
+    - id: "FMC4"
+      label: "Where proximity generates power, viable praxis requires maintained distance."
+      relevance: >
+        Decision-makers and experts occupy asymmetric proximity to instruments,
+        channels, and decision levers. Maintained distance is needed to prevent
+        institutional position from becoming epistemic supremacy.
+
+    - id: "FMC5"
+      label: "Within PMS–LOGIC, stable self-binding takes the form of restraint rather than assertion."
+      relevance: >
+        Stable policy praxis requires restraint against turning provisional
+        coherence into final necessity-language. Self-binding preserves
+        accountability without justificatory escalation.
+
+  pms_logic_output:
+    structural_mapping: >
+      Distinctions (Δ), persistent non-events (Λ), and stabilized uncertainty
+      practices (Α) interact under asymmetry (Ω) and temporality (Θ), with Χ and
+      Σ operating as boundary management inside a decision-bearing frame.
+    attribution_conditions: >
+      Responsibility tracks effective decision capacity, operative authority, and
+      temporal window rather than epistemic completeness.
+    what_remains_open: >
+      Persistent uncertainty, unmodeled effects, residual exposure asymmetries,
+      and non-closure (Λ) remain structurally present.
+    excluded_outputs:
+      - "No prescriptions."
+      - "No comprehensive value ranking."
+      - "No sanctions."
+      - "No hidden ought."
+      - "No scientistic closure."
+      - "No theological or metaphysical completion."
+
+  readable_structural_closure: >
+    In policy under deep uncertainty, what often gets labeled moral urgency does
+    not stem from a concealed obligation to choose correctly. It emerges because
+    decisions become structurally unavoidable once institutions hold effective
+    decision capacity under asymmetry (Ω: structural imbalance) and irreversible
+    time (Θ: temporality). Even without decisive knowledge, choosing, delaying,
+    or defaulting becomes attributable praxis. PMS–LOGIC therefore reconstructs
+    the scene as one of attributable consequence under non-closure (Λ), not one
+    of derived obligation. Logic can order the scene, but it cannot close it;
+    the remainder must be carried rather than converted into authority.
+
+  extended_structural_closure:
+    paragraph_1: >
+      The policy case is paradigmatic for PMS–LOGIC because it sharply separates
+      knowledge from capacity. Responsibility does not wait for epistemic
+      completeness. What matters structurally is whether decision-bearing actors
+      can act within an operative frame and whether their actions or omissions
+      shape trajectories that later cannot simply be reset. This is why policy
+      remains responsibility-readable even where model convergence never arrives.
+
+    paragraph_2: >
+      The decisive boundary is again effective capacity. PMS–LOGIC rejects the
+      claim that responsibility requires certainty. It also rejects the inverse
+      claim that uncertainty dissolves attribution. Where institutions possess
+      frame-bound authority, implementation pathways, and live temporal windows,
+      delay itself becomes structurally consequential. Non-action is not
+      neutrality; it redistributes exposure, locks in paths, and privileges some
+      risks over others. Calibration sensitivity remains essential where
+      authority is fragmented, implementation is weak, or timing is contested.
+
+    paragraph_3: >
+      This case makes especially visible the structural limit of logic. Models,
+      projections, and expert syntheses are indispensable for integrating
+      complexity, but they encounter a hard boundary where Λ persists:
+      uncertainty is not merely a temporary defect that better reasoning will
+      necessarily eliminate in time. Closure-pressure arises precisely here,
+      tempting institutions to present policy as logically necessary or
+      scientifically compelled in order to mask the remainder. PMS–LOGIC treats
+      this move as illegitimate: logic may integrate, but it may not authorize.
+
+    paragraph_4: >
+      Distance (Χ) is therefore not optional. Χ prevents the slide from 'this is
+      the best integration we can currently achieve' to 'this is the justified
+      outcome.' Integration without distance becomes dogma; distance without
+      integration becomes paralysis. PMS–LOGIC stabilizes the configuration by
+      holding both together: coherence without closure, and action without
+      justificatory escalation.
+
+    paragraph_5: >
+      Self-binding (Ψ) completes the picture. Responsibility here is not a
+      momentary burden attached to a single decision point, but a trajectory-level
+      commitment: owning consequences across revisions, corrections, and future
+      reinterpretations (Φ). Policies may change, evidence may evolve, and models
+      may be updated, but attribution does not reset with each reframing.
+
+    paragraph_6: >
+      The example therefore exhibits the full PMS–LOGIC architecture:
+      pre-moral structure (uncertainty, roles, frames, non-events), logical
+      boundary discipline (integration without closure-authority), and
+      post-moral readability (attributable consequences under Ω, Θ, Λ, and Ψ).
+      The result is a structurally sharp but non-prescriptive account: no code,
+      no ranking, no sanction, and no hidden ought—only a disciplined
+      reconstruction of why consequences belong to decision-bearing trajectories
+      even when knowledge remains incomplete.
+
+  counter_reading_relevance:
+    most_relevant:
+      - id: "D2"
+        why_relevant: >
+          Deep uncertainty often triggers the relativist misreading that nothing
+          can be attributed because nothing is fully known.
+      - id: "D3"
+        why_relevant: >
+          The case strongly tempts nihilistic reasoning that uncertainty
+          neutralizes consequence and therefore dissolves responsibility.
+      - id: "D4"
+        why_relevant: >
+          Policy non-closure is often compensated by metaphysical or quasi-sacral
+          authority claims; the example must explicitly resist that move.
+      - id: "D6"
+        why_relevant: >
+          Readers may try to convert the example into a decision algorithm; PMS–LOGIC
+          must remain orienting rather than instructive.
+      - id: "D7"
+        why_relevant: >
+          The reconstruction may seem persuasive because it translates policy
+          urgency and scientific rhetoric into structural grammar; this does not
+          by itself establish final superiority over rival frameworks.
+      - id: "D8"
+        why_relevant: >
+          The scene sits close to technocracy critique, pragmatism, deontic
+          policy reasoning, and systems governance; PMS–LOGIC must therefore
+          mark its own reconstructive scope carefully.
+
+  derived_axes_projection_local:
+    note: >
+      This is a local paper-internal localization for the example, not a
+      measurement of objective system quality.
+    axes:
+      Awareness_A:
+        structural_level: "High"
+        local_reason: >
+          The scene sharply exposes model limits, unmodeled remainder, temporal
+          windows, and asymmetrical exposure distributions.
+      Coherence_C:
+        structural_level: "High"
+        local_reason: >
+          The case can be structurally integrated through bounded policy logic
+          without requiring closure or certainty.
+      Responsibility_R:
+        structural_level: "High"
+        local_reason: >
+          Consequences become strongly attributable where effective decision
+          capacity exists, even while epistemic uncertainty remains persistent.
+      Action_E:
+        structural_level: "Deliberately constrained"
+        local_reason: >
+          Action is filtered through bounded authority, incomplete evidence, and
+          irreversible timing; restraint against overreach remains necessary.
+      Dignity_in_Practice_D:
+        structural_level: "Stabilizing"
+        local_reason: >
+          The example requires restraint against sacrificing exposed populations
+          to abstract model authority and against person-level condemnation of
+          decision-bearers.
+
+  conclusion:
+    takeaway: >
+      Policy under deep uncertainty is morally readable in PMS–LOGIC not because
+      an obligation to choose correctly is secretly derived, but because
+      institutions with effective decision capacity act, delay, or default under
+      asymmetry and irreversible time. Responsibility becomes attributable even
+      where knowledge remains incomplete, and logic must carry Λ rather than
+      convert uncertainty into authority.
+    publication_note: >
+      This example is valid only as a scene-bound structural reconstruction. It
+      is not a policy recommendation, not a governance protocol, and not a
+      substitute for domain-specific legal, scientific, or institutional procedures.

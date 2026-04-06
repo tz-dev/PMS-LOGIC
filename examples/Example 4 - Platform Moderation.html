@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/main.css" />
+		<title>PMS-LOGIC — Example 4: Platform Moderation</title>
+		<style type="text/css">
+			:root {
+			  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+			  --font-heading: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+			  --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+			  --color-bg: #f5f7fb;
+			  --color-surface: #ffffff;
+			  --color-surface-soft: #f9fbfd;
+			  --color-text: #18202a;
+			  --color-muted: #5f6b7a;
+			  --color-accent: #1f4b99;
+			  --color-accent-soft: #e8f0ff;
+			  --color-border: #d9e1ea;
+			  --color-border-strong: #bfc9d8;
+			  --color-quote: #2f5da8;
+			  --color-code-bg: #f3f5f7;
+			  --color-table-head: #eef3f8;
+			  --color-row-alt: #fbfcfe;
+
+			  --shadow-soft: 0 10px 30px rgba(18, 30, 50, 0.06);
+			  --radius-sm: 6px;
+			  --radius-md: 10px;
+			  --radius-lg: 16px;
+
+			  --content-width: 980px;
+			  --line-height: 1.7;
+			}
+
+			*,
+			*::before,
+			*::after {
+			  box-sizing: border-box;
+			}
+
+			html {
+			  margin: 0;
+			  padding: 0;
+			  scroll-behavior: smooth;
+			}
+
+			body {
+			  margin: 0;
+			  padding: 32px 20px 64px;
+			  font-family: var(--font-body);
+			  font-size: 16px;
+			  line-height: var(--line-height);
+			  color: var(--color-text);
+			  background:
+			    linear-gradient(180deg, #f7f9fc 0%, #f3f6fa 100%);
+			}
+
+			.page,
+			body > header,
+			body > section,
+			body > main {
+			  width: min(100%, var(--content-width));
+			  margin-left: auto;
+			  margin-right: auto;
+			}
+
+			.page {
+			  background: var(--color-surface);
+			  border: 1px solid var(--color-border);
+			  border-radius: var(--radius-lg);
+			  box-shadow: var(--shadow-soft);
+			  padding: 40px 42px 56px;
+			}
+
+			/* Header */
+			header {
+			  width: min(100%, var(--content-width));
+			  margin: 0 auto 28px;
+			  padding: 24px 0 18px;
+			  border-bottom: 1px solid var(--color-border);
+			}
+
+			header h1 {
+			  margin: 0 0 10px;
+			  font-family: var(--font-heading);
+			  font-size: clamp(2rem, 4vw, 2.8rem);
+			  font-weight: 500;
+			  line-height: 1.15;
+			  text-align: center;
+			  letter-spacing: -0.02em;
+			  color: var(--color-text);
+			}
+
+			header h2 {
+			  margin: 0 auto 12px;
+			  max-width: 48rem;
+			  font-size: 1.15rem !important;
+			  line-height: 1.45;
+			  font-weight: 400;
+			  text-align: center;
+			  color: var(--color-muted);
+			  border: 0;
+			  padding: 0;
+			}
+
+			header .subtitle {
+			  max-width: 52rem;
+			  margin: 0 auto 12px;
+			  text-align: center;
+			  color: var(--color-muted);
+			  font-size: 1rem;
+			}
+
+			header .meta {
+			  max-width: 52rem;
+			  margin: 14px auto 0;
+			  padding: 12px 14px;
+			  border: 1px solid var(--color-border);
+			  border-radius: var(--radius-md);
+			  background: var(--color-surface-soft);
+			  font-size: 0.88rem;
+			  line-height: 1.55;
+			  color: var(--color-muted);
+			}
+
+			/* Sections */
+			section {
+			  margin: 0 0 28px;
+			}
+
+			section#content {
+			  width: min(100%, var(--content-width));
+			  margin-left: auto;
+			  margin-right: auto;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+			  font-family: var(--font-heading);
+			  color: var(--color-text);
+			  letter-spacing: -0.01em;
+			}
+
+			h1 {
+			  font-size: clamp(2rem, 4vw, 2.8rem);
+			  font-weight: 500;
+			}
+
+			h2,
+			h2 strong {
+			  padding-bottom: 8px;
+			  font-size: 1.65rem !important;
+			  font-weight: 500 !important;
+			  line-height: 1.25;
+			  border-bottom: 1px solid var(--color-border);
+			}
+
+			h3,
+			h3 strong {
+			  margin: 22px 0 8px !important;
+			  font-size: 1.2rem !important;
+			  font-weight: 600 !important;
+			  line-height: 1.35;
+			}
+
+			h4,
+			h4 strong {
+			  margin: 18px 0 6px !important;
+			  font-size: 1.05rem !important;
+			  font-weight: 600 !important;
+			  line-height: 1.35;
+			}
+
+			h5,
+			h5 strong,
+			h6,
+			h6 strong {
+			  margin: 16px 0 4px !important;
+			  font-size: 1rem !important;
+			  font-weight: 600 !important;
+			  line-height: 1.35;
+			}
+
+			/* Text */
+			p {
+			  margin: 0 0 12px;
+			}
+
+			strong {
+			  color: #111827;
+			}
+
+			em {
+			  color: inherit;
+			}
+
+			.small {
+			  font-size: 0.92rem;
+			  color: var(--color-muted);
+			}
+
+			/* Links */
+			a {
+			  color: var(--color-accent);
+			  text-decoration: none;
+			  border-bottom: 1px solid transparent;
+			}
+
+			a:hover,
+			a:focus {
+			  border-bottom-color: currentColor;
+			}
+
+			/* Lists */
+			ul,
+			ol {
+			  margin: 8px 0 14px 1.25rem;
+			  padding: 0;
+			}
+
+			li {
+			  margin: 0 0 6px;
+			  padding-left: 2px;
+			}
+
+			ul ul,
+			ol ol,
+			ul ol,
+			ol ul {
+			  margin-top: 6px;
+			  margin-bottom: 8px;
+			}
+
+			li > p {
+			  margin-bottom: 6px;
+			}
+
+			/* Horizontal rule */
+			hr {
+			  display: block;
+			  height: 0;
+			  border: 0;
+			  border-top: 1px solid var(--color-border);
+			  margin: 24px 0;
+			}
+
+			/* Quotes */
+			blockquote {
+			  margin: 16px 0;
+			  padding: 12px 18px;
+			  border-left: 4px solid var(--color-quote);
+			  background: #f8fbff;
+			  color: #324154;
+			  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+			}
+
+			blockquote p:last-child {
+			  margin-bottom: 0;
+			}
+
+			/* Code */
+			code,
+			.code-inline {
+			  font-family: var(--font-mono);
+			  font-size: 0.92em;
+			  background: var(--color-code-bg);
+			  border: 1px solid #e7ebf0;
+			  border-radius: 4px;
+			  padding: 0.12em 0.4em;
+			  color: #233044;
+			}
+
+			pre {
+			  margin: 14px 0 18px;
+			  padding: 14px 16px;
+			  overflow-x: auto;
+			  background: #111827;
+			  color: #f3f4f6;
+			  border-radius: var(--radius-md);
+			  border: 1px solid #0f172a;
+			  text-align: left;
+			  line-height: 1.55;
+			}
+
+			pre code {
+			  background: transparent;
+			  border: 0;
+			  color: inherit;
+			  padding: 0;
+			  font-size: 0.92rem;
+			}
+
+			/* Boxes / callouts */
+			.box {
+			  margin: 16px 0 18px;
+			  padding: 14px 16px;
+			  border: 1px solid var(--color-border);
+			  border-left: 4px solid var(--color-accent);
+			  border-radius: var(--radius-md);
+			  background: linear-gradient(180deg, #fbfdff 0%, #f7faff 100%);
+			  line-height: 1.55;
+			}
+
+			.box-title {
+			  margin: 0 0 6px;
+			  font-size: 0.95rem;
+			  font-weight: 700;
+			  color: var(--color-accent);
+			}
+
+			.box p:last-child,
+			.box ul:last-child,
+			.box ol:last-child {
+			  margin-bottom: 0;
+			}
+
+			/* Tables */
+			.table,
+			table {
+			  width: 100%;
+			  margin: 14px 0 18px;
+			  border-collapse: collapse;
+			  border-spacing: 0;
+			  font-size: 0.95rem;
+			  line-height: 1.5;
+			  border: 1px solid var(--color-border);
+			  border-radius: var(--radius-md);
+			  overflow: hidden;
+			}
+
+			.table th,
+			.table td,
+			table th,
+			table td {
+			  padding: 10px 12px;
+			  vertical-align: top;
+			  border: 1px solid var(--color-border);
+			  text-align: left;
+			}
+
+			.table th,
+			table th {
+			  background: var(--color-table-head);
+			  color: #233044;
+			  font-weight: 700;
+			  font-variant: small-caps;
+			  letter-spacing: 0.03em;
+			}
+
+			.table tr:nth-child(even) td,
+			table tr:nth-child(even) td {
+			  background: var(--color-row-alt);
+			}
+
+			.table tr:nth-child(odd) td,
+			table tr:nth-child(odd) td {
+			  background: #ffffff;
+			}
+
+			/* Tags */
+			.tag {
+			  display: inline-block;
+			  margin: 0 6px 6px 0;
+			  padding: 3px 10px;
+			  border: 1px solid var(--color-border-strong);
+			  border-radius: 999px;
+			  background: #fff;
+			  color: var(--color-muted);
+			  font-size: 0.78rem;
+			  line-height: 1.3;
+			}
+
+			/* Placeholder */
+			.placeholder {
+			  color: var(--color-muted);
+			  font-style: italic;
+			}
+
+			/* Two-column layouts */
+			.two-column {
+			  display: grid;
+			  grid-template-columns: repeat(2, minmax(0, 1fr));
+			  gap: 18px;
+			  margin: 10px 0 16px;
+			}
+
+			.two-column > div {
+			  min-width: 0;
+			}
+
+			/* Utility */
+			.pagebreak {
+			  page-break-before: always;
+			  break-before: page;
+			}
+
+			/* Better spacing for consecutive structural blocks */
+			h2 + p,
+			h3 + p,
+			h4 + p {
+			  margin-top: 2px;
+			}
+
+			p + ul,
+			p + ol {
+			  margin-top: 6px;
+			}
+
+			ul + p,
+			ol + p {
+			  margin-top: 10px;
+			}
+
+			/* Optional content-specific helper classes */
+			.meta-grid {
+			  display: grid;
+			  grid-template-columns: 180px 1fr;
+			  gap: 8px 14px;
+			  margin: 12px 0 18px;
+			}
+
+			.meta-grid dt {
+			  font-weight: 600;
+			  color: var(--color-muted);
+			}
+
+			.meta-grid dd {
+			  margin: 0;
+			}
+
+			.definition-list {
+			  display: grid;
+			  grid-template-columns: 180px 1fr;
+			  gap: 8px 14px;
+			}
+
+			.definition-list dt {
+			  font-weight: 600;
+			  color: var(--color-accent);
+			}
+
+			.definition-list dd {
+			  margin: 0;
+			}
+
+			.callout-warning {
+			  border-left-color: #b45309;
+			  background: #fffaf2;
+			}
+
+			.callout-success {
+			  border-left-color: #0f766e;
+			  background: #f4fffd;
+			}
+
+			.callout-danger {
+			  border-left-color: #b91c1c;
+			  background: #fff8f8;
+			}
+
+			/* Images */
+			img {
+			  display: block;
+			  max-width: 100%;
+			  height: auto;
+			  margin: 14px auto 18px;
+			  border-radius: var(--radius-sm);
+			}
+
+			/* Print */
+			@media print {
+			  :root {
+			    --color-bg: white;
+			    --color-surface: white;
+			    --color-surface-soft: white;
+			    --color-row-alt: #fafafa;
+			    --shadow-soft: none;
+			  }
+
+			  html,
+			  body {
+			    background: white !important;
+			  }
+
+			  body {
+			    width: 100%;
+			    margin: 0;
+			    padding: 0;
+			    font-size: 11pt;
+			    line-height: 1.45;
+			  }
+
+			  .page,
+			  body > header,
+			  body > section,
+			  body > main,
+			  section#content {
+			    width: 100%;
+			    max-width: 100%;
+			    margin: 0;
+			  }
+
+			  .page {
+			    border: 0;
+			    box-shadow: none;
+			    border-radius: 0;
+			    padding: 0;
+			  }
+
+			  header {
+			    margin-bottom: 18px;
+			    padding: 0 0 12px;
+			  }
+
+			  h2,
+			  h2 strong {
+			    page-break-after: avoid;
+			  }
+
+			  h3,
+			  h3 strong,
+			  h4,
+			  h4 strong {
+			    page-break-after: avoid;
+			  }
+
+			  p,
+			  li,
+			  blockquote,
+			  .box,
+			  table,
+			  pre {
+			    page-break-inside: avoid;
+			  }
+
+			  a,
+			  a:visited {
+			    color: inherit;
+			    text-decoration: none;
+			  }
+
+			  a[href]::after {
+			    content: "";
+			  }
+
+			  .box {
+			    background: white;
+			  }
+			}
+
+			/* Responsive */
+			@media (max-width: 900px) {
+			  body {
+			    padding: 20px 14px 44px;
+			  }
+
+			  .page {
+			    padding: 28px 22px 40px;
+			  }
+
+			  .two-column {
+			    grid-template-columns: 1fr;
+			  }
+
+			  .meta-grid,
+			  .definition-list {
+			    grid-template-columns: 1fr;
+			    gap: 4px 0;
+			  }
+
+			  header h1 {
+			    font-size: 2.2rem;
+			  }
+
+			  h2,
+			  h2 strong {
+			    font-size: 1.45rem !important;
+			  }
+			}
+
+			@media (max-width: 640px) {
+			  body {
+			    font-size: 15px;
+			  }
+
+			  .page {
+			    padding: 22px 16px 32px;
+			    border-radius: 12px;
+			  }
+
+			  header .meta {
+			    padding: 10px 12px;
+			  }
+
+			  .table,
+			  table {
+			    font-size: 0.88rem;
+			  }
+
+			  .table th,
+			  .table td,
+			  table th,
+			  table td {
+			    padding: 8px 9px;
+			  }
+
+			  pre {
+			    padding: 12px 13px;
+			  }
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1><strong>PMS–LOGIC</strong></h1>
+			<h2><em>Example 4: Platform Moderation — Authority Capture via “We’re Just Being Rational”</em></h2>
+			<div class="meta">
+				<strong>Example ID:</strong> <code>LOGIC_EX_04</code> &middot;
+				<strong>Example Version:</strong> <code>LOGIC_EX_04_1.0</code> &middot;
+				<strong>Schema Version:</strong> <code>PMS-LOGIC_1.1</code><br />
+				<strong>Status:</strong> draft_example &middot;
+				<strong>Language:</strong> EN &middot;
+				<strong>Depends on:</strong> <code>PMS_1.3</code>, <code>PMS-LOGIC_1.1</code>
+			</div>
+		</header>
+
+		<section id="content">
+
+			<h2>0) Example Identity</h2>
+			<p>
+				<strong>Example label:</strong> <em>Platform Moderation: Authority Capture via “We’re Just Being Rational”</em>
+			</p>
+			<p>
+				<strong>Repository path:</strong> <code>examples/LOGIC_EX_04_platform-moderation-authority-capture.yaml</code>
+			</p>
+			<p>
+				<strong>Aligned with:</strong> <code>PMS-LOGIC.yaml</code> (<code>PMS-LOGIC_1.1</code>) and
+				<code>PMS.yaml</code> (<code>PMS_1.3</code>)
+			</p>
+			<hr />
+
+			<h2>1) Minimal Vignette</h2>
+
+			<h3>1.1 Scene</h3>
+			<p>
+				A large online platform enforces content moderation policies through a
+				combination of algorithmic scoring, internal guidelines, human review,
+				and appeal pipelines. Decisions affect visibility, reach, monetization,
+				and account access at scale.
+			</p>
+
+			<h3>1.2 Stakes</h3>
+			<p>
+				Moderation outcomes have reputational, economic, communicative, and
+				participatory effects. Users may lose audience access, business
+				continuity, or speech visibility, while appeals remain delayed, partial,
+				or opaque.
+			</p>
+
+			<h3>1.3 Structural issue</h3>
+			<p>
+				The issue is how logical procedures, metrics, and policy rules become
+				authority under asymmetry, without introducing norms, and how omissions in
+				explanation, review, and correction become responsibility-relevant under
+				time.
+			</p>
+
+			<hr />
+
+			<h2>2) Why This Is Repo-Useful</h2>
+
+			<h3>2.1 Structural focus</h3>
+			<p>
+				This example is useful because it concentrates asymmetrical enforcement
+				capacity, procedural opacity, metric integration, appeal gaps, and durable
+				downstream effects in one scene. It sharply illustrates how logic becomes
+				vulnerable to authority capture when non-closure is denied.
+			</p>
+
+			<h3>2.2 Lens relevance</h3>
+			<p>
+				It demonstrates PMS–LOGIC’s account of closure-pressure in an institutional
+				system that presents itself as merely rational or technical. It shows how
+				moral readability can emerge even without explicit normative language,
+				simply because consequences are durable, uneven, and insufficiently
+				answerable.
+			</p>
+
+			<h3>2.3 Repository value</h3>
+			<p>
+				As a test vector, the case differentiates PMS–LOGIC from both moralizing
+				censorship critiques and purely technocratic self-descriptions. It shows
+				how moderation becomes structurally attributable without reducing the case
+				to hidden ethics or policy absolutism.
+			</p>
+
+			<hr />
+
+			<h2>3) Frame Validity</h2>
+
+			<h3>3.1 Operative frame — <strong>□</strong></h3>
+			<ul>
+				<li><strong>Role space:</strong>
+					<ul>
+						<li>Platform moderators, escalation teams, trust-and-safety units, and policy teams</li>
+						<li>Automated systems that classify, score, route, or trigger enforcement actions</li>
+						<li>Affected users whose speech visibility, access, and recourse are shaped by platform decisions</li>
+						<li>Appeal and review actors operating within latency, staffing, and policy constraints</li>
+					</ul>
+				</li>
+				<li><strong>Scope boundaries:</strong>
+					<ul>
+						<li>Terms of service, internal enforcement guidelines, scoring models, and moderation pipelines define the operative frame.</li>
+						<li>Appeal mechanisms, review windows, latency constraints, and available moderation resources constrain feasible intervention.</li>
+						<li>Only what can be enforced, reviewed, reversed, or explained within current platform capacity counts as operative capacity.</li>
+					</ul>
+				</li>
+				<li><strong>Out of frame:</strong>
+					<ul>
+						<li>Comprehensive truth adjudication</li>
+						<li>Full moral evaluation of speech as such</li>
+						<li>Societal consensus on contested meanings</li>
+						<li>Any assumption that model outputs exhaust context, meaning, or public consequence</li>
+						<li>Any presumption that platform rules exhaust the public significance of moderated content</li>
+					</ul>
+				</li>
+			</ul>
+			<p>
+				<strong>Frame integrity note:</strong> The example remains valid only so long as the platform frame is legible
+				enough to identify actual enforcement capacity, actual review limits, and
+				actual time-bounded recourse conditions. If the frame is performed
+				rhetorically but not operationally, attribution claims require
+				recalibration rather than inflation.
+			</p>
+
+			<hr />
+
+			<h2>4) Operator Mapping</h2>
+
+			<h3>4.1 Full chain</h3>
+			<p><code>Δ, ∇, □, Λ, Α, Ω, Θ, Φ, Χ, Σ, Ψ</code></p>
+			<p>
+				This is a readability chain for the example, not a redefinition of PMS dependency order.
+			</p>
+
+			<h3>4.2 Reduced signatures</h3>
+			<ul>
+				<li><strong>PRE_MORAL_justification:</strong> <code>Δ + ∇ + □ + Λ + Α</code><br />
+					The scene is defined by distinctions, thresholds, omissions,
+					enforcement defaults, and stabilized moderation patterns before any
+					evaluative vocabulary is introduced.
+				</li>
+				<li><strong>LOGIC_boundary_management:</strong> <code>□ + Λ + Χ + Σ</code><br />
+					Moderation relies on coordinated rules, scores, signals, and review
+					pipelines under persistent remainder. Distance is required to prevent
+					models and procedures from hardening into justificatory authority.
+				</li>
+				<li><strong>POST_MORAL_effects:</strong> <code>Ω + Θ + Ψ</code><br />
+					Concentrated enforcement capacity, durable downstream effects, and
+					institutional continuity make platform trajectories responsibility-
+					readable without generating an ought.
+				</li>
+				<li><strong>MORAL_READABILITY_min:</strong> <code>Ω + Θ + Λ + Ψ</code><br />
+					Moral readability emerges post hoc because asymmetric and durable
+					moderation effects are stabilized through omissions, unresolved
+					remainder, and continuous platform governance.
+				</li>
+				<li><strong>POTENTIAL_effective:</strong> <code>□ + Θ</code><br />
+					Only actual enforcement and review capacity within the operative frame
+					counts; abstract claims that “someone could have fixed it” do not
+					substitute for effective capacity.
+				</li>
+				<li><strong>NON_CLOSURE_stability:</strong> <code>Δ + □ + Λ + Α</code><br />
+					Contextual remainder, explanation gaps, and repeated reliance on
+					thresholds become stabilized within the frame without ever exhausting
+					the meaning of moderated content.
+				</li>
+				<li><strong>HUME_KNOT_reconstruction:</strong> <code>□ + Ω + Θ + Λ + Ψ</code><br />
+					The moderation scene becomes responsibility-readable without crossing
+					the is/ought boundary; effects become attributable, not obligatory.
+				</li>
+			</ul>
+
+			<h3>4.3 Tripartition tag</h3>
+			<ul>
+				<li><strong>Pre-moral:</strong> Platform rules, operational thresholds, omitted explanations, appeal
+					latency, and stabilized moderation routines define the scene before norm
+					derivation.</li>
+				<li><strong>Logical:</strong> Moderation functions as ordering and boundary management through
+					thresholds, scores, and review procedures, but cannot legitimately close
+					contextual remainder or convert procedure into final authority.</li>
+				<li><strong>Post-moral:</strong> Moral readability emerges only once moderation trajectories become
+					attributable under asymmetry, temporality, non-event, and self-binding.</li>
+			</ul>
+
+			<h3>4.4 Structural analysis by operator</h3>
+			<ul>
+				<li><strong>Δ (Difference):</strong>
+					<ul>
+						<li>Allowed vs. restricted content</li>
+						<li>Flagged vs. unflagged behavior</li>
+						<li>High-confidence score vs. low-confidence score</li>
+						<li>Reviewed vs. unreviewed case</li>
+						<li>Appealable vs. practically non-contestable outcome</li>
+					</ul>
+				</li>
+				<li><strong>∇ (Impulse):</strong>
+					<ul>
+						<li>Drive toward scalable enforcement through metrics and thresholds</li>
+						<li>Drive toward procedural simplification under volume pressure</li>
+						<li>Drive to present platform outputs as rationally necessary</li>
+						<li>Drive to reduce contestability by invoking policy coherence</li>
+					</ul>
+				</li>
+				<li><strong>□ (Frame):</strong>
+					<ul>
+						<li>Terms of service and internal enforcement criteria</li>
+						<li>Moderation pipelines, reviewer capacity, and latency constraints</li>
+						<li>Appeal channels and review windows</li>
+						<li>Model thresholds, risk scores, and escalation rules</li>
+						<li>Institutional remit over visibility, access, and account continuity</li>
+					</ul>
+				</li>
+				<li><strong>Λ (Non-Event):</strong>
+					<ul>
+						<li>Absence of case-specific justification for many decisions</li>
+						<li>Non-delivery of individualized explanations within relevant time windows</li>
+						<li>Failure to review, correct, or reopen a contested decision</li>
+						<li>Metrics cannot exhaust context, meaning, or downstream effects</li>
+						<li>No moderation system fully resolves the public meaning of contested speech</li>
+					</ul>
+				</li>
+				<li><strong>Α (Attractor):</strong>
+					<ul>
+						<li>Recurrent reliance on scores, thresholds, and precedents</li>
+						<li>Habitual deferral to “policy says so” or “the model flagged it.”</li>
+						<li>Institutional drift toward explanation minimization under scale pressure</li>
+						<li>Stabilized appeal gaps as normal operating condition</li>
+					</ul>
+				</li>
+				<li><strong>Ω (Asymmetry):</strong>
+					<ul>
+						<li><strong>Exposure gradients:</strong>
+							<ul>
+								<li>Platform decisions disproportionately affect users with limited recourse</li>
+								<li>Speech visibility and account access can be altered at scale by one-sided enforcement mechanisms</li>
+								<li>Users may bear reputational and economic losses without reciprocal influence over moderation design</li>
+							</ul>
+						</li>
+						<li><strong>Capacity gradients:</strong>
+							<ul>
+								<li>Enforcement capacity exceeds user capacity to contest or understand outcomes</li>
+								<li>Platform policy teams and automated systems hold concentrated decision leverage</li>
+								<li>Appeal and correction capacity is unevenly distributed and often delayed</li>
+							</ul>
+						</li>
+					</ul>
+					<p>
+						<strong>Note:</strong> Ω here marks unequal power over visibility, recourse, explanation, and
+						downstream consequence. It does not imply moral guilt or moral verdict
+						by itself.
+					</p>
+				</li>
+				<li><strong>Θ (Temporality):</strong>
+					<ul>
+						<li>Visibility loss and account actions have lasting effects</li>
+						<li>Appeals are time-bound and may arrive after material damage is done</li>
+						<li>Delayed review can preserve or deepen downstream losses</li>
+						<li>Policy iterations do not erase prior enforcement effects</li>
+					</ul>
+				</li>
+				<li><strong>Φ (Recontextualization):</strong>
+					<ul>
+						<li>Shift from “objective enforcement” to “capacity-bounded governance under uncertainty.”</li>
+						<li>Reframe moderation from truth adjudication to attributable management of exposure and access.</li>
+					</ul>
+				</li>
+				<li><strong>Χ (Distance):</strong>
+					<ul>
+						<li>Prevent metric outputs from becoming justificatory authority</li>
+						<li>Prevent “rational necessity” rhetoric from sealing decisions against contestation</li>
+						<li>Hold open the difference between coordinated enforcement and final epistemic authority</li>
+						<li>Keep the analysis structural rather than accusatory or apologetic</li>
+					</ul>
+				</li>
+				<li><strong>Σ (Integration):</strong>
+					<ul>
+						<li>Coordinate rules, signals, thresholds, and review flows</li>
+						<li>Preserve procedural coherence without claiming completeness</li>
+						<li>Integrate case-handling under scale constraints without totalizing the model</li>
+					</ul>
+				</li>
+				<li><strong>Ψ (Self-Binding):</strong>
+					<ul>
+						<li>The platform remains linked to long-term effects across policy iterations and appeals</li>
+						<li>Responsibility persists across updates, reversals, and explanatory revisions</li>
+						<li>Institutional continuity makes enforcement trajectories attributable over time</li>
+					</ul>
+				</li>
+			</ul>
+
+			<hr />
+
+			<h2>5) Effective Capacity Boundary</h2>
+			<p>
+				<strong>Boundary condition reference:</strong> <code>BC_EFFECTIVE_CAPACITY</code>
+			</p>
+			<p>
+				<strong>Statement:</strong> Responsibility presupposes effective, frame-bound moderation capacity:
+				actual enforcement power, available review channels, operative appeal
+				pathways, and temporal windows within which intervention or correction can
+				still matter.
+			</p>
+			<p>
+				<strong>No capacity, no attribution:</strong> Where platform actors lack actual authority, access, or correction
+				capacity, attribution does not simply expand by rhetorical demand.
+				Structural possibility must remain capacity-bound.
+			</p>
+			<p>
+				<strong>Calibration note:</strong> The threshold at which moderation capacity becomes effectively attributable
+				remains calibration-sensitive. Borderline cases may include partially
+				automated routing, outsourced review, inconsistent escalation authority,
+				ineffective appeals, or correction windows that close before review is
+				feasible. PMS–LOGIC specifies structural form, not every sufficiency
+				threshold in advance.
+			</p>
+			<p>
+				<strong>Anti-inflation note:</strong> This boundary prevents both technocratic deflection (“the system decided,
+				so no one is responsible”) and moral inflation (“someone must be fully
+				answerable for every downstream effect regardless of operative capacity”).
+			</p>
+
+			<hr />
+
+			<h2>6) Moral Readability Without “Ought”</h2>
+
+			<h3>6.1 Status</h3>
+			<p><strong>Post-moral readability</strong></p>
+
+			<h3>6.2 Minimal operator basis</h3>
+			<p><code>Ω + Θ + Λ + Ψ</code></p>
+
+			<h3>6.3 Emergence statement</h3>
+			<p>
+				Moral readability emerges post hoc because platform moderation distributes
+				durable and uneven consequences under concentrated capacity, while omitted
+				explanation and review remain structurally active.
+			</p>
+
+			<h3>6.4 Omission non-neutrality</h3>
+			<p>
+				Failure to review, explain, or correct decisions functions as a non-event
+				(<strong>Λ</strong>) within the operative frame and therefore shapes outcomes rather than
+				merely leaving them untouched.
+			</p>
+
+			<h3>6.5 Non-innocence note</h3>
+			<p>
+				The scene becomes one of structural non-innocence not because the platform
+				openly moralizes, but because consequences remain traceable under
+				asymmetry, temporality, omission, and institutional continuity.
+			</p>
+
+			<h3>6.6 Hume-boundary note</h3>
+			<p>
+				Nothing in this example derives an ought from an is. The reconstruction
+				remains on the side of attributable consequence rather than obligation.
+			</p>
+
+			<hr />
+
+			<h2>7) Logic Boundary Management</h2>
+
+			<h3>7.1 Role of logic</h3>
+			<p>
+				Logic functions here as an ordering instrument for coordinating policy
+				rules, classification signals, thresholds, escalation conditions, and
+				limited review capacity.
+			</p>
+
+			<h3>7.2 Limit of logic</h3>
+			<p>
+				Metrics and procedural consistency cannot exhaust meaning, context, or
+				downstream effects. They therefore cannot legitimately function as final
+				authority.
+			</p>
+
+			<h3>7.3 Persistent non-closure</h3>
+			<p>
+				Non-closure (<strong>Λ</strong>) remains within the frame: contextual remainder, public
+				meaning, explanation gaps, and appeal insufficiency persist even where
+				procedural coherence is high.
+			</p>
+
+			<h3>7.4 Closure-pressure</h3>
+			<p><strong>Source:</strong> <code>∇ → Σ-totalization risk</code></p>
+			<p>
+				Pressure arises to present moderation outcomes as rationally necessary,
+				technically compelled, or policy-exhaustive in order to reduce
+				contestation and institutional friction.
+			</p>
+
+			<h3>7.5 Disciplined stopping point</h3>
+			<p>
+				The appropriate endpoint is a structurally disciplined stopping point for
+				logic as used here: coordinated enforcement without conversion into final
+				justification.
+			</p>
+
+			<hr />
+
+			<h2>8) Typical Drift Markers</h2>
+			<ul>
+				<li><strong>Dogmatism (Σ-totalization):</strong> Treating scoring models, thresholds, or policy tables as final arbiters of meaning and legitimacy.</li>
+				<li><strong>Moralism (pseudo-ought injection):</strong> Converting enforcement outputs into moral condemnation of users rather than maintaining structural attribution.</li>
+				<li><strong>Nihilism (Λ-suppression):</strong> Denying omission effects by saying “the system decided” or “nothing was omitted because a process existed.”</li>
+				<li><strong>Authority capture (Ω-inflation):</strong> Laundering platform power into epistemic authority through rhetoric of rationality, objectivity, or technical necessity.</li>
+				<li><strong>Technocratic reduction (□-overconstraint):</strong> Assuming platform frames exhaust public meaning and that anything outside model capture is negligible or irrelevant.</li>
+			</ul>
+
+			<hr />
+
+			<h2>9) Failure-Mode Constraint Reference</h2>
+			<ul>
+				<li><strong>FMC2 — Forced closure where Non-Event (Λ: structured absence) persists produces structural instability.</strong><br />
+					Moderation systems cannot eliminate contextual remainder, appeal gaps, or
+					omitted explanation by procedural declaration. Closure rhetoric here
+					masks unresolved structural absence.
+				</li>
+				<li><strong>FMC3 — When explanatory power is converted into sense-making authority, structural overreach occurs.</strong><br />
+					Metrics, thresholds, and policy rules may coordinate enforcement, but
+					they do not thereby acquire final authority over context, legitimacy, or
+					the meaning of contested speech.
+				</li>
+				<li><strong>FMC4 — Where proximity generates power, viable praxis requires maintained distance.</strong><br />
+					Platform actors stand in asymmetric proximity to visibility controls,
+					enforcement tools, and appeal structures. Maintained distance is needed
+					to prevent governance power from becoming epistemic supremacy.
+				</li>
+				<li><strong>FMC5 — Within PMS–LOGIC, stable self-binding takes the form of restraint rather than assertion.</strong><br />
+					Stable moderation praxis requires restraint against presenting
+					procedurally coherent outputs as morally exhaustive or finally justified.
+				</li>
+			</ul>
+
+			<hr />
+
+			<h2>10) PMS–LOGIC Output</h2>
+			<ul>
+				<li><strong>Structural mapping:</strong> Distinctions (<strong>Δ</strong>), omitted explanation and review (<strong>Λ</strong>), and stabilized
+					moderation routines (<strong>Α</strong>) operate under asymmetry (<strong>Ω</strong>) and temporality (<strong>Θ</strong>),
+					while <strong>Χ</strong> and <strong>Σ</strong> constrain closure-pressure within a bounded governance frame.</li>
+				<li><strong>Attribution conditions:</strong> Responsibility tracks effective enforcement capacity, review power,
+					correction persistence, and institutional continuity rather than declared
+					neutrality or algorithmic opacity.</li>
+				<li><strong>What remains open:</strong> Contextual remainder, public-meaning surplus, explanation deficits, appeal
+					gaps, and non-closure (<strong>Λ</strong>) remain structurally present.</li>
+				<li><strong>Excluded outputs:</strong>
+					<ul>
+						<li>No prescriptions</li>
+						<li>No moral ranking of speakers as persons</li>
+						<li>No sanctions beyond scene reconstruction</li>
+						<li>No hidden ought</li>
+						<li>No comprehensive truth adjudication</li>
+						<li>No claim that procedure exhausts legitimacy</li>
+					</ul>
+				</li>
+			</ul>
+
+			<hr />
+
+			<h2>11) Validity Gate Reminder</h2>
+			<p>
+				<strong>Note:</strong> This example remains valid only as a scene-bound PMS application. It does
+				not license verdicts, prescriptions, person-ranking, or irreversible
+				identity claims.
+			</p>
+			<ul>
+				<li><strong>Χ (Distance):</strong> Maintain meta-position and stop-capability; no fusion into verdict, authority, or normative demand.</li>
+				<li><strong>Reversibility:</strong> All readings remain scene-bound, revisable, and configuration-specific; no global person labels or irreversible interpretive claims.</li>
+				<li><strong>D (Dignity-in-practice):</strong> No shaming, ranking, humiliation, or ontological person evaluation; critique remains restricted to structural attribution and boundary handling.</li>
+			</ul>
+
+			<hr />
+
+			<h2>12) Readable Structural Closure</h2>
+			<p>
+				This case shows with particular clarity how logic turns into authority when
+				its structural limits are not carried. The platform does not become morally
+				charged because it openly legislates values, but because it holds
+				concentrated and persistent capacity under asymmetry (<strong>Ω</strong>: structural
+				imbalance) and irreversible time (<strong>Θ</strong>: temporality). Once this capacity is in
+				place, moderation outcomes and omissions become attributable. PMS–LOGIC
+				therefore reconstructs the scene as one of consequence-bearing governance
+				under non-closure (<strong>Λ</strong>), not as one of derived moral obligation. Logic may
+				order the scene, but it cannot complete it; the remainder must be carried
+				rather than displaced into claims of rational necessity.
+			</p>
+
+			<hr />
+
+			<h2>13) Extended Structural Closure</h2>
+
+			<h3>13.1</h3>
+			<p>
+				The platform moderation case is especially useful because it exposes how
+				institutional rationality can mask authority capture. Scores, thresholds,
+				and guidelines are legitimate tools of integration (<strong>Σ</strong>): they reduce
+				complexity and permit scalability. The failure begins when these tools are
+				rhetorically elevated into justificatory closure: “the model decided,”
+				“policy required it,” or “the system is simply rational.” At that point,
+				logic is no longer functioning as ordering; it is functioning as authority.
+			</p>
+
+			<h3>13.2</h3>
+			<p>
+				The key structural mechanism is asymmetrical and durable consequence under
+				insufficient answerability. Users often experience moderation as
+				moralizing even where no explicit moral language is used, because speech
+				visibility, account continuity, and economic participation are affected in
+				uneven ways while explanation is absent or delayed. This is why omission
+				matters so much here: the non-event (<strong>Λ</strong>) of missing review, missing
+				justification, or missing correction is not empty. It actively stabilizes
+				outcomes and blocks contestation.
+			</p>
+
+			<h3>13.3</h3>
+			<p>
+				PMS–LOGIC clarifies why two common reactions both misfire. Calling the
+				system “purely technical” suppresses <strong>Λ</strong> by denying that opacity and
+				omission matter under <strong>Ω</strong> and <strong>Θ</strong>. Calling every enforcement action moral
+				condemnation injects a pseudo-ought and collapses structural attribution
+				into accusation. The model refuses both moves. Responsibility here tracks
+				effective enforcement and correction capacity over time, not moral intent
+				and not algorithmic inevitability.
+			</p>
+
+			<h3>13.4</h3>
+			<p>
+				Distance (<strong>Χ</strong>) is therefore decisive. Without <strong>Χ</strong>, integration (<strong>Σ</strong>) slides into
+				totalization: models become final arbiters, and platform power is
+				laundered into epistemic legitimacy. With <strong>Χ</strong>, moderation can be seen for
+				what it is within PMS–LOGIC: capacity-bounded governance under uncertainty,
+				not truth sovereignty. Recontextualization (<strong>Φ</strong>) becomes possible only once
+				the system is no longer allowed to mistake its operational coherence for
+				comprehensive authority.
+			</p>
+
+			<h3>13.5</h3>
+			<p>
+				Self-binding (<strong>Ψ</strong>) stabilizes attribution across time. Policy revisions,
+				appeal updates, and model retraining do not erase the continuity of the
+				platform trajectory. Responsibility does not reset at each version change.
+				The platform remains structurally linked to the effects of its enforcement
+				patterns and its omissions, including those produced by latency, silence,
+				or systematic under-explanation.
+			</p>
+
+			<h3>13.6</h3>
+			<p>
+				The example therefore displays the full PMS–LOGIC architecture:
+				pre-moral structure (rules, thresholds, omissions, stabilized routines),
+				logical boundary discipline (integration without closure-authority), and
+				post-moral readability (attributable consequences under <strong>Ω</strong>, <strong>Θ</strong>, <strong>Λ</strong>, and <strong>Ψ</strong>).
+				The result is a structurally sharp but non-prescriptive account: no code,
+				no person-ranking, no sanction, and no hidden ought—only a disciplined
+				reconstruction of why governance by “mere rationality” can become
+				responsibility-readable when its own remainder is denied.
+			</p>
+
+			<hr />
+
+			<h2>14) Counter-Reading Relevance</h2>
+			<ul>
+				<li><strong>D1 — “This is just ethics in disguise.”</strong><br />
+					The case is often misread as covert ethics because moderation has
+					obvious public-moral resonance. The example must show why readability
+					does not imply norm generation.
+				</li>
+				<li><strong>D4 — “This is a hidden theological argument.”</strong><br />
+					Platforms often compensate non-closure with quasi-transcendent rhetoric
+					of safety, truth, or system objectivity. The example must resist that
+					move.
+				</li>
+				<li><strong>D6 — “This cannot guide action.”</strong><br />
+					Readers may try to convert the example into a moderation manual; the
+					example must remain orienting rather than instructive.
+				</li>
+				<li><strong>D7 — “This wins by translation, not necessarily by final superiority.”</strong><br />
+					PMS–LOGIC may seem compelling because it translates platform rhetoric
+					into structural grammar; this does not by itself prove final
+					superiority.
+				</li>
+				<li><strong>D8 — “Relation to adjacent frameworks.”</strong><br />
+					The scene lies close to adjacent debates in platform governance,
+					systems ethics, political theory, and pragmatism, so reconstructive
+					scope must remain explicit.
+				</li>
+			</ul>
+
+			<hr />
+
+			<h2>15) Derived-Axes Projection (Local)</h2>
+			<p>
+				This is a local paper-internal localization for the example, not a
+				measurement of objective system quality.
+			</p>
+			<ul>
+				<li><strong>Awareness (A):</strong> High — the case sharply reveals boundary problems between model output,
+					context, explanation, and downstream consequence.</li>
+				<li><strong>Coherence (C):</strong> High — the moderation scene can be structurally integrated through bounded
+					enforcement logic even while contextual remainder persists.</li>
+				<li><strong>Responsibility (R):</strong> High — concentrated enforcement capacity and durable omission effects make
+					platform trajectories strongly attributable over time.</li>
+				<li><strong>Action (E):</strong> Deliberately constrained — action is filtered through thresholds, review channels,
+					and appeal windows; restraint is required to prevent coherence from becoming
+					authority.</li>
+				<li><strong>Dignity-in-Practice (D):</strong> Stabilizing — the case requires restraint against implicit person-ranking,
+					dehumanizing categorization, and the conversion of governance power
+					into moralized superiority.</li>
+			</ul>
+
+			<hr />
+
+			<h2>16) Conclusion</h2>
+			<p>
+				<strong>Takeaway:</strong> Platform moderation is morally readable in PMS–LOGIC not because an
+				ethical code is secretly derived, but because concentrated enforcement
+				capacity under asymmetry and irreversible time produces attributable
+				consequences, including through omission. When logic is allowed to
+				masquerade as authority, legitimacy crises intensify. The alternative is
+				not norm inflation, but discipline: carry <strong>Λ</strong>, maintain <strong>Χ</strong>, integrate without
+				totalization, and bind responsibility to capacity over time.
+			</p>
+			<p>
+				<strong>Publication note:</strong> This example is valid only as a scene-bound structural reconstruction. It
+				is not a moderation manual, not a regulatory recommendation, and not a
+				substitute for legal, institutional, or domain-specific governance procedures.
+			</p>
+
+		</section>
+	</body>
+</html>

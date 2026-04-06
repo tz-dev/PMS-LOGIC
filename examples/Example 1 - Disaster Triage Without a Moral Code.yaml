@@ -1,0 +1,539 @@
+# =============================================================================
+#  PMS-LOGIC — EXAMPLE SUITE ENTRY
+#
+#  Repository:
+#    https://github.com/tz-dev/PMS-LOGIC
+#
+#  File:
+#    examples/LOGIC_EX_01_disaster-triage.yaml
+#
+#  Example Version:
+#    LOGIC_EX_01_1.0
+#
+#  Last Updated:
+#    2026-04-06
+#
+# -----------------------------------------------------------------------------
+#  PURPOSE AND STATUS
+# -----------------------------------------------------------------------------
+#  This document defines a scene-bound EXAMPLE SUITE ENTRY for the
+#  PMS-LOGIC application profile. It is fully aligned with:
+#
+#    - PMS-LOGIC.yaml (schema_version: PMS-LOGIC_1.1)
+#    - PMS.yaml       (schema_version: PMS_1.3)
+#
+#  It is not a normative guide, not a decision protocol, and not a moral code.
+#  Its function is to render a concrete scene operator-readable under the
+#  PMS-LOGIC lens while preserving:
+#
+#    - Distance (Χ),
+#    - reversibility,
+#    - Dignity-in-Practice (D),
+#    - non-prescriptivity,
+#    - and strict responsibility/ought separation.
+#
+# -----------------------------------------------------------------------------
+#  EXAMPLE TYPE
+# -----------------------------------------------------------------------------
+#  Scene-bound, non-instructional, structurally reconstructive.
+#
+# =============================================================================
+
+schema_version: "PMS-LOGIC_1.1"
+
+example_meta:
+  example_id: "LOGIC_EX_01"
+  example_version: "LOGIC_EX_01_1.0"
+  title: "Disaster Triage Without a Moral Code"
+  status: "draft_example"
+  last_updated: "2026-04-06"
+  language: "EN"
+  repository_path: "examples/LOGIC_EX_01_disaster-triage.yaml"
+  aligned_with:
+    profile_name: "PMS–LOGIC Application Profile"
+    profile_short: "PMS-LOGIC"
+    profile_schema_version: "PMS-LOGIC_1.1"
+    base_model_name: "Praxeological Meta-Structure"
+    base_model_short: "PMS"
+    base_schema_version: "PMS_1.3"
+  authors:
+    - name: "T. Zöller"
+      role: "originator"
+    - name: "ChatGPT (GPT-5.4 Thinking)"
+      role: "formalization_assistant"
+  example_type:
+    scene_bound: true
+    non_instructional: true
+    person_level_typing: false
+    sanction_logic: false
+    moral_code_generation: false
+
+validity_gate_reminder:
+  note: >
+    This example remains valid only as a scene-bound PMS application. It does not
+    license verdicts, prescriptions, person-ranking, or irreversible identity claims.
+  requires:
+    - id: "Χ"
+      name: "Distance"
+      meaning: >
+        Maintain meta-position and stop-capability; no fusion into verdict,
+        authority, or normative demand.
+    - id: "reversibility"
+      meaning: >
+        All readings remain scene-bound, revisable, and configuration-specific;
+        no global person labels or irreversible interpretive claims.
+    - id: "D"
+      name: "Dignity-in-practice"
+      meaning: >
+        No shaming, ranking, humiliation, or ontological person evaluation;
+        critique remains restricted to structural attribution and boundary handling.
+
+model_binding:
+  source_profile:
+    file: "PMS-LOGIC.yaml"
+    schema_version: "PMS-LOGIC_1.1"
+  source_base_model:
+    file: "PMS.yaml"
+    schema_version: "PMS_1.3"
+  applicable_profile_sections:
+    - "paper_lens.tripartition"
+    - "paper_lens.non_operator_constructs"
+    - "reduced_signatures"
+    - "failure_mode_constraints"
+    - "drift_catalogue"
+    - "scale_matrices.derived_axes_projection"
+    - "counter_readings"
+    - "example_suite_schema"
+
+example_entry:
+  minimal_vignette:
+    scene: >
+      A large-scale disaster produces multiple injured persons while medical
+      resources, personnel, transport capacity, and operative time windows are
+      severely limited.
+    stakes: >
+      Immediate loss of life is possible. Decisions distribute irreversible
+      consequences across unequally exposed persons and roles.
+    structural_issue: >
+      Allocation under scarcity where not all needs can be met within the
+      operative frame. The issue is not which person is worth more, but how
+      consequence-attribution becomes structurally readable when effective
+      capacity is limited and time closes options.
+
+  why_this_is_repo_useful:
+    structural_focus: >
+      This example is useful because it concentrates, in a single scene,
+      several central PMS–LOGIC features: asymmetry (Ω), temporality (Θ),
+      non-event (Λ), frame-bounded effective capacity (□ + Θ), closure-pressure,
+      self-binding (Ψ), and the distinction between responsibility and ought.
+    relevance_for_profile: >
+      It demonstrates how moral readability can emerge sharply without norm
+      derivation, how logic can function as an ordering tool without becoming
+      final authority, and how omission becomes structurally relevant without
+      being translated into a prescriptive code.
+    repository_value: >
+      As a test vector, it helps distinguish PMS–LOGIC from deontic, utilitarian,
+      virtue-ethical, theological, or sanction-based readings by showing what
+      the model can reconstruct and where it stops.
+
+  frame_validity:
+    operative_frame_□:
+      role_space:
+        - "Emergency responders assigned to triage, stabilization, and resource allocation."
+        - "Medical personnel operating under disaster protocol."
+        - "Institutional command structures governing immediate response."
+      scope_boundaries:
+        - "Only actions feasible within current resources, access conditions, authority, and temporal windows count as operative possibilities."
+        - "Effective capacity is bounded by means, role, access, transport, personnel, and time."
+        - "Attribution applies only within the actually available response frame."
+      out_of_frame:
+        - "Ideal care for all persons."
+        - "Retrospective moral blame as such."
+        - "Ontological ranking of persons."
+        - "Metaphysical justifications of loss."
+        - "Any assumption that abstract possibility counts as effective capacity."
+      frame_integrity_note: >
+        The example remains valid only so long as the disaster-response frame
+        remains legible. If the frame collapses entirely, attribution claims may
+        require re-evaluation rather than inflation.
+
+  operator_mapping:
+    full_chain:
+      sequence: ["Δ", "∇", "□", "Λ", "Α", "Ω", "Θ", "Φ", "Χ", "Σ", "Ψ"]
+      note: >
+        This is a readability chain for the example, not a redefinition of PMS
+        dependency order.
+
+    reduced_signature_mapping:
+      PRE_MORAL_justification:
+        operators: ["Δ", "∇", "□", "Λ", "Α"]
+        function_in_scene: >
+          Scarcity, triage distinctions, expectations, and recurrent response
+          patterns define the scene before any evaluative vocabulary is introduced.
+
+      LOGIC_boundary_management:
+        operators: ["□", "Λ", "Χ", "Σ"]
+        function_in_scene: >
+          Triage logic coordinates criteria, urgency, and capacity under
+          persistent non-closure, while distance restrains totalization and
+          false moral completion.
+
+      POST_MORAL_effects:
+        operators: ["Ω", "Θ", "Ψ"]
+        function_in_scene: >
+          Unequal exposure, irreversible timing, and role-bound continuity make
+          consequences attributable without generating a prescriptive ought.
+
+      MORAL_READABILITY_min:
+        operators: ["Ω", "Θ", "Λ", "Ψ"]
+        function_in_scene: >
+          This constellation explains why the scene becomes morally readable
+          post hoc once omission and action alike leave attributable traces.
+
+      POTENTIAL_effective:
+        operators: ["□", "Θ"]
+        function_in_scene: >
+          Only frame-bound and temporally available capacity counts; abstract
+          possibility does not.
+
+      NON_CLOSURE_stability:
+        operators: ["Δ", "□", "Λ", "Α"]
+        function_in_scene: >
+          Non-closure is stabilized by protocol and repeated patterned response,
+          rather than eliminated by justificatory overreach.
+
+      HUME_KNOT_reconstruction:
+        operators: ["□", "Ω", "Θ", "Λ", "Ψ"]
+        function_in_scene: >
+          The scene becomes responsibility-readable without crossing the
+          is/ought boundary; omission becomes attributable, not obligatory.
+
+  tripartition_tag:
+    pre_moral:
+      applies: true
+      statement: >
+        Scarcity, role structure, distinctions of treatability, temporal
+        windows, and expected omissions define the scene structurally prior to
+        evaluative or normative interpretation.
+    logical:
+      applies: true
+      statement: >
+        Triage protocol functions as ordering and boundary management. It
+        integrates constraints, but does not yield final closure or moral
+        authority.
+    post_moral:
+      applies: true
+      statement: >
+        Moral readability emerges only once consequences become attributable
+        under asymmetry, irreversibility, non-event, and self-binding.
+
+  structural_analysis:
+    distinctions_Δ:
+      - "Treatable within the time window vs. non-treatable within the time window."
+      - "Immediate intervention vs. delayed intervention."
+      - "Within-capacity action vs. beyond-capacity expectation."
+      - "Stabilization priority vs. non-priority under operative protocol."
+
+    impulse_∇:
+      - "Drive toward maximal rescue."
+      - "Pressure to produce explanatory and operational closure."
+      - "Pressure to redescribe constrained necessity as morally final correctness."
+
+    frame_□:
+      - "Disaster triage protocol."
+      - "Institutional role boundaries."
+      - "Available means, personnel, transport, and authority."
+      - "Temporal windows for effective intervention."
+
+    non_event_Λ:
+      - "Some patients will not receive treatment at all."
+      - "Some interventions will not occur before critical deterioration."
+      - "No triage rule can eliminate all loss."
+      - "No final explanation within the operative frame can morally complete the scene."
+
+    attractor_Α:
+      - "Established triage protocols as recurrent response patterns under scarcity."
+      - "Repeated reliance on standardized prioritization under time pressure."
+      - "Stabilized non-substitution: the system can operate without claiming full moral resolution."
+
+    asymmetry_Ω:
+      exposure_gradients:
+        - "Responders hold asymmetric influence over access to treatment."
+        - "Patients are unequally exposed to delay, omission, and loss."
+      capacity_gradients:
+        - "Responders possess finite, role-bound capacity."
+        - "Institutional power is unevenly distributed across positions."
+      note: >
+        Ω does not indicate moral superiority or inferiority. It indicates
+        structural imbalance of exposure, power, and consequence-distribution.
+
+    temporality_Θ:
+      - "Missed interventions cannot be undone."
+      - "Delay changes outcomes irreversibly."
+      - "Temporal windows close asymmetrically."
+      - "Later reinterpretation cannot erase earlier consequence pathways."
+
+    recontextualization_Φ:
+      - "Shift from 'the morally best outcome overall' to 'the maximal enactment of effective capacity within the operative frame.'"
+      - "Reframe the scene from 'ideal rescue logic' to 'bounded response logic under scarcity.'"
+
+    distance_Χ:
+      - "Suspend ontological ranking of persons."
+      - "Prevent role-power from becoming epistemic or moral supremacy."
+      - "Refuse forced closure where remainder persists."
+      - "Keep analysis structural rather than condemnatory or sanctifying."
+
+    integration_Σ:
+      - "Coordinate medical urgency, survival probability, time pressure, and resource availability."
+      - "Preserve coherence without converting protocol into final justification."
+      - "Support enactment without totalizing the scene."
+
+    self_binding_Ψ:
+      - "Responders remain bound to the consequences of decisions within the role-frame."
+      - "Protocol-guided continuity stabilizes attribution across cases."
+      - "Accountability remains possible without deriving obligation or sanction."
+
+  effective_capacity_boundary:
+    boundary_condition_ref: "BC_EFFECTIVE_CAPACITY"
+    statement: >
+      Responsibility presupposes effective, frame-bound capacity with available
+      means, access, authority, and open temporal windows. Abstract possibility
+      does not count as operative capacity.
+    no_capacity_no_attribution: >
+      Where effective capacity is absent, no attribution of responsibility arises
+      even if later observers imagine a better or more desirable outcome.
+    calibration_note: >
+      The threshold at which capacity becomes effectively attributable remains
+      calibration-sensitive. In triage, borderline cases may involve ambiguity
+      concerning access, feasibility, timing, or role-authority. PMS–LOGIC
+      clarifies the structural form of attributable capacity, but not every
+      threshold of sufficiency in advance.
+    anti_inflation_note: >
+      This boundary blocks moral inflation ('you were obliged to do the
+      impossible') and blocks moral erasure ('nothing belongs to anyone because
+      the scene was catastrophic').
+
+  moral_readability_field:
+    status: "post-moral readability"
+    minimal_operator_basis: ["Ω", "Θ", "Λ", "Ψ"]
+    emergence_statement: >
+      Moral readability emerges post hoc because action and non-action are no
+      longer neutral once effective capacity exists under asymmetry and
+      irreversibility within an operative frame.
+    omission_non_neutrality: >
+      Not treating a patient is a non-event (Λ) within the frame and therefore
+      carries attributable consequences, even though no prescriptive command is
+      generated.
+    non_innocence_note: >
+      The scene becomes one of non-innocence not because a hidden moral law has
+      been derived, but because omissions and selections become structurally
+      traceable once capacity, asymmetry, and temporality are in place.
+    hume_boundary_note: >
+      Nothing in this example derives an ought from an is. The reconstruction
+      remains on the side of attributable consequence rather than obligation.
+
+  logic_boundary_management:
+    role_of_logic: >
+      Logic functions as an ordering instrument for coordinating urgency,
+      treatability, resource scarcity, and time pressure.
+    limit_of_logic: >
+      Logic cannot eliminate loss, justify every outcome as finally correct, or
+      transform coherent triage procedure into moral closure.
+    persistent_non_closure: >
+      Non-closure (Λ) remains within the frame: some losses are structurally
+      unavoidable, and no capacity-bound rule fully resolves the remainder.
+    closure_pressure:
+      source: "∇ → Σ-totalization risk"
+      description: >
+        There is pressure to redescribe a coherent triage procedure as the
+        morally right or fully justified outcome. PMS–LOGIC treats this as a
+        drift risk rather than as a legitimate completion of the scene.
+    disciplined_stopping_point: >
+      The appropriate endpoint is a structurally disciplined stopping point for
+      logic as used here: coherence without final authority.
+
+  typical_drift_markers:
+    - drift_id: "dogmatism_sigma_totalization"
+      marker: >
+        Treating the triage protocol as morally exhaustive or as finally
+        justified rather than as capacity-bound ordering under scarcity.
+    - drift_id: "moralism_pseudo_ought_injection"
+      marker: >
+        Translating attributable consequence into a prescriptive statement such
+        as 'therefore one must save this person' beyond effective capacity.
+    - drift_id: "nihilism_lambda_suppression"
+      marker: >
+        Claiming that nothing matters because loss is unavoidable, thereby
+        erasing omission-effects and temporal consequence.
+    - drift_id: "authority_capture_omega_inflation"
+      marker: >
+        Equating responder power or protocol control with moral truth.
+    - drift_id: "technocratic_reduction_frame_overconstraint"
+      marker: >
+        Treating the operational frame as exhaustive and dismissing all remainder
+        as irrelevant rather than as structurally carried non-closure.
+
+  failure_mode_constraint_reference:
+    - id: "FMC1"
+      label: "A boundary that cannot be carried becomes structurally unstable."
+      relevance: >
+        Triage categories and institutional commitments generate exposure. When a
+        responder group or institution claims a boundary it cannot sustain across
+        time and cases, the procedure becomes destructive rather than orienting.
+
+    - id: "FMC2"
+      label: "Forced closure where Non-Event (Λ: structured absence) persists produces structural instability."
+      relevance: >
+        Triage cannot eliminate irreducible loss. Any attempt to declare the
+        outcome fully justified replaces persistent remainder with false certainty.
+
+    - id: "FMC4"
+      label: "Where proximity generates power, viable praxis requires maintained distance."
+      relevance: >
+        Responders exercise asymmetrical power under conditions of extreme
+        proximity. Maintained distance prevents fusion of role-power with moral
+        supremacy.
+
+    - id: "FMC5"
+      label: "Within PMS–LOGIC, stable self-binding takes the form of restraint rather than assertion."
+      relevance: >
+        Stable triage praxis requires restraint in claims of certainty,
+        legitimacy, and justification even where a coherent protocol exists.
+
+  pms_logic_output:
+    structural_mapping: >
+      Scarcity, frame constraints, non-events, asymmetry, and temporality yield
+      attributable outcomes within a role-bound emergency configuration.
+    attribution_conditions: >
+      Responsibility tracks effective, frame-bound capacity only. It does not
+      extend to imagined or impossible action.
+    what_remains_open: >
+      Irreducible loss, unresolved remainder, and persistent non-closure (Λ)
+      remain structurally present.
+    excluded_outputs:
+      - "No prescriptions."
+      - "No value ranking of persons."
+      - "No sanctions."
+      - "No hidden ought."
+      - "No theological or metaphysical closure."
+      - "No final justification of loss."
+
+  readable_structural_closure: >
+    In disaster triage, the felt moral pressure does not arise because a hidden
+    norm has been smuggled in. It arises because praxis is irreversible (Θ),
+    asymmetrical (Ω), and frame-bound (□). Once responders occupy a role that
+    includes effective capacity, action and non-action cease to be neutral.
+    PMS–LOGIC therefore reconstructs the scene as one of attributable
+    consequence rather than obligation. Logic orders the scene, but it cannot
+    close it; the remainder must be carried as non-closure rather than converted
+    into justification.
+
+  extended_structural_closure:
+    paragraph_1: >
+      The triage case demonstrates that moral readability does not require norm
+      derivation. Responders operate within a constrained frame defined by
+      scarcity, role, access, and closing temporal windows. Under those
+      conditions, decisions distribute consequences non-neutrally. The relevant
+      structural question is not what anyone ought to do in an ideal moral
+      universe, but what becomes attributable once effective capacity exists in
+      a real emergency frame.
+
+    paragraph_2: >
+      The decisive boundary is effective capacity. PMS–LOGIC does not treat
+      abstract possibility as relevant. Responsibility tracks what was
+      structurally available in the operative configuration: means, access,
+      authority, and time. This prevents moral inflation ('you were obliged to
+      do the impossible') and moral erasure ('it was chaos, so nothing belongs
+      to anyone'). Calibration sensitivity remains important, especially in
+      borderline cases where timing, access, or feasibility are contested.
+
+    paragraph_3: >
+      Logic appears here in its proper role as ordering and boundary management.
+      A triage rule can coordinate criteria and stabilize action under pressure,
+      but it cannot deliver final closure, because loss remains structurally
+      unavoidable. PMS–LOGIC treats this remainder as something carried within
+      the frame rather than compensated by substitute narratives of moral
+      certainty. Closure-pressure may arise institutionally or affectively, but
+      the model’s discipline is to resist the conversion of coherence into
+      authority.
+
+    paragraph_4: >
+      Distance (Χ) and dignity-in-practice (D) matter precisely at this point.
+      Distance prevents asymmetric position from turning into epistemic or moral
+      supremacy. Dignity-in-practice prevents the triage frame from sliding into
+      implicit ranking of persons as persons. Integration (Σ) keeps enactment
+      coherent without claiming moral completeness, while self-binding (Ψ)
+      stabilizes attribution over time without turning accountability into
+      condemnation or sanctification.
+
+    paragraph_5: >
+      The example therefore exhibits the full PMS–LOGIC architecture:
+      pre-moral structure (scarcity, roles, frames, non-events), logical
+      boundary discipline (coherence without closure), and post-moral
+      readability (attributable consequences under Ω, Θ, Λ, and Ψ). The result
+      is a structurally sharp but non-prescriptive account: no code, no ranking,
+      no sanction, and no hidden ought—only a disciplined reconstruction of
+      where responsibility becomes legible, and where attribution must stop.
+
+  counter_reading_relevance:
+    most_relevant:
+      - id: "D1"
+        why_relevant: >
+          Triage scenes are often moralized immediately; this example shows why
+          responsibility-readability should not be confused with ethics injection.
+      - id: "D5"
+        why_relevant: >
+          The fairness objection is central because responsibility without
+          obligation can be mistaken for punishment or blame.
+      - id: "D6"
+        why_relevant: >
+          Triage examples tempt readers to extract practical rules; PMS–LOGIC
+          must remain orienting rather than instructive.
+      - id: "D7"
+        why_relevant: >
+          The example may look strong because the grammar translates competing
+          vocabularies effectively; this does not by itself prove final
+          superiority over rival frameworks.
+
+  derived_axes_projection_local:
+    note: >
+      This is a local paper-internal localization for the example, not a
+      measurement of objective system quality.
+    axes:
+      Awareness_A:
+        structural_level: "High"
+        local_reason: >
+          The scene sharply exposes limits, frame boundaries, temporal closure,
+          and asymmetrical consequence-distribution.
+      Coherence_C:
+        structural_level: "High"
+        local_reason: >
+          Triage protocol stabilizes action under non-closure without removing
+          remainder.
+      Responsibility_R:
+        structural_level: "High"
+        local_reason: >
+          Consequences are strongly attributable where effective capacity exists,
+          but attribution remains bounded by calibration-sensitive thresholds.
+      Action_E:
+        structural_level: "Deliberately constrained"
+        local_reason: >
+          Action is filtered through scarce means, time pressure, and restraint
+          against overreach.
+      Dignity_in_Practice_D:
+        structural_level: "Stabilizing"
+        local_reason: >
+          The example requires restraint against person-ranking and against
+          converting role-power into domination.
+
+  conclusion:
+    takeaway: >
+      Disaster triage is morally readable in PMS–LOGIC not because an ethical
+      code is secretly derived, but because irreversible and asymmetrical praxis
+      under effective capacity produces attributable consequences. The model
+      reconstructs responsibility without obligation and closure without final
+      settlement.
+    publication_note: >
+      This example is valid only as a scene-bound structural reconstruction. It
+      is not a recommendation system, not a normative triage protocol, and not a
+      substitute for medical, legal, or institutional decision rules.

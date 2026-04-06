@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/main.css" />
+		<title>PMS-LOGIC — Example 5: Family Care Asymmetry</title>
+		<style type="text/css">
+			:root {
+			  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+			  --font-heading: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+			  --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+			  --color-bg: #f5f7fb;
+			  --color-surface: #ffffff;
+			  --color-surface-soft: #f9fbfd;
+			  --color-text: #18202a;
+			  --color-muted: #5f6b7a;
+			  --color-accent: #1f4b99;
+			  --color-accent-soft: #e8f0ff;
+			  --color-border: #d9e1ea;
+			  --color-border-strong: #bfc9d8;
+			  --color-quote: #2f5da8;
+			  --color-code-bg: #f3f5f7;
+			  --color-table-head: #eef3f8;
+			  --color-row-alt: #fbfcfe;
+
+			  --shadow-soft: 0 10px 30px rgba(18, 30, 50, 0.06);
+			  --radius-sm: 6px;
+			  --radius-md: 10px;
+			  --radius-lg: 16px;
+
+			  --content-width: 980px;
+			  --line-height: 1.7;
+			}
+
+			*,
+			*::before,
+			*::after {
+			  box-sizing: border-box;
+			}
+
+			html {
+			  margin: 0;
+			  padding: 0;
+			  scroll-behavior: smooth;
+			}
+
+			body {
+			  margin: 0;
+			  padding: 32px 20px 64px;
+			  font-family: var(--font-body);
+			  font-size: 16px;
+			  line-height: var(--line-height);
+			  color: var(--color-text);
+			  background:
+			    linear-gradient(180deg, #f7f9fc 0%, #f3f6fa 100%);
+			}
+
+			.page,
+			body > header,
+			body > section,
+			body > main {
+			  width: min(100%, var(--content-width));
+			  margin-left: auto;
+			  margin-right: auto;
+			}
+
+			.page {
+			  background: var(--color-surface);
+			  border: 1px solid var(--color-border);
+			  border-radius: var(--radius-lg);
+			  box-shadow: var(--shadow-soft);
+			  padding: 40px 42px 56px;
+			}
+
+			/* Header */
+			header {
+			  width: min(100%, var(--content-width));
+			  margin: 0 auto 28px;
+			  padding: 24px 0 18px;
+			  border-bottom: 1px solid var(--color-border);
+			}
+
+			header h1 {
+			  margin: 0 0 10px;
+			  font-family: var(--font-heading);
+			  font-size: clamp(2rem, 4vw, 2.8rem);
+			  font-weight: 500;
+			  line-height: 1.15;
+			  text-align: center;
+			  letter-spacing: -0.02em;
+			  color: var(--color-text);
+			}
+
+			header h2 {
+			  margin: 0 auto 12px;
+			  max-width: 48rem;
+			  font-size: 1.15rem !important;
+			  line-height: 1.45;
+			  font-weight: 400;
+			  text-align: center;
+			  color: var(--color-muted);
+			  border: 0;
+			  padding: 0;
+			}
+
+			header .subtitle {
+			  max-width: 52rem;
+			  margin: 0 auto 12px;
+			  text-align: center;
+			  color: var(--color-muted);
+			  font-size: 1rem;
+			}
+
+			header .meta {
+			  max-width: 52rem;
+			  margin: 14px auto 0;
+			  padding: 12px 14px;
+			  border: 1px solid var(--color-border);
+			  border-radius: var(--radius-md);
+			  background: var(--color-surface-soft);
+			  font-size: 0.88rem;
+			  line-height: 1.55;
+			  color: var(--color-muted);
+			}
+
+			/* Sections */
+			section {
+			  margin: 0 0 28px;
+			}
+
+			section#content {
+			  width: min(100%, var(--content-width));
+			  margin-left: auto;
+			  margin-right: auto;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+			  font-family: var(--font-heading);
+			  color: var(--color-text);
+			  letter-spacing: -0.01em;
+			}
+
+			h1 {
+			  font-size: clamp(2rem, 4vw, 2.8rem);
+			  font-weight: 500;
+			}
+
+			h2,
+			h2 strong {
+			  padding-bottom: 8px;
+			  font-size: 1.65rem !important;
+			  font-weight: 500 !important;
+			  line-height: 1.25;
+			  border-bottom: 1px solid var(--color-border);
+			}
+
+			h3,
+			h3 strong {
+			  margin: 22px 0 8px !important;
+			  font-size: 1.2rem !important;
+			  font-weight: 600 !important;
+			  line-height: 1.35;
+			}
+
+			h4,
+			h4 strong {
+			  margin: 18px 0 6px !important;
+			  font-size: 1.05rem !important;
+			  font-weight: 600 !important;
+			  line-height: 1.35;
+			}
+
+			h5,
+			h5 strong,
+			h6,
+			h6 strong {
+			  margin: 16px 0 4px !important;
+			  font-size: 1rem !important;
+			  font-weight: 600 !important;
+			  line-height: 1.35;
+			}
+
+			/* Text */
+			p {
+			  margin: 0 0 12px;
+			}
+
+			strong {
+			  color: #111827;
+			}
+
+			em {
+			  color: inherit;
+			}
+
+			.small {
+			  font-size: 0.92rem;
+			  color: var(--color-muted);
+			}
+
+			/* Links */
+			a {
+			  color: var(--color-accent);
+			  text-decoration: none;
+			  border-bottom: 1px solid transparent;
+			}
+
+			a:hover,
+			a:focus {
+			  border-bottom-color: currentColor;
+			}
+
+			/* Lists */
+			ul,
+			ol {
+			  margin: 8px 0 14px 1.25rem;
+			  padding: 0;
+			}
+
+			li {
+			  margin: 0 0 6px;
+			  padding-left: 2px;
+			}
+
+			ul ul,
+			ol ol,
+			ul ol,
+			ol ul {
+			  margin-top: 6px;
+			  margin-bottom: 8px;
+			}
+
+			li > p {
+			  margin-bottom: 6px;
+			}
+
+			/* Horizontal rule */
+			hr {
+			  display: block;
+			  height: 0;
+			  border: 0;
+			  border-top: 1px solid var(--color-border);
+			  margin: 24px 0;
+			}
+
+			/* Quotes */
+			blockquote {
+			  margin: 16px 0;
+			  padding: 12px 18px;
+			  border-left: 4px solid var(--color-quote);
+			  background: #f8fbff;
+			  color: #324154;
+			  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+			}
+
+			blockquote p:last-child {
+			  margin-bottom: 0;
+			}
+
+			/* Code */
+			code,
+			.code-inline {
+			  font-family: var(--font-mono);
+			  font-size: 0.92em;
+			  background: var(--color-code-bg);
+			  border: 1px solid #e7ebf0;
+			  border-radius: 4px;
+			  padding: 0.12em 0.4em;
+			  color: #233044;
+			}
+
+			pre {
+			  margin: 14px 0 18px;
+			  padding: 14px 16px;
+			  overflow-x: auto;
+			  background: #111827;
+			  color: #f3f4f6;
+			  border-radius: var(--radius-md);
+			  border: 1px solid #0f172a;
+			  text-align: left;
+			  line-height: 1.55;
+			}
+
+			pre code {
+			  background: transparent;
+			  border: 0;
+			  color: inherit;
+			  padding: 0;
+			  font-size: 0.92rem;
+			}
+
+			/* Boxes / callouts */
+			.box {
+			  margin: 16px 0 18px;
+			  padding: 14px 16px;
+			  border: 1px solid var(--color-border);
+			  border-left: 4px solid var(--color-accent);
+			  border-radius: var(--radius-md);
+			  background: linear-gradient(180deg, #fbfdff 0%, #f7faff 100%);
+			  line-height: 1.55;
+			}
+
+			.box-title {
+			  margin: 0 0 6px;
+			  font-size: 0.95rem;
+			  font-weight: 700;
+			  color: var(--color-accent);
+			}
+
+			.box p:last-child,
+			.box ul:last-child,
+			.box ol:last-child {
+			  margin-bottom: 0;
+			}
+
+			/* Tables */
+			.table,
+			table {
+			  width: 100%;
+			  margin: 14px 0 18px;
+			  border-collapse: collapse;
+			  border-spacing: 0;
+			  font-size: 0.95rem;
+			  line-height: 1.5;
+			  border: 1px solid var(--color-border);
+			  border-radius: var(--radius-md);
+			  overflow: hidden;
+			}
+
+			.table th,
+			.table td,
+			table th,
+			table td {
+			  padding: 10px 12px;
+			  vertical-align: top;
+			  border: 1px solid var(--color-border);
+			  text-align: left;
+			}
+
+			.table th,
+			table th {
+			  background: var(--color-table-head);
+			  color: #233044;
+			  font-weight: 700;
+			  font-variant: small-caps;
+			  letter-spacing: 0.03em;
+			}
+
+			.table tr:nth-child(even) td,
+			table tr:nth-child(even) td {
+			  background: var(--color-row-alt);
+			}
+
+			.table tr:nth-child(odd) td,
+			table tr:nth-child(odd) td {
+			  background: #ffffff;
+			}
+
+			/* Tags */
+			.tag {
+			  display: inline-block;
+			  margin: 0 6px 6px 0;
+			  padding: 3px 10px;
+			  border: 1px solid var(--color-border-strong);
+			  border-radius: 999px;
+			  background: #fff;
+			  color: var(--color-muted);
+			  font-size: 0.78rem;
+			  line-height: 1.3;
+			}
+
+			/* Placeholder */
+			.placeholder {
+			  color: var(--color-muted);
+			  font-style: italic;
+			}
+
+			/* Two-column layouts */
+			.two-column {
+			  display: grid;
+			  grid-template-columns: repeat(2, minmax(0, 1fr));
+			  gap: 18px;
+			  margin: 10px 0 16px;
+			}
+
+			.two-column > div {
+			  min-width: 0;
+			}
+
+			/* Utility */
+			.pagebreak {
+			  page-break-before: always;
+			  break-before: page;
+			}
+
+			/* Better spacing for consecutive structural blocks */
+			h2 + p,
+			h3 + p,
+			h4 + p {
+			  margin-top: 2px;
+			}
+
+			p + ul,
+			p + ol {
+			  margin-top: 6px;
+			}
+
+			ul + p,
+			ol + p {
+			  margin-top: 10px;
+			}
+
+			/* Optional content-specific helper classes */
+			.meta-grid {
+			  display: grid;
+			  grid-template-columns: 180px 1fr;
+			  gap: 8px 14px;
+			  margin: 12px 0 18px;
+			}
+
+			.meta-grid dt {
+			  font-weight: 600;
+			  color: var(--color-muted);
+			}
+
+			.meta-grid dd {
+			  margin: 0;
+			}
+
+			.definition-list {
+			  display: grid;
+			  grid-template-columns: 180px 1fr;
+			  gap: 8px 14px;
+			}
+
+			.definition-list dt {
+			  font-weight: 600;
+			  color: var(--color-accent);
+			}
+
+			.definition-list dd {
+			  margin: 0;
+			}
+
+			.callout-warning {
+			  border-left-color: #b45309;
+			  background: #fffaf2;
+			}
+
+			.callout-success {
+			  border-left-color: #0f766e;
+			  background: #f4fffd;
+			}
+
+			.callout-danger {
+			  border-left-color: #b91c1c;
+			  background: #fff8f8;
+			}
+
+			/* Images */
+			img {
+			  display: block;
+			  max-width: 100%;
+			  height: auto;
+			  margin: 14px auto 18px;
+			  border-radius: var(--radius-sm);
+			}
+
+			/* Print */
+			@media print {
+			  :root {
+			    --color-bg: white;
+			    --color-surface: white;
+			    --color-surface-soft: white;
+			    --color-row-alt: #fafafa;
+			    --shadow-soft: none;
+			  }
+
+			  html,
+			  body {
+			    background: white !important;
+			  }
+
+			  body {
+			    width: 100%;
+			    margin: 0;
+			    padding: 0;
+			    font-size: 11pt;
+			    line-height: 1.45;
+			  }
+
+			  .page,
+			  body > header,
+			  body > section,
+			  body > main,
+			  section#content {
+			    width: 100%;
+			    max-width: 100%;
+			    margin: 0;
+			  }
+
+			  .page {
+			    border: 0;
+			    box-shadow: none;
+			    border-radius: 0;
+			    padding: 0;
+			  }
+
+			  header {
+			    margin-bottom: 18px;
+			    padding: 0 0 12px;
+			  }
+
+			  h2,
+			  h2 strong {
+			    page-break-after: avoid;
+			  }
+
+			  h3,
+			  h3 strong,
+			  h4,
+			  h4 strong {
+			    page-break-after: avoid;
+			  }
+
+			  p,
+			  li,
+			  blockquote,
+			  .box,
+			  table,
+			  pre {
+			    page-break-inside: avoid;
+			  }
+
+			  a,
+			  a:visited {
+			    color: inherit;
+			    text-decoration: none;
+			  }
+
+			  a[href]::after {
+			    content: "";
+			  }
+
+			  .box {
+			    background: white;
+			  }
+			}
+
+			/* Responsive */
+			@media (max-width: 900px) {
+			  body {
+			    padding: 20px 14px 44px;
+			  }
+
+			  .page {
+			    padding: 28px 22px 40px;
+			  }
+
+			  .two-column {
+			    grid-template-columns: 1fr;
+			  }
+
+			  .meta-grid,
+			  .definition-list {
+			    grid-template-columns: 1fr;
+			    gap: 4px 0;
+			  }
+
+			  header h1 {
+			    font-size: 2.2rem;
+			  }
+
+			  h2,
+			  h2 strong {
+			    font-size: 1.45rem !important;
+			  }
+			}
+
+			@media (max-width: 640px) {
+			  body {
+			    font-size: 15px;
+			  }
+
+			  .page {
+			    padding: 22px 16px 32px;
+			    border-radius: 12px;
+			  }
+
+			  header .meta {
+			    padding: 10px 12px;
+			  }
+
+			  .table,
+			  table {
+			    font-size: 0.88rem;
+			  }
+
+			  .table th,
+			  .table td,
+			  table th,
+			  table td {
+			    padding: 8px 9px;
+			  }
+
+			  pre {
+			    padding: 12px 13px;
+			  }
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1><strong>PMS–LOGIC</strong></h1>
+			<h2><em>Example 5: Family Care Asymmetry — Responsibility Without Prescription</em></h2>
+			<div class="meta">
+				<strong>Example ID:</strong> <code>LOGIC_EX_05</code> &middot;
+				<strong>Example Version:</strong> <code>LOGIC_EX_05_1.0</code> &middot;
+				<strong>Schema Version:</strong> <code>PMS-LOGIC_1.1</code><br />
+				<strong>Status:</strong> draft_example &middot;
+				<strong>Language:</strong> EN &middot;
+				<strong>Depends on:</strong> <code>PMS_1.3</code>, <code>PMS-LOGIC_1.1</code>
+			</div>
+		</header>
+
+		<section id="content">
+
+			<h2>0) Example Identity</h2>
+			<p>
+				<strong>Example label:</strong> <em>Family Care Asymmetry: Responsibility Without Prescription</em>
+			</p>
+			<p>
+				<strong>Repository path:</strong> <code>examples/LOGIC_EX_05_family-care-asymmetry.yaml</code>
+			</p>
+			<p>
+				<strong>Aligned with:</strong> <code>PMS-LOGIC.yaml</code> (<code>PMS-LOGIC_1.1</code>) and
+				<code>PMS.yaml</code> (<code>PMS_1.3</code>)
+			</p>
+			<hr />
+
+			<h2>1) Minimal Vignette</h2>
+
+			<h3>1.1 Scene</h3>
+			<p>
+				An adult family member provides ongoing informal care to an elderly
+				relative over an extended period. Care includes coordination, presence,
+				appointments, practical support, and intermittent crisis response, while
+				professional services remain partial, delayed, or unevenly accessible.
+			</p>
+
+			<h3>1.2 Stakes</h3>
+			<p>
+				The scene affects health outcomes, dependency trajectories, caregiver
+				exhaustion, distribution of family burden, and long-term life
+				reorganization for all involved.
+			</p>
+
+			<h3>1.3 Structural issue</h3>
+			<p>
+				The issue is how responsibility becomes attributable through asymmetry and
+				time in an everyday care trajectory without being translated into command,
+				total obligation, or idealized family morality.
+			</p>
+
+			<hr />
+
+			<h2>2) Why This Is Repo-Useful</h2>
+
+			<h3>2.1 Structural focus</h3>
+			<p>
+				This example is useful because it shows PMS–LOGIC in an ordinary but
+				highly pressure-loaded scene where responsibility appears almost
+				automatically moralized. It concentrates vulnerability, continuity,
+				fatigue, omission, and capacity boundaries in a way that makes the
+				responsibility/ought distinction especially clear.
+			</p>
+
+			<h3>2.2 Lens relevance</h3>
+			<p>
+				It demonstrates how moral readability emerges in sustained care without
+				requiring hidden norm derivation. It also shows why family relations are
+				especially vulnerable to pseudo-ought injection, guilt escalation, and
+				authority capture through vulnerability claims.
+			</p>
+
+			<h3>2.3 Repository value</h3>
+			<p>
+				As a test vector, the case helps distinguish PMS–LOGIC from moralizing
+				care ethics, total-duty family narratives, and nihilistic retreat. It
+				shows how care becomes structurally attributable while remaining bounded by
+				actual, sustainable capacity.
+			</p>
+
+			<hr />
+
+			<h2>3) Frame Validity</h2>
+
+			<h3>3.1 Operative frame — <strong>□</strong></h3>
+			<ul>
+				<li><strong>Role space:</strong>
+					<ul>
+						<li>Primary informal caregiver</li>
+						<li>Care recipient with varying dependency and vulnerability</li>
+						<li>Extended family with uneven participation or absence</li>
+						<li>Healthcare, homecare, and social services with partial availability</li>
+					</ul>
+				</li>
+				<li><strong>Scope boundaries:</strong>
+					<ul>
+						<li>Informal care capacity is limited by time, health, access, finances, mobility, and support systems.</li>
+						<li>The operative frame includes actual service availability, transport, scheduling, fatigue limits, and institutional interfaces.</li>
+						<li>Only what can be sustained within real capacity and time windows counts as operative possibility.</li>
+					</ul>
+				</li>
+				<li><strong>Out of frame:</strong>
+					<ul>
+						<li>Idealized family norms</li>
+						<li>Heroism narratives</li>
+						<li>Total obligation</li>
+						<li>Retrospective purity tests</li>
+						<li>Any assumption that kinship as such produces unlimited attributable capacity</li>
+					</ul>
+				</li>
+			</ul>
+			<p>
+				<strong>Frame integrity note:</strong> The example remains valid only so long as actual supports, absences, and
+				limits are represented as part of the frame. If cultural expectations
+				replace operative capacity analysis, the scene becomes morally inflated
+				and structurally blurred.
+			</p>
+
+			<hr />
+
+			<h2>4) Operator Mapping</h2>
+
+			<h3>4.1 Full chain</h3>
+			<p><code>Δ, ∇, □, Λ, Α, Ω, Θ, Φ, Χ, Σ, Ψ</code></p>
+			<p>
+				This is a readability chain for the example, not a redefinition of PMS dependency order.
+			</p>
+
+			<h3>4.2 Reduced signatures</h3>
+			<ul>
+				<li><strong>PRE_MORAL_justification:</strong> <code>Δ + ∇ + □ + Λ + Α</code><br />
+					The care scene is defined by distinctions, recurrent absences,
+					support limits, and stabilized dependency patterns before evaluative
+					or moral vocabulary is introduced.
+				</li>
+				<li><strong>LOGIC_boundary_management:</strong> <code>□ + Λ + Χ + Σ</code><br />
+					Care coordination requires bounded integration of needs, fatigue,
+					services, and time without converting coherence into final
+					justification or total duty.
+				</li>
+				<li><strong>POST_MORAL_effects:</strong> <code>Ω + Θ + Ψ</code><br />
+					Vulnerability, sustained caregiving capacity, and continuity across
+					time make care trajectories responsibility-readable without producing
+					prescription.
+				</li>
+				<li><strong>MORAL_READABILITY_min:</strong> <code>Ω + Θ + Λ + Ψ</code><br />
+					Moral readability emerges post hoc because asymmetrical dependency,
+					durable effects, structured omissions, and continuity of care bind
+					outcomes to a trajectory.
+				</li>
+				<li><strong>POTENTIAL_effective:</strong> <code>□ + Θ</code><br />
+					Only effective, sustainable care capacity within actual time and frame
+					conditions counts; abstract family expectation does not.
+				</li>
+				<li><strong>NON_CLOSURE_stability:</strong> <code>Δ + □ + Λ + Α</code><br />
+					Needs, gaps, partial support, and recurrent shortfall become
+					stabilized in an open structure that cannot be fully resolved.
+				</li>
+				<li><strong>HUME_KNOT_reconstruction:</strong> <code>□ + Ω + Θ + Λ + Ψ</code><br />
+					The care scene becomes responsibility-readable without crossing the
+					is/ought boundary; consequences become attributable, not obligatory.
+				</li>
+			</ul>
+
+			<h3>4.3 Tripartition tag</h3>
+			<ul>
+				<li><strong>Pre-moral:</strong> Dependency, support availability, fatigue, service gaps, and recurring
+					care routines define the scene before norm derivation.</li>
+				<li><strong>Logical:</strong> Care coordination functions as ordering and boundary management under
+					persistent remainder; it cannot legitimately compute a final or total
+					right balance.</li>
+				<li><strong>Post-moral:</strong> Moral readability emerges only once asymmetry, temporality, omission,
+					and continuity make care consequences attributable.</li>
+			</ul>
+
+			<h3>4.4 Structural analysis by operator</h3>
+			<ul>
+				<li><strong>Δ (Difference):</strong>
+					<ul>
+						<li>Available vs. unavailable support</li>
+						<li>Immediate care vs. deferred care</li>
+						<li>Sustainable response vs. overextension</li>
+						<li>Within-capacity assistance vs. beyond-capacity expectation</li>
+						<li>Shared care vs. default concentration on one caregiver</li>
+					</ul>
+				</li>
+				<li><strong>∇ (Impulse):</strong>
+					<ul>
+						<li>Drive to preserve care continuity despite growing strain</li>
+						<li>Drive to close gaps by personal overextension</li>
+						<li>Drive to find “the right balance” between self-preservation and care</li>
+						<li>Drive to compensate structural insufficiency through informal sacrifice</li>
+					</ul>
+				</li>
+				<li><strong>□ (Frame):</strong>
+					<ul>
+						<li>Family relationship and recurring care arrangement</li>
+						<li>Actual access to services, appointments, respite, transport, and support</li>
+						<li>Time availability, health constraints, income constraints, and logistical feasibility</li>
+						<li>Cultural expectations only insofar as they actually shape operative pressures</li>
+						<li>Institutional and service interfaces that affect what care is possible</li>
+					</ul>
+				</li>
+				<li><strong>Λ (Non-Event):</strong>
+					<ul>
+						<li>Gaps in service provision</li>
+						<li>Missed interventions due to fatigue, overload, or time scarcity</li>
+						<li>Delayed appointments, follow-up, or coordination</li>
+						<li>Absence of sufficient shared support</li>
+						<li>No allocation of effort resolves all needs or prevents all loss</li>
+					</ul>
+				</li>
+				<li><strong>Α (Attractor):</strong>
+					<ul>
+						<li>Routine reliance on the same caregiver</li>
+						<li>Normalization of partial care and chronic insufficiency</li>
+						<li>Habitual deferral by others to the caregiver already carrying the load</li>
+						<li>Stabilized expectation that the existing care trajectory will continue</li>
+					</ul>
+				</li>
+				<li><strong>Ω (Asymmetry):</strong>
+					<ul>
+						<li><strong>Exposure gradients:</strong>
+							<ul>
+								<li>The care recipient is highly vulnerable to interruption, delay, or partial care</li>
+								<li>The caregiver typically has greater operative capacity, but also asymmetric exposure to burnout and cumulative burden</li>
+								<li>Extended family and institutions may be less immediately exposed to consequences than either caregiver or recipient</li>
+							</ul>
+						</li>
+						<li><strong>Capacity gradients:</strong>
+							<ul>
+								<li>Care capacity is finite, role-bound, and time-bound</li>
+								<li>The caregiver often has more immediate ability to affect outcomes than others in the frame</li>
+								<li>Capacity is unequal not only between caregiver and recipient, but also across the wider family and service network</li>
+							</ul>
+						</li>
+					</ul>
+					<p>
+						<strong>Note:</strong> Ω here marks structural imbalance in vulnerability, access, and ability
+						to intervene. It does not by itself produce duty or moral command.
+					</p>
+				</li>
+				<li><strong>Θ (Temporality):</strong>
+					<ul>
+						<li>Health declines accumulate</li>
+						<li>Missed care has lasting effects</li>
+						<li>Fatigue and overload compound over time</li>
+						<li>Care trajectories do not reset after one missed intervention or one exhausted period</li>
+						<li>Delayed support can foreclose later possibilities</li>
+					</ul>
+				</li>
+				<li><strong>Φ (Recontextualization):</strong>
+					<ul>
+						<li>Shift from “total care” to “sustainable care within capacity.”</li>
+						<li>Shift from “family duty” to “capacity-bounded care trajectory under asymmetry.”</li>
+						<li>Shift from solitary care expectation to distributed support where feasible.</li>
+					</ul>
+				</li>
+				<li><strong>Χ (Distance):</strong>
+					<ul>
+						<li>Restrain moral self-judgment and heroization</li>
+						<li>Prevent vulnerability from becoming command without capacity checks</li>
+						<li>Keep the analysis structural rather than sanctifying sacrifice or condemning limitation</li>
+						<li>Hold open the difference between attributable consequence and unconditional duty</li>
+					</ul>
+				</li>
+				<li><strong>Σ (Integration):</strong>
+					<ul>
+						<li>Coordinate care tasks, service access, fatigue limits, and temporal urgency</li>
+						<li>Preserve coherence in a livable care pattern without claiming completeness</li>
+						<li>Integrate supports and boundaries without pretending that all unmet needs can be eliminated</li>
+					</ul>
+				</li>
+				<li><strong>Ψ (Self-Binding):</strong>
+					<ul>
+						<li>Continuity of commitment stabilizes attribution over time</li>
+						<li>The caregiving trajectory remains identifiable across repeated acts, omissions, and revisions</li>
+						<li>Responsibility persists where capacity and continuity persist, without becoming prescription</li>
+					</ul>
+				</li>
+			</ul>
+
+			<hr />
+
+			<h2>5) Effective Capacity Boundary</h2>
+			<p>
+				<strong>Boundary condition reference:</strong> <code>BC_EFFECTIVE_CAPACITY</code>
+			</p>
+			<p>
+				<strong>Statement:</strong> Responsibility presupposes effective, sustainable, frame-bound care
+				capacity: actual time, access, practical ability, health, support, and
+				open temporal windows within which action can still matter.
+			</p>
+			<p>
+				<strong>No capacity, no attribution:</strong> Where caregiving capacity collapses through exhaustion, service absence,
+				health limitation, loss of access, or closed time windows, attribution
+				does not simply continue by moral expectation alone.
+			</p>
+			<p>
+				<strong>Calibration note:</strong> The threshold at which care capacity becomes effectively attributable
+				remains calibration-sensitive. Borderline cases may include chronic
+				fatigue, fluctuating health, partial service access, unstable support from
+				others, and ambiguous temporal urgency. PMS–LOGIC specifies structural
+				form, not every sufficiency threshold in advance.
+			</p>
+			<p>
+				<strong>Anti-inflation note:</strong> This boundary prevents both moral inflation (“as family, one must always
+				do more”) and moral erasure (“because not everything can be done, nothing
+				belongs to anyone”).
+			</p>
+
+			<hr />
+
+			<h2>6) Moral Readability Without “Ought”</h2>
+
+			<h3>6.1 Status</h3>
+			<p><strong>Post-moral readability</strong></p>
+
+			<h3>6.2 Minimal operator basis</h3>
+			<p><code>Ω + Θ + Λ + Ψ</code></p>
+
+			<h3>6.3 Emergence statement</h3>
+			<p>
+				Moral readability emerges post hoc because ongoing care unfolds under
+				vulnerability, unequal capacity, durable effects, structured absences, and
+				continuity of commitment.
+			</p>
+
+			<h3>6.4 Omission non-neutrality</h3>
+			<p>
+				Non-provision, delay, missed intervention, or partial care function as
+				non-events (<strong>Λ</strong>) within the care frame and therefore shape outcomes rather
+				than merely failing to add positive action.
+			</p>
+
+			<h3>6.5 Non-innocence note</h3>
+			<p>
+				The scene becomes one of structural non-innocence not because the
+				caregiver violates a hidden command, but because consequences attach to an
+				ongoing care trajectory wherever effective capacity persists.
+			</p>
+
+			<h3>6.6 Hume-boundary note</h3>
+			<p>
+				Nothing in this example derives an ought from an is. The reconstruction
+				remains on the side of attributable consequence rather than obligation.
+			</p>
+
+			<hr />
+
+			<h2>7) Logic Boundary Management</h2>
+
+			<h3>7.1 Role of logic</h3>
+			<p>
+				Logic functions here as an ordering instrument for coordinating needs,
+				finite capacity, temporal urgency, service options, and support limits.
+			</p>
+
+			<h3>7.2 Limit of logic</h3>
+			<p>
+				No calculation can produce a final, exhaustive, or universally valid
+				right amount of care. Needs exceed capacity, and remainder persists.
+			</p>
+
+			<h3>7.3 Persistent non-closure</h3>
+			<p>
+				Non-closure (<strong>Λ</strong>) remains within the frame: unmet needs, fatigue, service
+				gaps, and partial loss cannot be fully eliminated or morally neutralized.
+			</p>
+
+			<h3>7.4 Closure-pressure</h3>
+			<p><strong>Source:</strong> <code>∇ → Σ-totalization risk</code></p>
+			<p>
+				Pressure arises to declare one care pattern, sacrifice level, or balance
+				as finally right, either through self-judgment, family expectation, or
+				simplified moral narratives.
+			</p>
+
+			<h3>7.5 Disciplined stopping point</h3>
+			<p>
+				The appropriate endpoint is a structurally disciplined stopping point for
+				logic as used here: coordinated care within capacity, without conversion
+				into total duty or final justification.
+			</p>
+
+			<hr />
+
+			<h2>8) Typical Drift Markers</h2>
+			<ul>
+				<li><strong>Dogmatism (Σ-totalization):</strong> Treating one care pattern or one sacrifice level as exhaustive, final,
+					or fully justified for all future cases.</li>
+				<li><strong>Moralism (pseudo-ought injection):</strong> Translating attributable care responsibility into unconditional family
+					duty or endless command.</li>
+				<li><strong>Nihilism (Λ-suppression):</strong> Claiming that because limits exist and not everything can be done,
+					responsibility disappears.</li>
+				<li><strong>Authority capture (Ω-inflation):</strong> Converting vulnerability or family expectation into command without
+					checking actual capacity.</li>
+				<li><strong>Technocratic reduction (□-overconstraint):</strong> Treating the immediate family frame as exhaustive while ignoring
+					alternative supports, services, or redistributions outside the default
+					arrangement.</li>
+			</ul>
+
+			<hr />
+
+			<h2>9) Failure-Mode Constraint Reference</h2>
+			<ul>
+				<li><strong>FMC1 — A boundary that cannot be carried becomes structurally unstable.</strong><br />
+					Care arrangements that exceed sustainable capacity become destructive
+					rather than orienting. Overclaimed care boundaries eventually destabilize
+					both care quality and caregiver viability.
+				</li>
+				<li><strong>FMC2 — Forced closure where Non-Event (Λ: structured absence) persists produces structural instability.</strong><br />
+					No care arrangement eliminates all unmet need, fatigue, or loss. Any
+					attempt to declare the remainder resolved replaces structural openness
+					with false certainty or guilt narratives.
+				</li>
+				<li><strong>FMC4 — Where proximity generates power, viable praxis requires maintained distance.</strong><br />
+					Care scenes involve extreme proximity, dependency, and influence.
+					Maintained distance is needed so that vulnerability does not become
+					command and care does not become fused with total self-erasure.
+				</li>
+				<li><strong>FMC5 — Within PMS–LOGIC, stable self-binding takes the form of restraint rather than assertion.</strong><br />
+					Stable care requires restraint against claims of total obligation, total
+					innocence, or final justification. Self-binding remains continuity of
+					responsibility, not assertion of moral completeness.
+				</li>
+			</ul>
+
+			<hr />
+
+			<h2>10) PMS–LOGIC Output</h2>
+			<ul>
+				<li><strong>Structural mapping:</strong> Distinctions (<strong>Δ</strong>), care gaps and missed interventions (<strong>Λ</strong>), and stabilized
+					routines of partial support (<strong>Α</strong>) operate under vulnerability and unequal
+					capacity (<strong>Ω</strong>) and irreversible time (<strong>Θ</strong>), while <strong>Ψ</strong> stabilizes attribution
+					across the caregiving trajectory.</li>
+				<li><strong>Attribution conditions:</strong> Responsibility tracks effective, sustainable capacity within the operative
+					care frame rather than kinship abstraction, moral expectation, or ideal
+					care fantasy.</li>
+				<li><strong>What remains open:</strong> Irreducible loss, unmet needs, fatigue remainder, service insufficiency,
+					and persistent non-closure (<strong>Λ</strong>) remain structurally present.</li>
+				<li><strong>Excluded outputs:</strong>
+					<ul>
+						<li>No prescriptions</li>
+						<li>No heroism narratives</li>
+						<li>No family-role absolutization</li>
+						<li>No sanctions</li>
+						<li>No moral code</li>
+						<li>No hidden ought</li>
+					</ul>
+				</li>
+			</ul>
+
+			<hr />
+
+			<h2>11) Validity Gate Reminder</h2>
+			<p>
+				<strong>Note:</strong> This example remains valid only as a scene-bound PMS application. It does
+				not license verdicts, prescriptions, family-role absolutization, or
+				irreversible identity claims.
+			</p>
+			<ul>
+				<li><strong>Χ (Distance):</strong> Maintain meta-position and stop-capability; no fusion into verdict, authority, or normative demand.</li>
+				<li><strong>Reversibility:</strong> All readings remain scene-bound, revisable, and configuration-specific; no global person labels or irreversible interpretive claims.</li>
+				<li><strong>D (Dignity-in-practice):</strong> No shaming, ranking, humiliation, or ontological person evaluation; critique remains restricted to structural attribution and boundary handling.</li>
+			</ul>
+
+			<hr />
+
+			<h2>12) Readable Structural Closure</h2>
+			<p>
+				The family care case makes visible one of the most persistent confusions
+				PMS–LOGIC is designed to resist: the slide from structural responsibility
+				into implicit obligation. Moral pressure appears here not because a family
+				norm commands care, but because asymmetry (<strong>Ω</strong>: structural imbalance) and
+				irreversible time (<strong>Θ</strong>: temporality) render care and non-care consequential
+				once a person occupies a position of effective, ongoing capacity within a
+				shared frame (<strong>□</strong>). PMS–LOGIC therefore reconstructs the scene as one of
+				attributable consequence under continuity, not as one of derived duty. Logic
+				may coordinate the care scene, but it cannot close it; the remainder must be
+				carried rather than converted into command or guilt.
+			</p>
+
+			<hr />
+
+			<h2>13) Extended Structural Closure</h2>
+
+			<h3>13.1</h3>
+			<p>
+				The family care example is especially instructive because it is both
+				ordinary and structurally intense. It shows how moral language arises in
+				everyday life without requiring a hidden normative engine. Care becomes
+				readable because health trajectories, dependency relations, and missed
+				interventions accumulate over time. The scene is already asymmetrical and
+				temporally charged before anyone starts talking in the language of duty.
+			</p>
+
+			<h3>13.2</h3>
+			<p>
+				The key mechanism is continuity under asymmetry. As long as effective care
+				capacity exists, however limited, actions and omissions shape outcomes
+				that cannot be reset. Missed appointments, delayed responses, periods of
+				exhaustion, and partial support are not empty gaps. They are non-events
+				(<strong>Λ</strong>) within an established dependency frame, and therefore participate in
+				consequence formation. Responsibility becomes readable because consequences
+				attach to a caregiving trajectory, not because a hidden command has been
+				violated.
+			</p>
+
+			<h3>13.3</h3>
+			<p>
+				The decisive safeguard is the effective-capacity boundary. PMS–LOGIC does
+				not treat kinship as such as responsibility-generating. Responsibility
+				tracks effective, sustainable capacity within time, not abstract family
+				expectation or moral mythology. This blocks both dominant distortions:
+				moralism (“you must always do more because you are family”) and nihilism
+				(“because you cannot do everything, nothing belongs to anyone”). Capacity
+				remains the condition of attribution.
+			</p>
+
+			<h3>13.4</h3>
+			<p>
+				The case also reveals the limit of logic. Care scenes invite calculation:
+				how much is enough, what is fair, what is the right balance? But no final
+				balance is structurally available here. Needs exceed capacity, losses
+				remain, and remainder persists. Closure-pressure arises as guilt
+				narratives, family pressure, or self-judgment, each pushing integration
+				(<strong>Σ</strong>) toward totalization. PMS–LOGIC resists this move by insisting that <strong>Λ</strong>
+				be carried rather than resolved.
+			</p>
+
+			<h3>13.5</h3>
+			<p>
+				Distance (<strong>Χ</strong>) is therefore not withdrawal from care but protection against
+				escalation. It prevents vulnerability from becoming command and prevents
+				responsibility from collapsing into self-accusation. Integration (<strong>Σ</strong>)
+				coordinates care tasks, limits, and support systems into a livable pattern
+				without claiming completeness. Recontextualization (<strong>Φ</strong>) then becomes
+				possible: care can shift through new services, redistributed support, or
+				changed roles without erasing prior consequences.
+			</p>
+
+			<h3>13.6</h3>
+			<p>
+				Self-binding (<strong>Ψ</strong>) stabilizes attribution without turning it into
+				prescription. The caregiver remains a continuous bearer of consequences
+				across time not because they ought to be, but because the care trajectory
+				is theirs insofar as capacity and continuity persist. This is
+				responsibility as non-innocence, not command. The example therefore
+				displays the full PMS–LOGIC architecture: pre-moral structure
+				(dependency, gaps, routines), logical boundary discipline (coordination
+				without closure), and post-moral readability (attributable consequences
+				under <strong>Ω</strong>, <strong>Θ</strong>, <strong>Λ</strong>, and <strong>Ψ</strong>).
+			</p>
+
+			<hr />
+
+			<h2>14) Counter-Reading Relevance</h2>
+			<ul>
+				<li><strong>D1 — “This is just ethics in disguise.”</strong><br />
+					Care scenes are often immediately moralized; the example must show why
+					moral readability does not imply hidden ethics injection.
+				</li>
+				<li><strong>D2 — “This collapses into relativism.”</strong><br />
+					Readers may mistake non-prescriptivity for arbitrariness; the example
+					must show that capacity-bound attribution is constrained, not random.
+				</li>
+				<li><strong>D5 — “This makes responsibility unfair.”</strong><br />
+					Family care is especially prone to fairness objections; the example
+					must clarify that PMS–LOGIC models attribution, not moral desert.
+				</li>
+				<li><strong>D6 — “This cannot guide action.”</strong><br />
+					Readers may try to turn the example into practical care guidance; the
+					example must remain orienting rather than instructive.
+				</li>
+				<li><strong>D7 — “This wins by translation, not necessarily by final superiority.”</strong><br />
+					The example may seem persuasive because PMS–LOGIC redescribes common
+					care intuitions structurally; this does not itself prove final
+					philosophical superiority.
+				</li>
+				<li><strong>D8 — “Relation to adjacent frameworks.”</strong><br />
+					The case lies near adjacent care ethics, family ethics, and social
+					policy debates, so reconstructive scope must remain explicit.
+				</li>
+			</ul>
+
+			<hr />
+
+			<h2>15) Derived-Axes Projection (Local)</h2>
+			<p>
+				This is a local paper-internal localization for the example, not a
+				measurement of objective system quality.
+			</p>
+			<ul>
+				<li><strong>Awareness (A):</strong> High — the case sharply reveals limits, dependency structure, fatigue
+					boundaries, and the difference between operative capacity and moralized
+					expectation.</li>
+				<li><strong>Coherence (C):</strong> High — care arrangements can be coordinated coherently under persistent
+					remainder, even where no complete solution is available.</li>
+				<li><strong>Responsibility (R):</strong> High — ongoing capacity, asymmetry, and time make caregiving trajectories
+					strongly attributable where continuity persists.</li>
+				<li><strong>Action (E):</strong> Deliberately constrained — action must be filtered through sustainability, fatigue, support
+					limits, and open time windows rather than through escalation or guilt.</li>
+				<li><strong>Dignity-in-Practice (D):</strong> Stabilizing — the case requires restraint against shaming caregivers,
+					idealizing sacrifice, or ontologically reducing the care recipient or caregiver to
+					one role.</li>
+			</ul>
+
+			<hr />
+
+			<h2>16) Conclusion</h2>
+			<p>
+				<strong>Takeaway:</strong> Family care is morally readable in PMS–LOGIC not because a duty is secretly
+				derived, but because asymmetry, irreversible time, omission, and
+				continuity make consequences attributable wherever effective care capacity
+				persists. The model therefore reconstructs responsibility without
+				obligation, and care without total prescription.
+			</p>
+			<p>
+				<strong>Publication note:</strong> This example is valid only as a scene-bound structural reconstruction. It
+				is not a family ethics manual, not a caregiving recommendation set, and
+				not a substitute for clinical, social-service, or legal guidance.
+			</p>
+
+		</section>
+	</body>
+</html>

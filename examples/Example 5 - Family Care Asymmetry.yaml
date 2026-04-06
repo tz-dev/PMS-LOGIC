@@ -1,0 +1,587 @@
+# =============================================================================
+#  PMS-LOGIC — EXAMPLE SUITE ENTRY
+#
+#  Repository:
+#    https://github.com/tz-dev/PMS-LOGIC
+#
+#  File:
+#    examples/LOGIC_EX_05_family-care-asymmetry.yaml
+#
+#  Example Version:
+#    LOGIC_EX_05_1.0
+#
+#  Last Updated:
+#    2026-04-06
+#
+# -----------------------------------------------------------------------------
+#  PURPOSE AND STATUS
+# -----------------------------------------------------------------------------
+#  This document defines a scene-bound EXAMPLE SUITE ENTRY for the
+#  PMS-LOGIC application profile. It is fully aligned with:
+#
+#    - PMS-LOGIC.yaml (schema_version: PMS-LOGIC_1.1)
+#    - PMS.yaml       (schema_version: PMS_1.3)
+#
+#  It is not a family ethics manual, not a caregiving prescription, and not a
+#  moral code. Its function is to render a concrete care scene operator-readable
+#  under the PMS-LOGIC lens while preserving:
+#
+#    - Distance (Χ),
+#    - reversibility,
+#    - Dignity-in-Practice (D),
+#    - non-prescriptivity,
+#    - and strict responsibility/ought separation.
+#
+# -----------------------------------------------------------------------------
+#  EXAMPLE TYPE
+# -----------------------------------------------------------------------------
+#  Scene-bound, non-instructional, structurally reconstructive.
+#
+# =============================================================================
+
+schema_version: "PMS-LOGIC_1.1"
+
+example_meta:
+  example_id: "LOGIC_EX_05"
+  example_version: "LOGIC_EX_05_1.0"
+  title: "Family Care Asymmetry: Responsibility Without Prescription"
+  status: "draft_example"
+  last_updated: "2026-04-06"
+  language: "EN"
+  repository_path: "examples/LOGIC_EX_05_family-care-asymmetry.yaml"
+  aligned_with:
+    profile_name: "PMS–LOGIC Application Profile"
+    profile_short: "PMS-LOGIC"
+    profile_schema_version: "PMS-LOGIC_1.1"
+    base_model_name: "Praxeological Meta-Structure"
+    base_model_short: "PMS"
+    base_schema_version: "PMS_1.3"
+  authors:
+    - name: "T. Zöller"
+      role: "originator"
+    - name: "ChatGPT (GPT-5.4 Thinking)"
+      role: "formalization_assistant"
+  example_type:
+    scene_bound: true
+    non_instructional: true
+    person_level_typing: false
+    sanction_logic: false
+    moral_code_generation: false
+
+validity_gate_reminder:
+  note: >
+    This example remains valid only as a scene-bound PMS application. It does
+    not license verdicts, prescriptions, family-role absolutization, or
+    irreversible identity claims.
+  requires:
+    - id: "Χ"
+      name: "Distance"
+      meaning: >
+        Maintain meta-position and stop-capability; no fusion into verdict,
+        authority, or normative demand.
+    - id: "reversibility"
+      meaning: >
+        All readings remain scene-bound, revisable, and configuration-specific;
+        no global person labels or irreversible interpretive claims.
+    - id: "D"
+      name: "Dignity-in-practice"
+      meaning: >
+        No shaming, ranking, humiliation, or ontological person evaluation;
+        critique remains restricted to structural attribution and boundary handling.
+
+model_binding:
+  source_profile:
+    file: "PMS-LOGIC.yaml"
+    schema_version: "PMS-LOGIC_1.1"
+  source_base_model:
+    file: "PMS.yaml"
+    schema_version: "PMS_1.3"
+  applicable_profile_sections:
+    - "paper_lens.tripartition"
+    - "paper_lens.non_operator_constructs"
+    - "reduced_signatures"
+    - "failure_mode_constraints"
+    - "drift_catalogue"
+    - "scale_matrices.derived_axes_projection"
+    - "counter_readings"
+    - "example_suite_schema"
+
+example_entry:
+  minimal_vignette:
+    scene: >
+      An adult family member provides ongoing informal care to an elderly
+      relative over an extended period. Care includes coordination, presence,
+      appointments, practical support, and intermittent crisis response, while
+      professional services remain partial, delayed, or unevenly accessible.
+    stakes: >
+      The scene affects health outcomes, dependency trajectories, caregiver
+      exhaustion, distribution of family burden, and long-term life
+      reorganization for all involved.
+    structural_issue: >
+      The issue is how responsibility becomes attributable through asymmetry and
+      time in an everyday care trajectory without being translated into command,
+      total obligation, or idealized family morality.
+
+  why_this_is_repo_useful:
+    structural_focus: >
+      This example is useful because it shows PMS–LOGIC in an ordinary but
+      highly pressure-loaded scene where responsibility appears almost
+      automatically moralized. It concentrates vulnerability, continuity,
+      fatigue, omission, and capacity boundaries in a way that makes the
+      responsibility/ought distinction especially clear.
+    relevance_for_profile: >
+      It demonstrates how moral readability emerges in sustained care without
+      requiring hidden norm derivation. It also shows why family relations are
+      especially vulnerable to pseudo-ought injection, guilt escalation, and
+      authority capture through vulnerability claims.
+    repository_value: >
+      As a test vector, the case helps distinguish PMS–LOGIC from moralizing
+      care ethics, total-duty family narratives, and nihilistic retreat. It
+      shows how care becomes structurally attributable while remaining bounded by
+      actual, sustainable capacity.
+
+  frame_validity:
+    operative_frame_□:
+      role_space:
+        - "Primary informal caregiver."
+        - "Care recipient with varying dependency and vulnerability."
+        - "Extended family with uneven participation or absence."
+        - "Healthcare, homecare, and social services with partial availability."
+      scope_boundaries:
+        - "Informal care capacity is limited by time, health, access, finances, mobility, and support systems."
+        - "The operative frame includes actual service availability, transport, scheduling, fatigue limits, and institutional interfaces."
+        - "Only what can be sustained within real capacity and time windows counts as operative possibility."
+      out_of_frame:
+        - "Idealized family norms."
+        - "Heroism narratives."
+        - "Total obligation."
+        - "Retrospective purity tests."
+        - "Any assumption that kinship as such produces unlimited attributable capacity."
+      frame_integrity_note: >
+        The example remains valid only so long as actual supports, absences, and
+        limits are represented as part of the frame. If cultural expectations
+        replace operative capacity analysis, the scene becomes morally inflated
+        and structurally blurred.
+
+  operator_mapping:
+    full_chain:
+      sequence: ["Δ", "∇", "□", "Λ", "Α", "Ω", "Θ", "Φ", "Χ", "Σ", "Ψ"]
+      note: >
+        This is a readability chain for the example, not a redefinition of PMS
+        dependency order.
+
+    reduced_signature_mapping:
+      PRE_MORAL_justification:
+        operators: ["Δ", "∇", "□", "Λ", "Α"]
+        function_in_scene: >
+          The care scene is defined by distinctions, recurrent absences,
+          support limits, and stabilized dependency patterns before evaluative
+          or moral vocabulary is introduced.
+
+      LOGIC_boundary_management:
+        operators: ["□", "Λ", "Χ", "Σ"]
+        function_in_scene: >
+          Care coordination requires bounded integration of needs, fatigue,
+          services, and time without converting coherence into final
+          justification or total duty.
+
+      POST_MORAL_effects:
+        operators: ["Ω", "Θ", "Ψ"]
+        function_in_scene: >
+          Vulnerability, sustained caregiving capacity, and continuity across
+          time make care trajectories responsibility-readable without producing
+          prescription.
+
+      MORAL_READABILITY_min:
+        operators: ["Ω", "Θ", "Λ", "Ψ"]
+        function_in_scene: >
+          Moral readability emerges post hoc because asymmetrical dependency,
+          durable effects, structured omissions, and continuity of care bind
+          outcomes to a trajectory.
+
+      POTENTIAL_effective:
+        operators: ["□", "Θ"]
+        function_in_scene: >
+          Only effective, sustainable care capacity within actual time and frame
+          conditions counts; abstract family expectation does not.
+
+      NON_CLOSURE_stability:
+        operators: ["Δ", "□", "Λ", "Α"]
+        function_in_scene: >
+          Needs, gaps, partial support, and recurrent shortfall become
+          stabilized in an open structure that cannot be fully resolved.
+
+      HUME_KNOT_reconstruction:
+        operators: ["□", "Ω", "Θ", "Λ", "Ψ"]
+        function_in_scene: >
+          The care scene becomes responsibility-readable without crossing the
+          is/ought boundary; consequences become attributable, not obligatory.
+
+  tripartition_tag:
+    pre_moral:
+      applies: true
+      statement: >
+        Dependency, support availability, fatigue, service gaps, and recurring
+        care routines define the scene before norm derivation.
+    logical:
+      applies: true
+      statement: >
+        Care coordination functions as ordering and boundary management under
+        persistent remainder; it cannot legitimately compute a final or total
+        right balance.
+    post_moral:
+      applies: true
+      statement: >
+        Moral readability emerges only once asymmetry, temporality, omission,
+        and continuity make care consequences attributable.
+
+  structural_analysis:
+    distinctions_Δ:
+      - "Available vs. unavailable support."
+      - "Immediate care vs. deferred care."
+      - "Sustainable response vs. overextension."
+      - "Within-capacity assistance vs. beyond-capacity expectation."
+      - "Shared care vs. default concentration on one caregiver."
+
+    impulse_∇:
+      - "Drive to preserve care continuity despite growing strain."
+      - "Drive to close gaps by personal overextension."
+      - "Drive to find 'the right balance' between self-preservation and care."
+      - "Drive to compensate structural insufficiency through informal sacrifice."
+
+    frame_□:
+      - "Family relationship and recurring care arrangement."
+      - "Actual access to services, appointments, respite, transport, and support."
+      - "Time availability, health constraints, income constraints, and logistical feasibility."
+      - "Cultural expectations only insofar as they actually shape operative pressures."
+      - "Institutional and service interfaces that affect what care is possible."
+
+    non_event_Λ:
+      - "Gaps in service provision."
+      - "Missed interventions due to fatigue, overload, or time scarcity."
+      - "Delayed appointments, follow-up, or coordination."
+      - "Absence of sufficient shared support."
+      - "No allocation of effort resolves all needs or prevents all loss."
+
+    attractor_Α:
+      - "Routine reliance on the same caregiver."
+      - "Normalization of partial care and chronic insufficiency."
+      - "Habitual deferral by others to the caregiver already carrying the load."
+      - "Stabilized expectation that the existing care trajectory will continue."
+
+    asymmetry_Ω:
+      exposure_gradients:
+        - "The care recipient is highly vulnerable to interruption, delay, or partial care."
+        - "The caregiver typically has greater operative capacity, but also asymmetric exposure to burnout and cumulative burden."
+        - "Extended family and institutions may be less immediately exposed to consequences than either caregiver or recipient."
+      capacity_gradients:
+        - "Care capacity is finite, role-bound, and time-bound."
+        - "The caregiver often has more immediate ability to affect outcomes than others in the frame."
+        - "Capacity is unequal not only between caregiver and recipient, but also across the wider family and service network."
+      note: >
+        Ω here marks structural imbalance in vulnerability, access, and ability
+        to intervene. It does not by itself produce duty or moral command.
+
+    temporality_Θ:
+      - "Health declines accumulate."
+      - "Missed care has lasting effects."
+      - "Fatigue and overload compound over time."
+      - "Care trajectories do not reset after one missed intervention or one exhausted period."
+      - "Delayed support can foreclose later possibilities."
+
+    recontextualization_Φ:
+      - "Shift from 'total care' to 'sustainable care within capacity.'"
+      - "Shift from 'family duty' to 'capacity-bounded care trajectory under asymmetry.'"
+      - "Shift from solitary care expectation to distributed support where feasible."
+
+    distance_Χ:
+      - "Restrain moral self-judgment and heroization."
+      - "Prevent vulnerability from becoming command without capacity checks."
+      - "Keep the analysis structural rather than sanctifying sacrifice or condemning limitation."
+      - "Hold open the difference between attributable consequence and unconditional duty."
+
+    integration_Σ:
+      - "Coordinate care tasks, service access, fatigue limits, and temporal urgency."
+      - "Preserve coherence in a livable care pattern without claiming completeness."
+      - "Integrate supports and boundaries without pretending that all unmet needs can be eliminated."
+
+    self_binding_Ψ:
+      - "Continuity of commitment stabilizes attribution over time."
+      - "The caregiving trajectory remains identifiable across repeated acts, omissions, and revisions."
+      - "Responsibility persists where capacity and continuity persist, without becoming prescription."
+
+  effective_capacity_boundary:
+    boundary_condition_ref: "BC_EFFECTIVE_CAPACITY"
+    statement: >
+      Responsibility presupposes effective, sustainable, frame-bound care
+      capacity: actual time, access, practical ability, health, support, and
+      open temporal windows within which action can still matter.
+    no_capacity_no_attribution: >
+      Where caregiving capacity collapses through exhaustion, service absence,
+      health limitation, loss of access, or closed time windows, attribution
+      does not simply continue by moral expectation alone.
+    calibration_note: >
+      The threshold at which care capacity becomes effectively attributable
+      remains calibration-sensitive. Borderline cases may include chronic
+      fatigue, fluctuating health, partial service access, unstable support from
+      others, and ambiguous temporal urgency. PMS–LOGIC specifies structural
+      form, not every sufficiency threshold in advance.
+    anti_inflation_note: >
+      This boundary prevents both moral inflation ('as family, one must always
+      do more') and moral erasure ('because not everything can be done, nothing
+      belongs to anyone').
+
+  moral_readability_field:
+    status: "post-moral readability"
+    minimal_operator_basis: ["Ω", "Θ", "Λ", "Ψ"]
+    emergence_statement: >
+      Moral readability emerges post hoc because ongoing care unfolds under
+      vulnerability, unequal capacity, durable effects, structured absences, and
+      continuity of commitment.
+    omission_non_neutrality: >
+      Non-provision, delay, missed intervention, or partial care function as
+      non-events (Λ) within the care frame and therefore shape outcomes rather
+      than merely failing to add positive action.
+    non_innocence_note: >
+      The scene becomes one of structural non-innocence not because the
+      caregiver violates a hidden command, but because consequences attach to an
+      ongoing care trajectory wherever effective capacity persists.
+    hume_boundary_note: >
+      Nothing in this example derives an ought from an is. The reconstruction
+      remains on the side of attributable consequence rather than obligation.
+
+  logic_boundary_management:
+    role_of_logic: >
+      Logic functions here as an ordering instrument for coordinating needs,
+      finite capacity, temporal urgency, service options, and support limits.
+    limit_of_logic: >
+      No calculation can produce a final, exhaustive, or universally valid
+      right amount of care. Needs exceed capacity, and remainder persists.
+    persistent_non_closure: >
+      Non-closure (Λ) remains within the frame: unmet needs, fatigue, service
+      gaps, and partial loss cannot be fully eliminated or morally neutralized.
+    closure_pressure:
+      source: "∇ → Σ-totalization risk"
+      description: >
+        Pressure arises to declare one care pattern, sacrifice level, or balance
+        as finally right, either through self-judgment, family expectation, or
+        simplified moral narratives.
+    disciplined_stopping_point: >
+      The appropriate endpoint is a structurally disciplined stopping point for
+      logic as used here: coordinated care within capacity, without conversion
+      into total duty or final justification.
+
+  typical_drift_markers:
+    - drift_id: "dogmatism_sigma_totalization"
+      marker: >
+        Treating one care pattern or one sacrifice level as exhaustive, final,
+        or fully justified for all future cases.
+    - drift_id: "moralism_pseudo_ought_injection"
+      marker: >
+        Translating attributable care responsibility into unconditional family
+        duty or endless command.
+    - drift_id: "nihilism_lambda_suppression"
+      marker: >
+        Claiming that because limits exist and not everything can be done,
+        responsibility disappears.
+    - drift_id: "authority_capture_omega_inflation"
+      marker: >
+        Converting vulnerability or family expectation into command without
+        checking actual capacity.
+    - drift_id: "technocratic_reduction_frame_overconstraint"
+      marker: >
+        Treating the immediate family frame as exhaustive while ignoring
+        alternative supports, services, or redistributions outside the default
+        arrangement.
+
+  failure_mode_constraint_reference:
+    - id: "FMC1"
+      label: "A boundary that cannot be carried becomes structurally unstable."
+      relevance: >
+        Care arrangements that exceed sustainable capacity become destructive
+        rather than orienting. Overclaimed care boundaries eventually destabilize
+        both care quality and caregiver viability.
+
+    - id: "FMC2"
+      label: "Forced closure where Non-Event (Λ: structured absence) persists produces structural instability."
+      relevance: >
+        No care arrangement eliminates all unmet need, fatigue, or loss. Any
+        attempt to declare the remainder resolved replaces structural openness
+        with false certainty or guilt narratives.
+
+    - id: "FMC4"
+      label: "Where proximity generates power, viable praxis requires maintained distance."
+      relevance: >
+        Care scenes involve extreme proximity, dependency, and influence.
+        Maintained distance is needed so that vulnerability does not become
+        command and care does not become fused with total self-erasure.
+
+    - id: "FMC5"
+      label: "Within PMS–LOGIC, stable self-binding takes the form of restraint rather than assertion."
+      relevance: >
+        Stable care requires restraint against claims of total obligation, total
+        innocence, or final justification. Self-binding remains continuity of
+        responsibility, not assertion of moral completeness.
+
+  pms_logic_output:
+    structural_mapping: >
+      Distinctions (Δ), care gaps and missed interventions (Λ), and stabilized
+      routines of partial support (Α) operate under vulnerability and unequal
+      capacity (Ω) and irreversible time (Θ), while Ψ stabilizes attribution
+      across the caregiving trajectory.
+    attribution_conditions: >
+      Responsibility tracks effective, sustainable capacity within the operative
+      care frame rather than kinship abstraction, moral expectation, or ideal
+      care fantasy.
+    what_remains_open: >
+      Irreducible loss, unmet needs, fatigue remainder, service insufficiency,
+      and persistent non-closure (Λ) remain structurally present.
+    excluded_outputs:
+      - "No prescriptions."
+      - "No heroism narratives."
+      - "No family-role absolutization."
+      - "No sanctions."
+      - "No moral code."
+      - "No hidden ought."
+
+  readable_structural_closure: >
+    The family care case makes visible one of the most persistent confusions
+    PMS–LOGIC is designed to resist: the slide from structural responsibility
+    into implicit obligation. Moral pressure appears here not because a family
+    norm commands care, but because asymmetry (Ω: structural imbalance) and
+    irreversible time (Θ: temporality) render care and non-care consequential
+    once a person occupies a position of effective, ongoing capacity within a
+    shared frame (□). PMS–LOGIC therefore reconstructs the scene as one of
+    attributable consequence under continuity, not as one of derived duty. Logic
+    may coordinate the care scene, but it cannot close it; the remainder must be
+    carried rather than converted into command or guilt.
+
+  extended_structural_closure:
+    paragraph_1: >
+      The family care example is especially instructive because it is both
+      ordinary and structurally intense. It shows how moral language arises in
+      everyday life without requiring a hidden normative engine. Care becomes
+      readable because health trajectories, dependency relations, and missed
+      interventions accumulate over time. The scene is already asymmetrical and
+      temporally charged before anyone starts talking in the language of duty.
+
+    paragraph_2: >
+      The key mechanism is continuity under asymmetry. As long as effective care
+      capacity exists, however limited, actions and omissions shape outcomes
+      that cannot be reset. Missed appointments, delayed responses, periods of
+      exhaustion, and partial support are not empty gaps. They are non-events
+      (Λ) within an established dependency frame, and therefore participate in
+      consequence formation. Responsibility becomes readable because consequences
+      attach to a caregiving trajectory, not because a hidden command has been
+      violated.
+
+    paragraph_3: >
+      The decisive safeguard is the effective-capacity boundary. PMS–LOGIC does
+      not treat kinship as such as responsibility-generating. Responsibility
+      tracks effective, sustainable capacity within time, not abstract family
+      expectation or moral mythology. This blocks both dominant distortions:
+      moralism ('you must always do more because you are family') and nihilism
+      ('because you cannot do everything, nothing belongs to anyone'). Capacity
+      remains the condition of attribution.
+
+    paragraph_4: >
+      The case also reveals the limit of logic. Care scenes invite calculation:
+      how much is enough, what is fair, what is the right balance? But no final
+      balance is structurally available here. Needs exceed capacity, losses
+      remain, and remainder persists. Closure-pressure arises as guilt
+      narratives, family pressure, or self-judgment, each pushing integration
+      (Σ) toward totalization. PMS–LOGIC resists this move by insisting that Λ
+      be carried rather than resolved.
+
+    paragraph_5: >
+      Distance (Χ) is therefore not withdrawal from care but protection against
+      escalation. It prevents vulnerability from becoming command and prevents
+      responsibility from collapsing into self-accusation. Integration (Σ)
+      coordinates care tasks, limits, and support systems into a livable pattern
+      without claiming completeness. Recontextualization (Φ) then becomes
+      possible: care can shift through new services, redistributed support, or
+      changed roles without erasing prior consequences.
+
+    paragraph_6: >
+      Self-binding (Ψ) stabilizes attribution without turning it into
+      prescription. The caregiver remains a continuous bearer of consequences
+      across time not because they ought to be, but because the care trajectory
+      is theirs insofar as capacity and continuity persist. This is
+      responsibility as non-innocence, not command. The example therefore
+      displays the full PMS–LOGIC architecture: pre-moral structure
+      (dependency, gaps, routines), logical boundary discipline (coordination
+      without closure), and post-moral readability (attributable consequences
+      under Ω, Θ, Λ, and Ψ).
+
+  counter_reading_relevance:
+    most_relevant:
+      - id: "D1"
+        why_relevant: >
+          Care scenes are often immediately moralized; the example must show why
+          moral readability does not imply hidden ethics injection.
+      - id: "D2"
+        why_relevant: >
+          Readers may mistake non-prescriptivity for arbitrariness; the example
+          must show that capacity-bound attribution is constrained, not random.
+      - id: "D5"
+        why_relevant: >
+          Family care is especially prone to fairness objections; the example
+          must clarify that PMS–LOGIC models attribution, not moral desert.
+      - id: "D6"
+        why_relevant: >
+          Readers may try to turn the example into practical care guidance; the
+          example must remain orienting rather than instructive.
+      - id: "D7"
+        why_relevant: >
+          The example may seem persuasive because PMS–LOGIC redescribes common
+          care intuitions structurally; this does not itself prove final
+          philosophical superiority.
+      - id: "D8"
+        why_relevant: >
+          The case lies near adjacent care ethics, family ethics, and social
+          policy debates, so reconstructive scope must remain explicit.
+
+  derived_axes_projection_local:
+    note: >
+      This is a local paper-internal localization for the example, not a
+      measurement of objective system quality.
+    axes:
+      Awareness_A:
+        structural_level: "High"
+        local_reason: >
+          The case sharply reveals limits, dependency structure, fatigue
+          boundaries, and the difference between operative capacity and moralized
+          expectation.
+      Coherence_C:
+        structural_level: "High"
+        local_reason: >
+          Care arrangements can be coordinated coherently under persistent
+          remainder, even where no complete solution is available.
+      Responsibility_R:
+        structural_level: "High"
+        local_reason: >
+          Ongoing capacity, asymmetry, and time make caregiving trajectories
+          strongly attributable where continuity persists.
+      Action_E:
+        structural_level: "Deliberately constrained"
+        local_reason: >
+          Action must be filtered through sustainability, fatigue, support
+          limits, and open time windows rather than through escalation or guilt.
+      Dignity_in_Practice_D:
+        structural_level: "Stabilizing"
+        local_reason: >
+          The case requires restraint against shaming caregivers, idealizing
+          sacrifice, or ontologically reducing the care recipient or caregiver to
+          one role.
+
+  conclusion:
+    takeaway: >
+      Family care is morally readable in PMS–LOGIC not because a duty is secretly
+      derived, but because asymmetry, irreversible time, omission, and
+      continuity make consequences attributable wherever effective care capacity
+      persists. The model therefore reconstructs responsibility without
+      obligation, and care without total prescription.
+    publication_note: >
+      This example is valid only as a scene-bound structural reconstruction. It
+      is not a family ethics manual, not a caregiving recommendation set, and
+      not a substitute for clinical, social-service, or legal guidance.

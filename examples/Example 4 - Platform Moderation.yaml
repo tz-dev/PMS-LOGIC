@@ -1,0 +1,594 @@
+# =============================================================================
+#  PMS-LOGIC — EXAMPLE SUITE ENTRY
+#
+#  Repository:
+#    https://github.com/tz-dev/PMS-LOGIC
+#
+#  File:
+#    examples/LOGIC_EX_04_platform-moderation-authority-capture.yaml
+#
+#  Example Version:
+#    LOGIC_EX_04_1.0
+#
+#  Last Updated:
+#    2026-04-06
+#
+# -----------------------------------------------------------------------------
+#  PURPOSE AND STATUS
+# -----------------------------------------------------------------------------
+#  This document defines a scene-bound EXAMPLE SUITE ENTRY for the
+#  PMS-LOGIC application profile. It is fully aligned with:
+#
+#    - PMS-LOGIC.yaml (schema_version: PMS-LOGIC_1.1)
+#    - PMS.yaml       (schema_version: PMS_1.3)
+#
+#  It is not a normative guide, not a moderation manual, and not a moral code.
+#  Its function is to render a concrete governance scene operator-readable under
+#  the PMS-LOGIC lens while preserving:
+#
+#    - Distance (Χ),
+#    - reversibility,
+#    - Dignity-in-Practice (D),
+#    - non-prescriptivity,
+#    - and strict responsibility/ought separation.
+#
+# -----------------------------------------------------------------------------
+#  EXAMPLE TYPE
+# -----------------------------------------------------------------------------
+#  Scene-bound, non-instructional, structurally reconstructive.
+#
+# =============================================================================
+
+schema_version: "PMS-LOGIC_1.1"
+
+example_meta:
+  example_id: "LOGIC_EX_04"
+  example_version: "LOGIC_EX_04_1.0"
+  title: "Platform Moderation: Authority Capture via 'We’re Just Being Rational'"
+  status: "draft_example"
+  last_updated: "2026-04-06"
+  language: "EN"
+  repository_path: "examples/LOGIC_EX_04_platform-moderation-authority-capture.yaml"
+  aligned_with:
+    profile_name: "PMS–LOGIC Application Profile"
+    profile_short: "PMS-LOGIC"
+    profile_schema_version: "PMS-LOGIC_1.1"
+    base_model_name: "Praxeological Meta-Structure"
+    base_model_short: "PMS"
+    base_schema_version: "PMS_1.3"
+  authors:
+    - name: "T. Zöller"
+      role: "originator"
+    - name: "ChatGPT (GPT-5.4 Thinking)"
+      role: "formalization_assistant"
+  example_type:
+    scene_bound: true
+    non_instructional: true
+    person_level_typing: false
+    sanction_logic: false
+    moral_code_generation: false
+
+validity_gate_reminder:
+  note: >
+    This example remains valid only as a scene-bound PMS application. It does
+    not license verdicts, prescriptions, person-ranking, or irreversible
+    identity claims.
+  requires:
+    - id: "Χ"
+      name: "Distance"
+      meaning: >
+        Maintain meta-position and stop-capability; no fusion into verdict,
+        authority, or normative demand.
+    - id: "reversibility"
+      meaning: >
+        All readings remain scene-bound, revisable, and configuration-specific;
+        no global person labels or irreversible interpretive claims.
+    - id: "D"
+      name: "Dignity-in-practice"
+      meaning: >
+        No shaming, ranking, humiliation, or ontological person evaluation;
+        critique remains restricted to structural attribution and boundary handling.
+
+model_binding:
+  source_profile:
+    file: "PMS-LOGIC.yaml"
+    schema_version: "PMS-LOGIC_1.1"
+  source_base_model:
+    file: "PMS.yaml"
+    schema_version: "PMS_1.3"
+  applicable_profile_sections:
+    - "paper_lens.tripartition"
+    - "paper_lens.non_operator_constructs"
+    - "reduced_signatures"
+    - "failure_mode_constraints"
+    - "drift_catalogue"
+    - "scale_matrices.derived_axes_projection"
+    - "counter_readings"
+    - "example_suite_schema"
+
+example_entry:
+  minimal_vignette:
+    scene: >
+      A large online platform enforces content moderation policies through a
+      combination of algorithmic scoring, internal guidelines, human review,
+      and appeal pipelines. Decisions affect visibility, reach, monetization,
+      and account access at scale.
+    stakes: >
+      Moderation outcomes have reputational, economic, communicative, and
+      participatory effects. Users may lose audience access, business
+      continuity, or speech visibility, while appeals remain delayed, partial,
+      or opaque.
+    structural_issue: >
+      The issue is how logical procedures, metrics, and policy rules become
+      authority under asymmetry, without introducing norms, and how omissions in
+      explanation, review, and correction become responsibility-relevant under
+      time.
+
+  why_this_is_repo_useful:
+    structural_focus: >
+      This example is useful because it concentrates asymmetrical enforcement
+      capacity, procedural opacity, metric integration, appeal gaps, and durable
+      downstream effects in one scene. It sharply illustrates how logic becomes
+      vulnerable to authority capture when non-closure is denied.
+    relevance_for_profile: >
+      It demonstrates PMS–LOGIC’s account of closure-pressure in an institutional
+      system that presents itself as merely rational or technical. It shows how
+      moral readability can emerge even without explicit normative language,
+      simply because consequences are durable, uneven, and insufficiently
+      answerable.
+    repository_value: >
+      As a test vector, the case differentiates PMS–LOGIC from both moralizing
+      censorship critiques and purely technocratic self-descriptions. It shows
+      how moderation becomes structurally attributable without reducing the case
+      to hidden ethics or policy absolutism.
+
+  frame_validity:
+    operative_frame_□:
+      role_space:
+        - "Platform moderators, escalation teams, trust-and-safety units, and policy teams."
+        - "Automated systems that classify, score, route, or trigger enforcement actions."
+        - "Affected users whose speech visibility, access, and recourse are shaped by platform decisions."
+        - "Appeal and review actors operating within latency, staffing, and policy constraints."
+      scope_boundaries:
+        - "Terms of service, internal enforcement guidelines, scoring models, and moderation pipelines define the operative frame."
+        - "Appeal mechanisms, review windows, latency constraints, and available moderation resources constrain feasible intervention."
+        - "Only what can be enforced, reviewed, reversed, or explained within current platform capacity counts as operative capacity."
+      out_of_frame:
+        - "Comprehensive truth adjudication."
+        - "Full moral evaluation of speech as such."
+        - "Societal consensus on contested meanings."
+        - "Any assumption that model outputs exhaust context, meaning, or public consequence."
+        - "Any presumption that platform rules exhaust the public significance of moderated content."
+      frame_integrity_note: >
+        The example remains valid only so long as the platform frame is legible
+        enough to identify actual enforcement capacity, actual review limits, and
+        actual time-bounded recourse conditions. If the frame is performed
+        rhetorically but not operationally, attribution claims require
+        recalibration rather than inflation.
+
+  operator_mapping:
+    full_chain:
+      sequence: ["Δ", "∇", "□", "Λ", "Α", "Ω", "Θ", "Φ", "Χ", "Σ", "Ψ"]
+      note: >
+        This is a readability chain for the example, not a redefinition of PMS
+        dependency order.
+
+    reduced_signature_mapping:
+      PRE_MORAL_justification:
+        operators: ["Δ", "∇", "□", "Λ", "Α"]
+        function_in_scene: >
+          The scene is defined by distinctions, thresholds, omissions,
+          enforcement defaults, and stabilized moderation patterns before any
+          evaluative vocabulary is introduced.
+
+      LOGIC_boundary_management:
+        operators: ["□", "Λ", "Χ", "Σ"]
+        function_in_scene: >
+          Moderation relies on coordinated rules, scores, signals, and review
+          pipelines under persistent remainder. Distance is required to prevent
+          models and procedures from hardening into justificatory authority.
+
+      POST_MORAL_effects:
+        operators: ["Ω", "Θ", "Ψ"]
+        function_in_scene: >
+          Concentrated enforcement capacity, durable downstream effects, and
+          institutional continuity make platform trajectories responsibility-
+          readable without generating an ought.
+
+      MORAL_READABILITY_min:
+        operators: ["Ω", "Θ", "Λ", "Ψ"]
+        function_in_scene: >
+          Moral readability emerges post hoc because asymmetric and durable
+          moderation effects are stabilized through omissions, unresolved
+          remainder, and continuous platform governance.
+
+      POTENTIAL_effective:
+        operators: ["□", "Θ"]
+        function_in_scene: >
+          Only actual enforcement and review capacity within the operative frame
+          counts; abstract claims that 'someone could have fixed it' do not
+          substitute for effective capacity.
+
+      NON_CLOSURE_stability:
+        operators: ["Δ", "□", "Λ", "Α"]
+        function_in_scene: >
+          Contextual remainder, explanation gaps, and repeated reliance on
+          thresholds become stabilized within the frame without ever exhausting
+          the meaning of moderated content.
+
+      HUME_KNOT_reconstruction:
+        operators: ["□", "Ω", "Θ", "Λ", "Ψ"]
+        function_in_scene: >
+          The moderation scene becomes responsibility-readable without crossing
+          the is/ought boundary; effects become attributable, not obligatory.
+
+  tripartition_tag:
+    pre_moral:
+      applies: true
+      statement: >
+        Platform rules, operational thresholds, omitted explanations, appeal
+        latency, and stabilized moderation routines define the scene before norm
+        derivation.
+    logical:
+      applies: true
+      statement: >
+        Moderation functions as ordering and boundary management through
+        thresholds, scores, and review procedures, but cannot legitimately close
+        contextual remainder or convert procedure into final authority.
+    post_moral:
+      applies: true
+      statement: >
+        Moral readability emerges only once moderation trajectories become
+        attributable under asymmetry, temporality, non-event, and self-binding.
+
+  structural_analysis:
+    distinctions_Δ:
+      - "Allowed vs. restricted content."
+      - "Flagged vs. unflagged behavior."
+      - "High-confidence score vs. low-confidence score."
+      - "Reviewed vs. unreviewed case."
+      - "Appealable vs. practically non-contestable outcome."
+
+    impulse_∇:
+      - "Drive toward scalable enforcement through metrics and thresholds."
+      - "Drive toward procedural simplification under volume pressure."
+      - "Drive to present platform outputs as rationally necessary."
+      - "Drive to reduce contestability by invoking policy coherence."
+
+    frame_□:
+      - "Terms of service and internal enforcement criteria."
+      - "Moderation pipelines, reviewer capacity, and latency constraints."
+      - "Appeal channels and review windows."
+      - "Model thresholds, risk scores, and escalation rules."
+      - "Institutional remit over visibility, access, and account continuity."
+
+    non_event_Λ:
+      - "Absence of case-specific justification for many decisions."
+      - "Non-delivery of individualized explanations within relevant time windows."
+      - "Failure to review, correct, or reopen a contested decision."
+      - "Metrics cannot exhaust context, meaning, or downstream effects."
+      - "No moderation system fully resolves the public meaning of contested speech."
+
+    attractor_Α:
+      - "Recurrent reliance on scores, thresholds, and precedents."
+      - "Habitual deferral to 'policy says so' or 'the model flagged it.'"
+      - "Institutional drift toward explanation minimization under scale pressure."
+      - "Stabilized appeal gaps as normal operating condition."
+
+    asymmetry_Ω:
+      exposure_gradients:
+        - "Platform decisions disproportionately affect users with limited recourse."
+        - "Speech visibility and account access can be altered at scale by one-sided enforcement mechanisms."
+        - "Users may bear reputational and economic losses without reciprocal influence over moderation design."
+      capacity_gradients:
+        - "Enforcement capacity exceeds user capacity to contest or understand outcomes."
+        - "Platform policy teams and automated systems hold concentrated decision leverage."
+        - "Appeal and correction capacity is unevenly distributed and often delayed."
+      note: >
+        Ω here marks unequal power over visibility, recourse, explanation, and
+        downstream consequence. It does not imply moral guilt or moral verdict
+        by itself.
+
+    temporality_Θ:
+      - "Visibility loss and account actions have lasting effects."
+      - "Appeals are time-bound and may arrive after material damage is done."
+      - "Delayed review can preserve or deepen downstream losses."
+      - "Policy iterations do not erase prior enforcement effects."
+
+    recontextualization_Φ:
+      - "Shift from 'objective enforcement' to 'capacity-bounded governance under uncertainty.'"
+      - "Reframe moderation from truth adjudication to attributable management of exposure and access."
+
+    distance_Χ:
+      - "Prevent metric outputs from becoming justificatory authority."
+      - "Prevent 'rational necessity' rhetoric from sealing decisions against contestation."
+      - "Hold open the difference between coordinated enforcement and final epistemic authority."
+      - "Keep the analysis structural rather than accusatory or apologetic."
+
+    integration_Σ:
+      - "Coordinate rules, signals, thresholds, and review flows."
+      - "Preserve procedural coherence without claiming completeness."
+      - "Integrate case-handling under scale constraints without totalizing the model."
+
+    self_binding_Ψ:
+      - "The platform remains linked to long-term effects across policy iterations and appeals."
+      - "Responsibility persists across updates, reversals, and explanatory revisions."
+      - "Institutional continuity makes enforcement trajectories attributable over time."
+
+  effective_capacity_boundary:
+    boundary_condition_ref: "BC_EFFECTIVE_CAPACITY"
+    statement: >
+      Responsibility presupposes effective, frame-bound moderation capacity:
+      actual enforcement power, available review channels, operative appeal
+      pathways, and temporal windows within which intervention or correction can
+      still matter.
+    no_capacity_no_attribution: >
+      Where platform actors lack actual authority, access, or correction
+      capacity, attribution does not simply expand by rhetorical demand.
+      Structural possibility must remain capacity-bound.
+    calibration_note: >
+      The threshold at which moderation capacity becomes effectively attributable
+      remains calibration-sensitive. Borderline cases may include partially
+      automated routing, outsourced review, inconsistent escalation authority,
+      ineffective appeals, or correction windows that close before review is
+      feasible. PMS–LOGIC specifies structural form, not every sufficiency
+      threshold in advance.
+    anti_inflation_note: >
+      This boundary prevents both technocratic deflection ('the system decided,
+      so no one is responsible') and moral inflation ('someone must be fully
+      answerable for every downstream effect regardless of operative capacity').
+
+  moral_readability_field:
+    status: "post-moral readability"
+    minimal_operator_basis: ["Ω", "Θ", "Λ", "Ψ"]
+    emergence_statement: >
+      Moral readability emerges post hoc because platform moderation distributes
+      durable and uneven consequences under concentrated capacity, while omitted
+      explanation and review remain structurally active.
+    omission_non_neutrality: >
+      Failure to review, explain, or correct decisions functions as a non-event
+      (Λ) within the operative frame and therefore shapes outcomes rather than
+      merely leaving them untouched.
+    non_innocence_note: >
+      The scene becomes one of structural non-innocence not because the platform
+      openly moralizes, but because consequences remain traceable under
+      asymmetry, temporality, omission, and institutional continuity.
+    hume_boundary_note: >
+      Nothing in this example derives an ought from an is. The reconstruction
+      remains on the side of attributable consequence rather than obligation.
+
+  logic_boundary_management:
+    role_of_logic: >
+      Logic functions here as an ordering instrument for coordinating policy
+      rules, classification signals, thresholds, escalation conditions, and
+      limited review capacity.
+    limit_of_logic: >
+      Metrics and procedural consistency cannot exhaust meaning, context, or
+      downstream effects. They therefore cannot legitimately function as final
+      authority.
+    persistent_non_closure: >
+      Non-closure (Λ) remains within the frame: contextual remainder, public
+      meaning, explanation gaps, and appeal insufficiency persist even where
+      procedural coherence is high.
+    closure_pressure:
+      source: "∇ → Σ-totalization risk"
+      description: >
+        Pressure arises to present moderation outcomes as rationally necessary,
+        technically compelled, or policy-exhaustive in order to reduce
+        contestation and institutional friction.
+    disciplined_stopping_point: >
+      The appropriate endpoint is a structurally disciplined stopping point for
+      logic as used here: coordinated enforcement without conversion into final
+      justification.
+
+  typical_drift_markers:
+    - drift_id: "dogmatism_sigma_totalization"
+      marker: >
+        Treating scoring models, thresholds, or policy tables as final arbiters
+        of meaning and legitimacy.
+    - drift_id: "moralism_pseudo_ought_injection"
+      marker: >
+        Converting enforcement outputs into moral condemnation of users rather
+        than maintaining structural attribution.
+    - drift_id: "nihilism_lambda_suppression"
+      marker: >
+        Denying omission effects by saying 'the system decided' or 'nothing was
+        omitted because a process existed.'
+    - drift_id: "authority_capture_omega_inflation"
+      marker: >
+        Laundering platform power into epistemic authority through rhetoric of
+        rationality, objectivity, or technical necessity.
+    - drift_id: "technocratic_reduction_frame_overconstraint"
+      marker: >
+        Assuming platform frames exhaust public meaning and that anything outside
+        model capture is negligible or irrelevant.
+
+  failure_mode_constraint_reference:
+    - id: "FMC2"
+      label: "Forced closure where Non-Event (Λ: structured absence) persists produces structural instability."
+      relevance: >
+        Moderation systems cannot eliminate contextual remainder, appeal gaps, or
+        omitted explanation by procedural declaration. Closure rhetoric here
+        masks unresolved structural absence.
+
+    - id: "FMC3"
+      label: "When explanatory power is converted into sense-making authority, structural overreach occurs."
+      relevance: >
+        Metrics, thresholds, and policy rules may coordinate enforcement, but
+        they do not thereby acquire final authority over context, legitimacy, or
+        the meaning of contested speech.
+
+    - id: "FMC4"
+      label: "Where proximity generates power, viable praxis requires maintained distance."
+      relevance: >
+        Platform actors stand in asymmetric proximity to visibility controls,
+        enforcement tools, and appeal structures. Maintained distance is needed
+        to prevent governance power from becoming epistemic supremacy.
+
+    - id: "FMC5"
+      label: "Within PMS–LOGIC, stable self-binding takes the form of restraint rather than assertion."
+      relevance: >
+        Stable moderation praxis requires restraint against presenting
+        procedurally coherent outputs as morally exhaustive or finally justified.
+
+  pms_logic_output:
+    structural_mapping: >
+      Distinctions (Δ), omitted explanation and review (Λ), and stabilized
+      moderation routines (Α) operate under asymmetry (Ω) and temporality (Θ),
+      while Χ and Σ constrain closure-pressure within a bounded governance frame.
+    attribution_conditions: >
+      Responsibility tracks effective enforcement capacity, review power,
+      correction persistence, and institutional continuity rather than declared
+      neutrality or algorithmic opacity.
+    what_remains_open: >
+      Contextual remainder, public-meaning surplus, explanation deficits, appeal
+      gaps, and non-closure (Λ) remain structurally present.
+    excluded_outputs:
+      - "No prescriptions."
+      - "No moral ranking of speakers as persons."
+      - "No sanctions beyond scene reconstruction."
+      - "No hidden ought."
+      - "No comprehensive truth adjudication."
+      - "No claim that procedure exhausts legitimacy."
+
+  readable_structural_closure: >
+    This case shows with particular clarity how logic turns into authority when
+    its structural limits are not carried. The platform does not become morally
+    charged because it openly legislates values, but because it holds
+    concentrated and persistent capacity under asymmetry (Ω: structural
+    imbalance) and irreversible time (Θ: temporality). Once this capacity is in
+    place, moderation outcomes and omissions become attributable. PMS–LOGIC
+    therefore reconstructs the scene as one of consequence-bearing governance
+    under non-closure (Λ), not as one of derived moral obligation. Logic may
+    order the scene, but it cannot complete it; the remainder must be carried
+    rather than displaced into claims of rational necessity.
+
+  extended_structural_closure:
+    paragraph_1: >
+      The platform moderation case is especially useful because it exposes how
+      institutional rationality can mask authority capture. Scores, thresholds,
+      and guidelines are legitimate tools of integration (Σ): they reduce
+      complexity and permit scalability. The failure begins when these tools are
+      rhetorically elevated into justificatory closure: 'the model decided,'
+      'policy required it,' or 'the system is simply rational.' At that point,
+      logic is no longer functioning as ordering; it is functioning as authority.
+
+    paragraph_2: >
+      The key structural mechanism is asymmetrical and durable consequence under
+      insufficient answerability. Users often experience moderation as
+      moralizing even where no explicit moral language is used, because speech
+      visibility, account continuity, and economic participation are affected in
+      uneven ways while explanation is absent or delayed. This is why omission
+      matters so much here: the non-event (Λ) of missing review, missing
+      justification, or missing correction is not empty. It actively stabilizes
+      outcomes and blocks contestation.
+
+    paragraph_3: >
+      PMS–LOGIC clarifies why two common reactions both misfire. Calling the
+      system 'purely technical' suppresses Λ by denying that opacity and
+      omission matter under Ω and Θ. Calling every enforcement action moral
+      condemnation injects a pseudo-ought and collapses structural attribution
+      into accusation. The model refuses both moves. Responsibility here tracks
+      effective enforcement and correction capacity over time, not moral intent
+      and not algorithmic inevitability.
+
+    paragraph_4: >
+      Distance (Χ) is therefore decisive. Without Χ, integration (Σ) slides into
+      totalization: models become final arbiters, and platform power is
+      laundered into epistemic legitimacy. With Χ, moderation can be seen for
+      what it is within PMS–LOGIC: capacity-bounded governance under uncertainty,
+      not truth sovereignty. Recontextualization (Φ) becomes possible only once
+      the system is no longer allowed to mistake its operational coherence for
+      comprehensive authority.
+
+    paragraph_5: >
+      Self-binding (Ψ) stabilizes attribution across time. Policy revisions,
+      appeal updates, and model retraining do not erase the continuity of the
+      platform trajectory. Responsibility does not reset at each version change.
+      The platform remains structurally linked to the effects of its enforcement
+      patterns and its omissions, including those produced by latency, silence,
+      or systematic under-explanation.
+
+    paragraph_6: >
+      The example therefore displays the full PMS–LOGIC architecture:
+      pre-moral structure (rules, thresholds, omissions, stabilized routines),
+      logical boundary discipline (integration without closure-authority), and
+      post-moral readability (attributable consequences under Ω, Θ, Λ, and Ψ).
+      The result is a structurally sharp but non-prescriptive account: no code,
+      no person-ranking, no sanction, and no hidden ought—only a disciplined
+      reconstruction of why governance by 'mere rationality' can become
+      responsibility-readable when its own remainder is denied.
+
+  counter_reading_relevance:
+    most_relevant:
+      - id: "D1"
+        why_relevant: >
+          The case is often misread as covert ethics because moderation has
+          obvious public-moral resonance. The example must show why readability
+          does not imply norm generation.
+      - id: "D4"
+        why_relevant: >
+          Platforms often compensate non-closure with quasi-transcendent rhetoric
+          of safety, truth, or system objectivity. The example must resist that
+          move.
+      - id: "D6"
+        why_relevant: >
+          Readers may try to convert the example into a moderation manual; the
+          example must remain orienting rather than instructive.
+      - id: "D7"
+        why_relevant: >
+          PMS–LOGIC may seem compelling because it translates platform rhetoric
+          into structural grammar; this does not by itself prove final
+          superiority.
+      - id: "D8"
+        why_relevant: >
+          The scene lies close to adjacent debates in platform governance,
+          systems ethics, political theory, and pragmatism, so reconstructive
+          scope must remain explicit.
+
+  derived_axes_projection_local:
+    note: >
+      This is a local paper-internal localization for the example, not a
+      measurement of objective system quality.
+    axes:
+      Awareness_A:
+        structural_level: "High"
+        local_reason: >
+          The case sharply reveals boundary problems between model output,
+          context, explanation, and downstream consequence.
+      Coherence_C:
+        structural_level: "High"
+        local_reason: >
+          The moderation scene can be structurally integrated through bounded
+          enforcement logic even while contextual remainder persists.
+      Responsibility_R:
+        structural_level: "High"
+        local_reason: >
+          Concentrated enforcement capacity and durable omission effects make
+          platform trajectories strongly attributable over time.
+      Action_E:
+        structural_level: "Deliberately constrained"
+        local_reason: >
+          Action is filtered through thresholds, review channels, and appeal
+          windows; restraint is required to prevent coherence from becoming
+          authority.
+      Dignity_in_Practice_D:
+        structural_level: "Stabilizing"
+        local_reason: >
+          The case requires restraint against implicit person-ranking,
+          dehumanizing categorization, and the conversion of governance power
+          into moralized superiority.
+
+  conclusion:
+    takeaway: >
+      Platform moderation is morally readable in PMS–LOGIC not because an
+      ethical code is secretly derived, but because concentrated enforcement
+      capacity under asymmetry and irreversible time produces attributable
+      consequences, including through omission. When logic is allowed to
+      masquerade as authority, legitimacy crises intensify. The alternative is
+      not norm inflation, but discipline: carry Λ, maintain Χ, integrate without
+      totalization, and bind responsibility to capacity over time.
+    publication_note: >
+      This example is valid only as a scene-bound structural reconstruction. It
+      is not a moderation manual, not a regulatory recommendation, and not a
+      substitute for legal, institutional, or domain-specific governance procedures.

@@ -1,0 +1,569 @@
+# =============================================================================
+#  PMS-LOGIC — EXAMPLE SUITE ENTRY
+#
+#  Repository:
+#    https://github.com/tz-dev/PMS-LOGIC
+#
+#  File:
+#    examples/LOGIC_EX_02_whistleblower-omission.yaml
+#
+#  Example Version:
+#    LOGIC_EX_02_1.0
+#
+#  Last Updated:
+#    2026-04-06
+#
+# -----------------------------------------------------------------------------
+#  PURPOSE AND STATUS
+# -----------------------------------------------------------------------------
+#  This document defines a scene-bound EXAMPLE SUITE ENTRY for the
+#  PMS-LOGIC application profile. It is fully aligned with:
+#
+#    - PMS-LOGIC.yaml (schema_version: PMS-LOGIC_1.1)
+#    - PMS.yaml       (schema_version: PMS_1.3)
+#
+#  It is not a normative guide, not a compliance manual, and not a moral code.
+#  Its function is to render a concrete scene operator-readable under the
+#  PMS-LOGIC lens while preserving:
+#
+#    - Distance (Χ),
+#    - reversibility,
+#    - Dignity-in-Practice (D),
+#    - non-prescriptivity,
+#    - and strict responsibility/ought separation.
+#
+# -----------------------------------------------------------------------------
+#  EXAMPLE TYPE
+# -----------------------------------------------------------------------------
+#  Scene-bound, non-instructional, structurally reconstructive.
+#
+# =============================================================================
+
+schema_version: "PMS-LOGIC_1.1"
+
+example_meta:
+  example_id: "LOGIC_EX_02"
+  example_version: "LOGIC_EX_02_1.0"
+  title: "The Whistleblower Case: Omission as Λ Under Institutional Frame"
+  status: "draft_example"
+  last_updated: "2026-04-06"
+  language: "EN"
+  repository_path: "examples/LOGIC_EX_02_whistleblower-omission.yaml"
+  aligned_with:
+    profile_name: "PMS–LOGIC Application Profile"
+    profile_short: "PMS-LOGIC"
+    profile_schema_version: "PMS-LOGIC_1.1"
+    base_model_name: "Praxeological Meta-Structure"
+    base_model_short: "PMS"
+    base_schema_version: "PMS_1.3"
+  authors:
+    - name: "T. Zöller"
+      role: "originator"
+    - name: "ChatGPT (GPT-5.4 Thinking)"
+      role: "formalization_assistant"
+  example_type:
+    scene_bound: true
+    non_instructional: true
+    person_level_typing: false
+    sanction_logic: false
+    moral_code_generation: false
+
+validity_gate_reminder:
+  note: >
+    This example remains valid only as a scene-bound PMS application. It does not
+    license verdicts, prescriptions, person-ranking, or irreversible identity claims.
+  requires:
+    - id: "Χ"
+      name: "Distance"
+      meaning: >
+        Maintain meta-position and stop-capability; no fusion into verdict,
+        authority, or normative demand.
+    - id: "reversibility"
+      meaning: >
+        All readings remain scene-bound, revisable, and configuration-specific;
+        no global person labels or irreversible interpretive claims.
+    - id: "D"
+      name: "Dignity-in-practice"
+      meaning: >
+        No shaming, ranking, humiliation, or ontological person evaluation;
+        critique remains restricted to structural attribution and boundary handling.
+
+model_binding:
+  source_profile:
+    file: "PMS-LOGIC.yaml"
+    schema_version: "PMS-LOGIC_1.1"
+  source_base_model:
+    file: "PMS.yaml"
+    schema_version: "PMS_1.3"
+  applicable_profile_sections:
+    - "paper_lens.tripartition"
+    - "paper_lens.non_operator_constructs"
+    - "reduced_signatures"
+    - "failure_mode_constraints"
+    - "drift_catalogue"
+    - "scale_matrices.derived_axes_projection"
+    - "counter_readings"
+    - "example_suite_schema"
+
+example_entry:
+  minimal_vignette:
+    scene: >
+      An employee becomes aware of serious internal misconduct within an
+      organization and faces the possibility of reporting, escalating, delaying,
+      or remaining silent within existing institutional channels.
+    stakes: >
+      Harm to third parties may continue, institutional integrity may degrade,
+      and the employee may face retaliation, exposure, career loss, or legal
+      risk. Consequences unfold across unequal positions and over irreversible time.
+    structural_issue: >
+      The issue is whether omission (non-reporting) within a role-bound and
+      channel-bound frame becomes attributable under asymmetry and temporality,
+      without deriving a duty to disclose.
+
+  why_this_is_repo_useful:
+    structural_focus: >
+      This example is useful because it concentrates several central PMS–LOGIC
+      features in an institutional setting: informational asymmetry, role-bounded
+      capacity, channel-conditioned omission, temporal delay, retaliation risk,
+      attractors of silence, and pressure to convert attribution into moral command.
+    relevance_for_profile: >
+      It demonstrates how silence can become a structurally relevant non-event (Λ),
+      how responsibility can become attributable without heroization or condemnation,
+      and how logic must remain an ordering tool rather than a rule-producing authority.
+    repository_value: >
+      As a test vector, it helps distinguish PMS–LOGIC from deontic duty models,
+      virtue-ethical hero narratives, institutional apologetics, and nihilistic
+      evasions by showing what becomes structurally legible once information,
+      asymmetry, time, and self-binding interact.
+
+  frame_validity:
+    operative_frame_□:
+      role_space:
+        - "Employee operating under contractual, legal, and procedural constraints."
+        - "Managers, compliance officers, ombudspersons, or legal channels within the organization."
+        - "Institutional actors who control reporting pathways, documentation, escalation, and retaliation exposure."
+      scope_boundaries:
+        - "Only reporting, escalation, or disclosure options available within actual channels, access conditions, authority structure, and time windows count as operative possibilities."
+        - "Effective capacity is bounded by access to evidence, reporting channels, role-position, exposure conditions, and temporal availability."
+        - "Attribution applies only within the actually available organizational frame."
+      out_of_frame:
+        - "Heroic expectations detached from operative capacity."
+        - "Retrospective purity tests."
+        - "Global judgments about personal character."
+        - "Assumptions that institutional policy guarantees safety, fairness, or justice."
+        - "Any equation of abstract speakability with effective reporting capacity."
+      frame_integrity_note: >
+        The example remains valid only so long as the institutional frame is
+        sufficiently legible to identify roles, channels, and temporal windows.
+        If channels are fictive, inaccessible, or retaliatory beyond operative use,
+        attribution claims may require recalibration rather than inflation.
+
+  operator_mapping:
+    full_chain:
+      sequence: ["Δ", "∇", "□", "Λ", "Α", "Ω", "Θ", "Φ", "Χ", "Σ", "Ψ"]
+      note: >
+        This is a readability chain for the example, not a redefinition of PMS
+        dependency order.
+
+    reduced_signature_mapping:
+      PRE_MORAL_justification:
+        operators: ["Δ", "∇", "□", "Λ", "Α"]
+        function_in_scene: >
+          Knowledge distinctions, reporting possibilities, expected silence, and
+          recurrent institutional delay patterns define the scene before any
+          evaluative or normative vocabulary is introduced.
+
+      LOGIC_boundary_management:
+        operators: ["□", "Λ", "Χ", "Σ"]
+        function_in_scene: >
+          The case requires coordinated reading of channel availability, risk,
+          timing, and omission under persistent non-closure, while distance
+          restrains heroization, condemnation, and false universalization.
+
+      POST_MORAL_effects:
+        operators: ["Ω", "Θ", "Ψ"]
+        function_in_scene: >
+          Unequal organizational power, irreversible temporal compounding, and
+          continuity of role-bound consequence make silence or disclosure
+          attributable without generating a prescriptive ought.
+
+      MORAL_READABILITY_min:
+        operators: ["Ω", "Θ", "Λ", "Ψ"]
+        function_in_scene: >
+          This constellation explains why omission becomes morally readable post
+          hoc once silence stabilizes harm trajectories under asymmetry and time.
+
+      POTENTIAL_effective:
+        operators: ["□", "Θ"]
+        function_in_scene: >
+          Only frame-bound and temporally available disclosure capacity counts;
+          abstract possibility does not.
+
+      NON_CLOSURE_stability:
+        operators: ["Δ", "□", "Λ", "Α"]
+        function_in_scene: >
+          Institutional silence and delay become stabilized patterns without
+          thereby resolving the scene; non-closure remains carried rather than
+          eliminated by policy language or moral rhetoric.
+
+      HUME_KNOT_reconstruction:
+        operators: ["□", "Ω", "Θ", "Λ", "Ψ"]
+        function_in_scene: >
+          The case becomes responsibility-readable without crossing the
+          is/ought boundary; silence becomes attributable, not obligatory.
+
+  tripartition_tag:
+    pre_moral:
+      applies: true
+      statement: >
+        Role structure, knowledge access, reporting channels, delay patterns,
+        and expected omissions define the scene structurally prior to evaluative
+        or normative interpretation.
+    logical:
+      applies: true
+      statement: >
+        Institutional reporting logic functions as ordering and boundary
+        management. It can coordinate channels, risk, and timing, but it cannot
+        guarantee justice, fairness, or safe closure.
+    post_moral:
+      applies: true
+      statement: >
+        Moral readability emerges only once silence or disclosure becomes
+        attributable under asymmetry, temporality, non-event, and self-binding.
+
+  structural_analysis:
+    distinctions_Δ:
+      - "Knowledge vs. ignorance."
+      - "Internal reporting vs. external disclosure."
+      - "Available channel vs. unavailable or blocked channel."
+      - "Timely escalation vs. delayed escalation."
+      - "Within-capacity disclosure vs. beyond-capacity expectation."
+
+    impulse_∇:
+      - "Drive toward disclosure, correction, or harm interruption."
+      - "Pressure toward self-protection, deferral, or silence."
+      - "Pressure to convert a complex institutional scene into a binary verdict: mandatory disclosure or total impossibility."
+
+    frame_□:
+      - "Employment role and contractual structure."
+      - "Legal and procedural reporting channels."
+      - "Institutional policy and documentation pathways."
+      - "Retaliation risks and channel accessibility."
+      - "Temporal windows in which intervention remains structurally relevant."
+
+    non_event_Λ:
+      - "Failure to report within a known reporting window."
+      - "Silence where procedural escalation is structurally expected."
+      - "Deferred action under known institutional risk."
+      - "No institutional frame can guarantee safe, fair, or complete resolution."
+
+    attractor_Α:
+      - "Organizational norms that normalize silence or delay."
+      - "Recurrent deferral to 'someone else will act.'"
+      - "Procedural passivity that stabilizes omission without openly deciding it."
+      - "Routine dissipation of responsibility through bureaucratic delay."
+
+    asymmetry_Ω:
+      exposure_gradients:
+        - "The organization may hold power over employment, reputation, and access."
+        - "Third parties may bear harms that continue while silence persists."
+        - "The employee may hold localized informational asymmetry regarding the misconduct."
+      capacity_gradients:
+        - "Reporting capacity is role-bound, evidence-bound, and channel-bound."
+        - "Risk exposure to retaliation may be significantly asymmetric."
+        - "Institutional power may distort which disclosures are structurally feasible."
+      note: >
+        Ω here indicates unequal exposure, access, retaliation risk, and
+        consequence-distribution. It does not establish moral rank.
+
+    temporality_Θ:
+      - "Delayed reporting can increase harm."
+      - "Remedial options may narrow or disappear over time."
+      - "Silence can stabilize harmful trajectories irreversibly."
+      - "Later reinterpretation cannot erase the temporal effects of sustained omission."
+
+    recontextualization_Φ:
+      - "Shift from 'moral courage' to 'capacity-bounded disclosure under institutional asymmetry.'"
+      - "Reframe the case from 'heroism vs. cowardice' to 'attributable omission within real channels, risks, and time windows.'"
+
+    distance_Χ:
+      - "Hold back from valorization or condemnation."
+      - "Prevent institutional power from defining truth or innocence by default."
+      - "Prevent disclosure from being romanticized as universally mandatory."
+      - "Keep the reading structural rather than theatrical or exemplary."
+
+    integration_Σ:
+      - "Coordinate channel availability, retaliation risk, evidentiary access, and temporal urgency."
+      - "Preserve structural coherence without collapsing into a universal reporting rule."
+      - "Integrate silence, risk, and consequence without producing total closure."
+
+    self_binding_Ψ:
+      - "Commitment to procedural integrity across time stabilizes attribution."
+      - "The employee remains structurally linked to consequences where capacity existed."
+      - "Attribution remains possible without converting the actor into hero, traitor, or moral exemplar."
+
+  effective_capacity_boundary:
+    boundary_condition_ref: "BC_EFFECTIVE_CAPACITY"
+    statement: >
+      Responsibility presupposes effective, frame-bound capacity with available
+      channels, sufficient access, role-relevant authority, and open temporal
+      windows. Abstract speakability does not count as operative reporting capacity.
+    no_capacity_no_attribution: >
+      Where effective capacity is absent, attribution of responsibility does not
+      arise even if later observers imagine that disclosure would have been
+      preferable or admirable.
+    calibration_note: >
+      The threshold at which disclosure capacity becomes effectively attributable
+      remains calibration-sensitive. Borderline cases may involve inaccessible
+      channels, evidentiary uncertainty, extreme retaliation exposure, unclear
+      role-authority, or temporally degraded intervention windows. PMS–LOGIC
+      clarifies the structural form of attributable capacity, but not every
+      threshold of sufficiency in advance.
+    anti_inflation_note: >
+      This boundary blocks moral inflation ('you were obliged to sacrifice
+      yourself regardless of capacity') and blocks moral erasure ('nothing is
+      attributable because institutional outcomes were uncertain').
+
+  moral_readability_field:
+    status: "post-moral readability"
+    minimal_operator_basis: ["Ω", "Θ", "Λ", "Ψ"]
+    emergence_statement: >
+      Moral readability emerges post hoc because silence and disclosure cease to
+      be neutral once information is held within an operative frame under
+      asymmetrical power and irreversible time.
+    omission_non_neutrality: >
+      Silence functions as a non-event (Λ) within the institutional frame and
+      therefore carries attributable consequences, even though no prescriptive
+      command is generated.
+    non_innocence_note: >
+      The scene becomes one of non-innocence not because a hidden duty has been
+      derived, but because omission becomes structurally traceable once access,
+      asymmetry, temporality, and self-binding are in place.
+    hume_boundary_note: >
+      Nothing in this example derives an ought from an is. The reconstruction
+      remains on the side of attributable consequence rather than obligation.
+
+  logic_boundary_management:
+    role_of_logic: >
+      Logic functions as an ordering instrument for coordinating information,
+      reporting channels, retaliation risk, institutional procedure, and time pressure.
+    limit_of_logic: >
+      Logic cannot guarantee safety, fairness, or justice outcomes, and it
+      cannot transform a coherent reporting analysis into final moral closure.
+    persistent_non_closure: >
+      Non-closure (Λ) remains within the frame: harm may persist, retaliation
+      may remain unresolved, and no institutional rule fully completes the scene.
+    closure_pressure:
+      source: "∇ → Σ-totalization risk"
+      description: >
+        Pressure arises to declare whistleblowing universally mandatory, or
+        conversely universally impossible. PMS–LOGIC treats both moves as
+        closure-errors that exceed the legitimate role of logic in the scene.
+    disciplined_stopping_point: >
+      The appropriate endpoint is a structurally disciplined stopping point for
+      logic as used here: coherent coordination without final authority.
+
+  typical_drift_markers:
+    - drift_id: "dogmatism_sigma_totalization"
+      marker: >
+        Treating disclosure as an absolute duty regardless of channel
+        availability, retaliation exposure, or effective capacity.
+    - drift_id: "moralism_pseudo_ought_injection"
+      marker: >
+        Translating attributable silence into a universal command to disclose.
+    - drift_id: "nihilism_lambda_suppression"
+      marker: >
+        Claiming silence is neutral because outcomes were uncertain or because
+        no guaranteed safe path existed.
+    - drift_id: "authority_capture_omega_inflation"
+      marker: >
+        Letting institutional power define truth, innocence, or responsibility
+        solely by its own procedural dominance.
+    - drift_id: "technocratic_reduction_frame_overconstraint"
+      marker: >
+        Assuming existing channels exhaust all structural possibilities and
+        dismissing unmodeled remainder or blocked channels as irrelevant.
+
+  failure_mode_constraint_reference:
+    - id: "FMC2"
+      label: "Forced closure where Non-Event (Λ: structured absence) persists produces structural instability."
+      relevance: >
+        Silence and unresolved harm remain structurally present. Any attempt to
+        declare the case fully resolved by policy language or moral verdict
+        substitutes false closure for persistent remainder.
+
+    - id: "FMC3"
+      label: "When explanatory power is converted into sense-making authority, structural overreach occurs."
+      relevance: >
+        Institutional procedure or investigative logic can explain parts of the
+        case without thereby acquiring final authority over meaning,
+        responsibility, or legitimacy.
+
+    - id: "FMC4"
+      label: "Where proximity generates power, viable praxis requires maintained distance."
+      relevance: >
+        Organizations and insiders operate under asymmetric proximity to
+        information, channels, and consequences. Maintained distance prevents
+        fusion of institutional power with moral authority.
+
+    - id: "FMC5"
+      label: "Within PMS–LOGIC, stable self-binding takes the form of restraint rather than assertion."
+      relevance: >
+        The example requires restraint against turning attribution into praise,
+        blame, or universal command. Stable self-binding preserves structural
+        accountability without rhetorical escalation.
+
+  pms_logic_output:
+    structural_mapping: >
+      Knowledge distinctions (Δ), silence as non-event (Λ), and normalized
+      delay patterns (Α) interact under asymmetry (Ω) and temporality (Θ) to
+      produce attributable outcomes within an institutional frame.
+    attribution_conditions: >
+      Responsibility tracks access, operative channels, role-position, and
+      temporal window only. It does not extend to abstract heroism or imagined
+      ideal disclosure.
+    what_remains_open: >
+      Residual retaliation risk, unresolved institutional harm, blocked or
+      imperfect channels, and persistent non-closure (Λ) remain structurally present.
+    excluded_outputs:
+      - "No prescriptions."
+      - "No hero/traitor ranking."
+      - "No sanctions."
+      - "No hidden ought."
+      - "No final institutional innocence."
+      - "No theological or metaphysical closure."
+
+  readable_structural_closure: >
+    In the whistleblower case, the appearance of moral pressure does not
+    originate in a hidden duty to report. It arises because information becomes
+    structurally consequential once it is held within a role-defined frame (□),
+    under asymmetrical power relations (Ω), and across irreversible time (Θ).
+    Silence is no longer a neutral absence; it becomes a non-event (Λ) that
+    shapes outcome trajectories. PMS–LOGIC therefore reconstructs the scene as
+    one of attributable omission rather than obligation. Logic can order the
+    scene, but it cannot close it; the remainder must be carried rather than
+    converted into moral finality.
+
+  extended_structural_closure:
+    paragraph_1: >
+      The whistleblower case sharpens the PMS–LOGIC thesis because it locates
+      responsibility at the point where information, role, and omission become
+      structurally intertwined. The relevant question is not whether a hidden
+      moral law commands disclosure, but whether silence becomes attributable
+      once an actor possesses effective, frame-bound access to channels within
+      a live temporal window. This makes the case especially useful for
+      distinguishing responsibility from ought.
+
+    paragraph_2: >
+      The decisive boundary is again effective capacity. PMS–LOGIC does not
+      treat 'could have spoken in principle' as responsibility-generating.
+      Responsibility tracks what was structurally available in the operative
+      frame: means, access, authority, timing, and exposure conditions. This
+      prevents moral inflation ('you were obliged to sacrifice yourself') and
+      prevents moral evasion ('nothing belonged to anyone because the system was
+      broken'). Calibration sensitivity remains central where channels are
+      ambiguous, blocked, retaliatory, or temporally degraded.
+
+    paragraph_3: >
+      What makes the case particularly instructive is the role of Λ under
+      institutional frames. Silence is not an empty gap but a stabilizing
+      absence that interacts with attractors such as normalized delay, deferral,
+      and diffusion of responsibility. Under temporality (Θ), these patterns can
+      compound harm. Moral readability emerges post hoc because consequences
+      become traceable to a structurally sustained omission, not because a norm
+      has been violated.
+
+    paragraph_4: >
+      Logic’s temptation in this scene is binary closure: either whistleblowing
+      is declared universally mandatory, or it is declared structurally
+      impossible. Both moves exceed logic’s legitimate role. PMS–LOGIC insists
+      that Λ be carried: the frame cannot guarantee safety, justice, or
+      fairness, and this non-closure cannot be repaired by universalized rule
+      language or blanket exemption. Integration (Σ) is used only to coordinate
+      risk, channels, and timing—not to produce a final verdict.
+
+    paragraph_5: >
+      Distance (Χ) is critical to avoid moral theater. Without Χ, attribution
+      collapses into praise or blame, and self-binding (Ψ) is replaced by
+      external pressure. With Χ, self-binding remains what it is in PMS–LOGIC:
+      attribution-stability across time rather than moral elevation. The
+      employee remains a structurally identifiable bearer of consequences where
+      capacity existed, without being transformed into hero, traitor, or moral exemplar.
+
+    paragraph_6: >
+      The example therefore exhibits the full PMS–LOGIC architecture:
+      pre-moral structure (knowledge, roles, channels, delay attractors),
+      logical boundary discipline (coordination without closure), and
+      post-moral readability (attributable omission under Ω, Θ, Λ, and Ψ). The
+      result is a structurally sharp but non-prescriptive account: no code, no
+      sanctification, no condemnation, and no hidden ought—only a disciplined
+      reconstruction of how silence becomes legible as responsibility and where
+      attribution must stop.
+
+  counter_reading_relevance:
+    most_relevant:
+      - id: "D1"
+        why_relevant: >
+          Whistleblower scenes are often immediately moralized; this example
+          shows why responsibility-readability should not be confused with ethics injection.
+      - id: "D5"
+        why_relevant: >
+          The fairness objection is central because responsibility without
+          obligation can be mistaken for punishment, blame, or sacrificial expectation.
+      - id: "D6"
+        why_relevant: >
+          The example strongly tempts readers to extract decision rules; PMS–LOGIC
+          must remain orienting rather than instructive.
+      - id: "D7"
+        why_relevant: >
+          The reconstruction may look compelling because it translates courage,
+          duty, and silence into structural grammar; that does not by itself
+          prove final superiority over rival accounts.
+      - id: "D8"
+        why_relevant: >
+          The case sits close to deontic theory, virtue ethics, institutional
+          ethics, and political critique; PMS–LOGIC must therefore mark its own
+          reconstructive scope carefully.
+
+  derived_axes_projection_local:
+    note: >
+      This is a local paper-internal localization for the example, not a
+      measurement of objective system quality.
+    axes:
+      Awareness_A:
+        structural_level: "High"
+        local_reason: >
+          The scene sharply exposes limits of channels, timing, institutional
+          asymmetry, and omission-effects.
+      Coherence_C:
+        structural_level: "High"
+        local_reason: >
+          The case can be structurally integrated through reporting logic and
+          role analysis without requiring final closure.
+      Responsibility_R:
+        structural_level: "High"
+        local_reason: >
+          Consequences become strongly attributable where effective disclosure
+          capacity exists, while attribution remains bounded by calibration-sensitive thresholds.
+      Action_E:
+        structural_level: "Deliberately constrained"
+        local_reason: >
+          Action is filtered through procedural access, retaliation risk, and
+          temporal windows; restraint against overreach remains necessary.
+      Dignity_in_Practice_D:
+        structural_level: "Stabilizing"
+        local_reason: >
+          The example requires restraint against both institutional domination
+          and person-level heroization or condemnation.
+
+  conclusion:
+    takeaway: >
+      The whistleblower case is morally readable in PMS–LOGIC not because a duty
+      to report is secretly derived, but because silence and disclosure become
+      attributable under asymmetric institutional power, irreversible time, and
+      frame-bound effective capacity. The model reconstructs responsibility as
+      non-innocence of omission without turning it into obligation.
+    publication_note: >
+      This example is valid only as a scene-bound structural reconstruction. It
+      is not a compliance manual, not a legal recommendation, and not a
+      substitute for institutional, legal, or protective reporting procedures.
